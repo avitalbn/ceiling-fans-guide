@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הצעות מאווררי תקרה · 10 מאווררים, ספק אחד · פרויקט עידית</title>
+<meta name="description" content="הצעות מאווררי תקרה מאוחדות לפי ספק לבנייה חדשה של 10 מאווררים בישראל. שלושת המועמדים המובילים מושווים לפי מחיר כולל, איכות מוצר ושירות, עם סלים מפורטים מוכנים למשא ומתן מול ספק יחיד.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F4EE; --paper2:#EFEAE0; --card:#FFFFFF; --overlay:#FBF9F4;
+  --ink:#1C2B2D; --muted:#6F6A5E; --line:#E2DBCC; --line2:#EFE9DD;
+  --teal:#0E3B39; --teal2:#14524F; --brass:#B98A4A; --brass-soft:#F3EBDD;
+  --ksp:#2F6FED; --ksp-soft:#E7EEFD;
+  --lev:#1F8A70; --lev-soft:#E2F1EB;
+  --soho:#D97742; --soho-soft:#FBEDE2;
+  --pac:#7C5CBF; --swing:#C9A227; --we:#5B7083;
+  --ok:#2E7D5B; --warn:#B9772A; --warn-soft:#F8EEDD; --danger:#B4453A; --info:#2F6FED;
+  --radius:14px; --shadow:0 1px 2px rgba(28,43,45,.05),0 18px 40px -26px rgba(28,43,45,.35);
+  --max:1180px;
+  --body:"Assistant",-apple-system,"Segoe UI",Arial,sans-serif;
+  --display:"Frank Ruhl Libre",Georgia,"Times New Roman",serif;
+}
+/* Hebrew typography — requested font stack, with loaded Open Sans (Hebrew subset) as webfont fallback */
+html[lang="he"]{
+  --body:"Open Sans Hebrew","Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --display:"Open Sans Hebrew","Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+html[lang="he"] .eyebrow{letter-spacing:.04em}
+html[lang="he"] h1,html[lang="he"] h2,html[lang="he"] h3{letter-spacing:0;font-weight:700}
+html[lang="he"] .brand small{letter-spacing:.02em}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--teal2)}
+button{font-family:inherit;cursor:pointer}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 26px}
+.num{font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.14;letter-spacing:-.01em}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brass)}
+.eyebrow::before{content:"";width:32px;height:1px;background:var(--brass)}
+.muted{color:var(--muted)}
+:focus-visible{outline:3px solid var(--brass);outline-offset:2px;border-radius:6px}
+
+/* scrollbar in palette */
+*{scrollbar-width:thin;scrollbar-color:var(--brass) var(--paper2)}
+*::-webkit-scrollbar{width:11px;height:11px}
+*::-webkit-scrollbar-track{background:var(--paper2)}
+*::-webkit-scrollbar-thumb{background:var(--brass);border-radius:8px;border:2px solid var(--paper2)}
+*::-webkit-scrollbar-thumb:hover{background:var(--teal2)}
+
+/* topbar */
+.topbar{position:sticky;top:0;z-index:60;background:rgba(247,244,238,.9);backdrop-filter:saturate(1.2) blur(14px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:18px;height:64px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;color:var(--ink);text-decoration:none}
+.brand-mark{width:30px;height:30px;border-radius:50%;border:1.4px solid var(--teal);display:grid;place-items:center;flex:none;color:var(--teal)}
+.brand-mark svg{width:17px;height:17px}
+.brand small{display:block;font-weight:400;font-size:10.5px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;line-height:1.2}
+.nav{display:flex;gap:2px;margin-inline-start:auto;overflow-x:auto;scrollbar-width:none;min-width:0}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-size:14px;color:var(--muted);padding:7px 11px;border-radius:100px;white-space:nowrap;text-decoration:none;transition:.18s}
+.nav a:hover{color:var(--ink);background:rgba(0,0,0,.04)}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:100px;overflow:hidden;background:var(--card);flex:none}
+.lang button{border:0;background:transparent;color:var(--muted);font-size:12.5px;font-weight:700;padding:7px 12px;line-height:1;transition:.18s}
+.lang button:hover{color:var(--ink)}
+.lang button.active{background:var(--teal);color:#fff}
+.print-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--teal);background:transparent;color:var(--teal);border-radius:100px;padding:7px 14px;font-size:13px;font-weight:600;white-space:nowrap;transition:.18s;flex:none}
+.print-btn:hover{background:var(--teal);color:var(--paper)}
+.print-btn svg{width:14px;height:14px}
+
+/* hero */
+.hero{padding:54px 0 8px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(60% 50% at 85% 0%,rgba(31,138,112,.10),transparent 70%),
+  radial-gradient(50% 45% at 5% 10%,rgba(185,138,74,.12),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(38px,5.2vw,64px);margin:18px 0 16px;font-weight:600}
+.hero h1 em{font-style:normal;color:var(--teal2)}
+.hero-lead{font-size:18.5px;color:#43504F;max-width:60ch;margin:0 0 24px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.chip{display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);border-radius:100px;padding:6px 13px;font-size:13px;color:var(--muted)}
+.chip b{color:var(--ink);font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:8px 0 6px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);min-width:0}
+.stat b{display:block;font-family:var(--display);font-size:30px;color:var(--teal);line-height:1.05;overflow-wrap:break-word}
+.stat span{font-size:12.5px;color:var(--muted)}
+
+/* sections */
+section{padding:40px 0}
+.sec-head{max-width:70ch;margin-bottom:22px}
+.sec-head h2{font-size:clamp(26px,3.4vw,38px);margin:12px 0 8px}
+.sec-head p{margin:0;color:#43504F;font-size:16.5px}
+.alt-bg{background:linear-gradient(180deg,rgba(255,255,255,.5),transparent 30%)}
+
+/* priority selector */
+.priority{background:var(--teal);color:#EAF2F0;border-radius:18px;padding:22px 24px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.priority::after{content:"";position:absolute;inset-inline-end:-40px;top:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(185,138,74,.35),transparent 70%)}
+.priority h3{color:#fff;font-size:21px;margin:0 0 4px}
+.priority p{margin:0 0 16px;color:#B9CDC9;font-size:14.5px;max-width:64ch}
+.pri-btns{display:flex;flex-wrap:wrap;gap:10px;position:relative;z-index:1}
+.pri-btn{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.06);color:#EAF2F0;border-radius:100px;padding:10px 18px;font-size:14.5px;font-weight:600;transition:.18s}
+.pri-btn:hover{background:rgba(255,255,255,.14)}
+.pri-btn.active{background:var(--brass);border-color:var(--brass);color:#241a0c}
+.pri-rec{margin-top:16px;padding:13px 16px;background:rgba(255,255,255,.08);border-radius:12px;font-size:15px;position:relative;z-index:1;border-inline-start:3px solid var(--brass)}
+.pri-rec b{color:#fff}
+
+/* finalist cards */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
+.vcard{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;position:relative;transition:.25s;min-width:0}
+.vcard.dim{opacity:.62}
+.vcard.pick{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent),var(--shadow)}
+.vc-top{padding:20px 20px 16px;border-bottom:1px solid var(--line2);background:linear-gradient(180deg,var(--accent-soft),transparent)}
+.vc-rank{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:var(--card);border:1px solid var(--accent);border-radius:100px;padding:4px 11px}
+.vc-name{font-family:var(--display);font-size:25px;margin:12px 0 2px;font-weight:600}
+.vc-name small{display:block;font-family:var(--body);font-size:13px;color:var(--muted);font-weight:400;margin-top:2px}
+.vc-tag{font-size:13.5px;color:var(--accent);font-weight:700;margin-top:6px}
+.vc-price{padding:16px 20px 6px}
+.vc-price b{font-family:var(--display);font-size:38px;color:var(--ink);line-height:1}
+.vc-price span{display:block;font-size:12.5px;color:var(--muted);margin-top:3px}
+.vc-meters{padding:8px 20px 4px;display:grid;gap:9px}
+.meter{display:grid;grid-template-columns:74px 1fr 30px;align-items:center;gap:9px;font-size:12.5px}
+.meter .lab{color:var(--muted)}
+.meter .bar{height:7px;background:var(--line2);border-radius:6px;overflow:hidden}
+.meter .bar i{display:block;height:100%;background:var(--accent);border-radius:6px}
+.meter .val{text-align:end;font-weight:700;color:var(--ink)}
+.vc-body{padding:12px 20px 4px;flex:1}
+.vc-body h4{font-family:var(--body);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:10px 0 6px;font-weight:700}
+.vc-body ul{margin:0;padding:0;list-style:none}
+.vc-body li{position:relative;padding-inline-start:18px;font-size:14px;margin-bottom:6px;color:#3a4645}
+.vc-body li::before{content:"";position:absolute;inset-inline-start:2px;top:8px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.vc-body li.warn::before{background:var(--warn)}
+.vc-specs{display:flex;flex-wrap:wrap;gap:6px;padding:10px 20px 4px}
+.spec{font-size:11.5px;background:var(--overlay);border:1px solid var(--line);border-radius:7px;padding:4px 8px;color:#43504F}
+.vc-foot{padding:14px 20px 20px;margin-top:auto}
+.vc-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:100px;padding:11px;font-size:14.5px;font-weight:700;transition:.18s}
+.vc-btn:hover{filter:brightness(1.06)}
+.vc-btn svg{width:15px;height:15px}
+html[dir="rtl"] .vc-btn svg{transform:scaleX(-1)}
+
+/* why grid */
+.why{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);min-width:0}
+.panel h3{font-size:21px;margin:0 0 12px}
+.elim{list-style:none;margin:0;padding:0}
+.elim li{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line2)}
+.elim li:last-child{border-bottom:0}
+.elim .x{width:26px;height:26px;border-radius:50%;background:var(--warn-soft);color:var(--warn);display:grid;place-items:center;font-weight:800;font-size:14px;flex:none}
+.elim b{color:var(--ink)}
+.elim p{margin:2px 0 0;font-size:14px;color:#43504F}
+.tier{display:grid;gap:10px}
+.tier-row{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;background:var(--overlay);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.tier-dot{width:12px;height:12px;border-radius:50%;flex:none}
+.tier-row b{font-size:15px}
+.tier-row small{display:block;color:var(--muted);font-size:12.5px}
+.tier-row .p{font-family:var(--display);font-size:19px;font-weight:600}
+
+/* charts */
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.chart-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 20px 12px;box-shadow:var(--shadow);min-width:0}
+.chart-card h3{font-size:19px;margin:0 0 2px}
+.chart-card .sub{font-size:13px;color:var(--muted);margin:0 0 12px}
+.chart-card.full{grid-column:1/-1}
+svg.chart{width:100%;height:auto;display:block;overflow:visible;direction:ltr}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin:10px 0 4px;font-size:12.5px;color:#43504F}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
+.tip{position:fixed;z-index:90;pointer-events:none;background:var(--teal);color:#fff;padding:8px 11px;border-radius:9px;font-size:12.5px;line-height:1.45;box-shadow:var(--shadow);opacity:0;transition:opacity .12s;max-width:240px}
+.tip b{color:var(--brass)}
+
+/* table */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}
+table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;min-width:820px}
+table.cmp th,table.cmp td{padding:11px 13px;text-align:start;border-bottom:1px solid var(--line2)}
+table.cmp thead th{background:var(--overlay);font-size:11.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);font-weight:700;position:sticky;top:0}
+table.cmp tbody tr:hover{background:var(--overlay)}
+table.cmp tr.finalist{background:var(--brass-soft)}
+table.cmp tr.finalist:hover{background:#EFE4D0}
+table.cmp .vname{font-weight:700;color:var(--ink);white-space:nowrap}
+table.cmp .vname i{width:9px;height:9px;border-radius:50%;display:inline-block;margin-inline-end:7px}
+.badge{font-size:11px;font-weight:700;border-radius:6px;padding:2px 7px;white-space:nowrap}
+.badge.keep{background:var(--lev-soft);color:var(--lev)}
+.badge.out{background:var(--warn-soft);color:var(--warn)}
+.score-pill{font-weight:800;font-family:var(--display);font-size:16px}
+
+/* baskets */
+.basket-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.btab{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:13px 15px;text-align:start;transition:.18s;box-shadow:var(--shadow);min-width:0}
+.btab b{display:block;font-size:16px;color:var(--ink)}
+.btab small{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.btab .bt-p{font-family:var(--display);font-size:20px;font-weight:600;margin-top:6px;display:block}
+.btab.active{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+.btab.active b{color:var(--accent)}
+.bpanel{display:none}
+.bpanel.active{display:block}
+.basket{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.basket-intro{padding:18px 22px;border-bottom:1px solid var(--line);background:var(--overlay);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.basket-intro h3{font-size:22px;margin:0 0 4px}
+.basket-intro p{margin:0;font-size:13.5px;color:var(--muted);max-width:70ch}
+.basket-intro .tot{text-align:end;flex:none}
+.basket-intro .tot b{font-family:var(--display);font-size:30px;color:var(--accent);display:block;line-height:1}
+.basket-intro .tot span{font-size:12px;color:var(--muted)}
+.brow{display:grid;grid-template-columns:130px minmax(0,1fr) 40px 86px 96px;gap:12px;align-items:center;padding:11px 22px;border-bottom:1px solid var(--line2);font-size:13.5px}
+.brow.head{background:var(--overlay);font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);font-weight:700;padding-top:9px;padding-bottom:8px}
+.brow.head span:nth-child(n+3){text-align:end}
+.b-room{font-weight:700;color:var(--ink)}
+.b-room small{display:block;font-weight:400;color:var(--muted);font-size:11.5px}
+.b-model b{color:var(--ink)}
+.b-model small{display:block;color:var(--muted);font-size:12px;margin-top:1px}
+.b-model a{font-size:11.5px;color:var(--teal2);text-decoration:none}
+.b-model a:hover{text-decoration:underline}
+.b-qty,.b-unit,.b-line{text-align:end}
+.b-line{font-weight:700}
+.bsum{display:grid;grid-template-columns:1fr 1fr 1.2fr;border-top:1px solid var(--line);background:var(--overlay)}
+.bsum>div{padding:14px 22px;border-inline-start:1px solid var(--line)}
+.bsum>div:first-child{border-inline-start:0}
+.bsum span{display:block;font-size:11.5px;color:var(--muted);margin-bottom:2px}
+.bsum b{font-size:18px}
+.bsum .grand b{font-family:var(--display);font-size:28px;color:var(--accent)}
+.bnote{padding:13px 22px 18px;font-size:13px;color:#43504F;background:var(--overlay);line-height:1.55}
+.bnote b{color:var(--ink)}
+.bnote .neg{margin-top:8px;padding:10px 13px;background:var(--brass-soft);border-radius:10px;border-inline-start:3px solid var(--brass)}
+
+/* playbook */
+.play{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow);display:grid;grid-template-columns:auto 1fr;gap:14px;min-width:0}
+.step .n{width:34px;height:34px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:17px;flex:none}
+.step h3{font-size:17px;margin:0 0 4px;font-family:var(--body);font-weight:700}
+.step p{margin:0;font-size:14px;color:#43504F}
+
+/* method / sources */
+.method{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.weights{display:grid;gap:10px;margin-top:6px}
+.wrow{display:grid;grid-template-columns:120px 1fr 44px;gap:10px;align-items:center;font-size:13.5px}
+.wrow .bar{height:9px;background:var(--line2);border-radius:6px;overflow:hidden}
+.wrow .bar i{display:block;height:100%;border-radius:6px}
+.src{list-style:none;margin:0;padding:0;font-size:13.5px}
+.src li{padding:8px 0;border-bottom:1px solid var(--line2)}
+.src li:last-child{border-bottom:0}
+.src a{color:var(--teal2);text-decoration:none;word-break:break-word}
+.src a:hover{text-decoration:underline}
+.callout{background:var(--warn-soft);border:1px solid #E7D3B4;border-inline-start:4px solid var(--warn);border-radius:12px;padding:16px 18px;font-size:14px;color:#5a4a2e;margin-top:16px}
+.callout b{color:var(--ink)}
+
+footer{padding:30px 0 50px;border-top:1px solid var(--line);margin-top:20px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+footer a{color:var(--teal2)}
+
+@media(max-width:900px){
+  .cards{grid-template-columns:1fr}
+  .chart-grid,.why,.method,.play{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .brow{grid-template-columns:96px minmax(0,1fr) 34px 78px;padding:10px 15px;gap:8px}
+  .brow .b-unit{display:none}
+  .brow.head span:nth-child(4){display:none}
+  .bsum{grid-template-columns:1fr 1fr}
+  .bsum .grand{grid-column:1/-1;border-top:1px solid var(--line);border-inline-start:0}
+  .basket-tabs{grid-template-columns:1fr}
+  .nav{display:none}
+  .lang{margin-inline-start:auto}
+  .brand small{display:none}
+}
+@media(max-width:560px){
+  .topbar .wrap{gap:10px;padding:0 14px}
+  .print-btn span{display:none}
+  .print-btn{padding:8px 10px}
+  .lang button{padding:7px 9px;font-size:12px}
+  .brand{gap:8px;min-width:0}
+  .brand>span{min-width:0}
+  .brand [data-i="brandTitle"]{font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .wrap{padding:0 16px}
+  .hero{padding:38px 0 6px}
+  .hero-lead{font-size:16.5px}
+  .stat b{font-size:24px}
+  .vc-price b{font-size:32px}
+  .basket-intro .tot b{font-size:26px}
+}
+@media print{
+  .topbar,.priority,.pri-btns,.vc-btn,.basket-tabs,.print-btn,.tip,.lang{display:none!important}
+  body{background:#fff}
+  .bpanel{display:block!important;break-inside:avoid;margin-bottom:18px}
+  .vcard,.chart-card,.panel{break-inside:avoid;box-shadow:none}
+  section{padding:18px 0}
+  .cards{grid-template-columns:1fr 1fr 1fr}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" data-i-aria="ariaBack">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 12c-2.8-4.5-7-5.5-9-3.5S3 15 8 15.5 12 12 12 12Z"/><path d="M12 12c4.5-2.8 5.5-7 3.5-9S13 3 12.5 8 12 12 12 12Z"/><path d="M12 12c2.8 4.5 7 5.5 9 3.5S21 9 16 8.5 12 12 12 12Z"/><circle cx="12" cy="12" r="1.4"/></svg></span>
+      <span><span data-i="brandTitle">הצעות מאווררים</span><small data-i="brandSmall">ספק אחד · 10 מאווררים</small></span>
+    </a>
+    <nav class="nav" data-i-aria="ariaNav">
+      <a href="#finalists" data-i="navFinalists">המועמדים</a>
+      <a href="#why" data-i="navWhy">למה השלושה</a>
+      <a href="#charts" data-i="navCharts">גרפים</a>
+      <a href="#compare" data-i="navCompare">טבלת ניקוד</a>
+      <a href="#baskets" data-i="navBaskets">סלים מלאים</a>
+      <a href="#negotiate" data-i="navNegotiate">משא ומתן</a>
+      <a href="#method" data-i="navMethod">מתודולוגיה</a>
+    </nav>
+    <div class="lang" role="group" data-i-aria="ariaLang">
+      <button type="button" data-lang="he">עברית</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+    <button class="print-btn" onclick="window.print()" data-i-aria="ariaPrint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2M7 14h10v7H7z"/></svg><span data-i="print">הדפסה / PDF</span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow" data-i="heroEyebrow">החלטת רכש · נובמבר 2026</div>
+    <h1 data-i="heroH1">עשרה מאווררים.<br>שישה ספקים.<br><em>שלושה ששווה להתקשר אליהם.</em></h1>
+    <p class="hero-lead" data-i="heroLead"></p>
+    <div class="hero-meta">
+      <span class="chip" data-i="chip1"></span>
+      <span class="chip" data-i="chip2"></span>
+      <span class="chip" data-i="chip3"></span>
+      <span class="chip" data-i="chip4"></span>
+    </div>
+    <div class="stats">
+      <div class="stat"><b class="num">10</b><span data-i="stat1"></span></div>
+      <div class="stat"><b class="num">6</b><span data-i="stat2"></span></div>
+      <div class="stat"><b class="num">3</b><span data-i="stat3"></span></div>
+      <div class="stat"><b class="num">₪6,013–16,150</b><span data-i="stat4"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIORITY -->
+<section id="pick" style="padding-top:26px">
+  <div class="wrap">
+    <div class="priority">
+      <h3 data-i="priH"></h3>
+      <p data-i="priP"></p>
+      <div class="pri-btns" role="group" data-i-aria="ariaPri">
+        <button class="pri-btn" data-pri="ksp" data-i="priKsp"></button>
+        <button class="pri-btn active" data-pri="lev" data-i="priLev"></button>
+        <button class="pri-btn" data-pri="soho" data-i="priSoho"></button>
+      </div>
+      <div class="pri-rec" id="priRec" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINALISTS -->
+<section id="finalists">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" data-i="finEyebrow"></div>
+      <h2 data-i="finH"></h2>
+      <p data-i="finP"></p>
+    </div>
+    <div class="cards" id="cards"></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="alt-bg">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" data-i="whyEyebrow"></div>
+      <h2 data-i="whyH"></h2>
+      <p data-i="whyP"></p>
+    </div>
+    <div class="why">
+      <div class="panel">
+        <h3 data-i="whySetH"></h3>
+        <ul class="elim">
+          <li><span class="x">✕</span><div data-i="elim1"></div></li>
+          <li><span class="x">✕</span><div data-i="elim2"></div></li>
+          <li><span class="x">✕</span><div data-i="elim3"></div></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3 data-i="whyRemainH"></h3>
+        <div class="tier">
+          <div class="tier-row"><span class="tier-dot" style="background:var(--ksp)"></span><div><b>KSP</b><small data-i="tierKspSmall"></small></div><span class="p num">₪6,013</span></div>
+          <div class="tier-row"><span class="tier-dot" style="background:var(--lev)"></span><div><b>Lev Hamisrad</b><small data-i="tierLevSmall"></small></div><span class="p num">₪8,818</span></div>
+          <div class="tier-row"><span class="tier-dot" style="background:var(--soho)"></span><div><b>Soho Air</b><small data-i="tierSohoSmall"></small></div><span class="p num">₪16,150</span></div>
+        </div>
+        <p class="muted" style="font-size:13.5px;margin:14px 0 0" data-i="whyRemainP"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHARTS -->
+<section id="charts">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" data-i="chEyebrow"></div>
+      <h2 data-i="chH"></h2>
+      <p data-i="chP"></p>
+    </div>
+    <div class="chart-grid">
+      <div class="chart-card full">
+        <h3 data-i="chPriceH"></h3>
+        <p class="sub" data-i="chPriceSub"></p>
+        <svg class="chart" id="priceChart" viewBox="0 0 1080 300" role="img" data-i-aria="ariaPriceChart"></svg>
+        <div class="legend" id="priceLegend"></div>
+      </div>
+      <div class="chart-card">
+        <h3 data-i="chRadarH"></h3>
+        <p class="sub" data-i="chRadarSub"></p>
+        <svg class="chart" id="radarChart" viewBox="0 0 460 380" role="img" data-i-aria="ariaRadarChart"></svg>
+        <div class="legend" id="radarLegend"></div>
+      </div>
+      <div class="chart-card">
+        <h3 data-i="chStackH"></h3>
+        <p class="sub" data-i="chStackSub"></p>
+        <svg class="chart" id="stackChart" viewBox="0 0 460 380" role="img" data-i-aria="ariaStackChart"></svg>
+        <div class="legend" id="stackLegend"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCORECARD -->
+<section id="compare" class="alt-bg">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" data-i="scEyebrow"></div>
+      <h2 data-i="scH"></h2>
+      <p data-i="scP"></p>
+    </div>
+    <div class="tbl-wrap">
+      <table class="cmp" id="cmpTable">
+        <thead><tr>
+          <th data-i="thVendor"></th><th data-i="thTotal"></th><th data-i="thPrice"></th><th data-i="thProduct"></th><th data-i="thService"></th><th data-i="thComposite"></th><th data-i="thMotor"></th><th data-i="thWarranty"></th><th data-i="thDelivery"></th><th data-i="thInstall"></th><th data-i="thStatus"></th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- BASKETS -->
+<section id="baskets">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" data-i="bkEyebrow"></div>
+      <h2 data-i="bkH"></h2>
+      <p data-i="bkP"></p>
+    </div>
+    <div class="basket-tabs" id="basketTabs" role="tablist"></div>
+    <div id="basketPanels"></div>
+  </div>
+</section>
+
+<!-- NEGOTIATE -->
+<section id="negotiate" class="alt-bg">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" data-i="ngEyebrow"></div>
+      <h2 data-i="ngH"></h2>
+      <p data-i="ngP"></p>
+    </div>
+    <div class="play">
+      <div class="step"><span class="n">1</span><div><h3 data-i="ng1h"></h3><p data-i="ng1p"></p></div></div>
+      <div class="step"><span class="n">2</span><div><h3 data-i="ng2h"></h3><p data-i="ng2p"></p></div></div>
+      <div class="step"><span class="n">3</span><div><h3 data-i="ng3h"></h3><p data-i="ng3p"></p></div></div>
+      <div class="step"><span class="n">4</span><div><h3 data-i="ng4h"></h3><p data-i="ng4p"></p></div></div>
+      <div class="step"><span class="n">5</span><div><h3 data-i="ng5h"></h3><p data-i="ng5p"></p></div></div>
+      <div class="step"><span class="n">6</span><div><h3 data-i="ng6h"></h3><p data-i="ng6p"></p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section id="method">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" data-i="mtEyebrow"></div>
+      <h2 data-i="mtH"></h2>
+    </div>
+    <div class="method">
+      <div class="panel">
+        <h3 data-i="mtScoreH"></h3>
+        <p class="muted" style="font-size:14px;margin-top:0" data-i="mtScoreP"></p>
+        <div class="weights">
+          <div class="wrow"><span data-i="wProduct"></span><span class="bar"><i style="width:40%;background:var(--lev)"></i></span><b class="num">40%</b></div>
+          <div class="wrow"><span data-i="wPrice"></span><span class="bar"><i style="width:35%;background:var(--ksp)"></i></span><b class="num">35%</b></div>
+          <div class="wrow"><span data-i="wService"></span><span class="bar"><i style="width:25%;background:var(--brass)"></i></span><b class="num">25%</b></div>
+        </div>
+        <p style="font-size:13.5px;color:#43504F;margin-bottom:0" data-i="mtDetailP"></p>
+      </div>
+      <div class="panel">
+        <h3 data-i="mtSrcH"></h3>
+        <ul class="src">
+          <li data-i="src1"></li>
+          <li data-i="src2"></li>
+          <li data-i="src3"></li>
+          <li data-i="src4"></li>
+          <li data-i="src5"></li>
+          <li data-i="src6"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout" data-i="callout"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span data-i="foot1"></span>
+    <span><a href="index.html" data-i="footGuide"></a> · <a href="dashboard.html" data-i="footDash"></a> · <a href="#top" data-i="footTop"></a></span>
+  </div>
+</footer>
+
+</main>
+
+<div class="tip" id="tip"></div>
+
+<script>
+"use strict";
+/* ---------- DATA ---------- */
+const VENDORS = {
+  ksp:{name:"KSP", he:"", tag:"Lowest price", color:"var(--ksp)", hex:"#2F6FED", soft:"var(--ksp-soft)",
+    total:6013, products:5983, delivery:30, price:10.0, product:6.0, service:5.5,
+    motor:"Mixed AC/DC", warranty:"9–10 yr motor · 1 yr parts", deliveryTxt:"₪30 · pickup option", install:"Not included",
+    status:"keep", finalist:true, tier:"budget",
+    why:["Cheapest complete basket — ₪6,013 delivered, about ₪2,800 under the next finalist.","Every fan has an LED light; Star Outdoor pergola fan moves a verified 7,543 CFM.","Big retailer with pickup and standard returns."],
+    watch:["Some living/kitchen/study models have no published airflow — verify before ordering.","Mixed AC/DC motors; parts warranty only 1 year; no installation service."],
+    specs:["10 fans · LED on all","Star Outdoor IP44","₪30 delivery","Pickup available"],
+    rec:"<b>KSP</b> is your pick if the budget leads. You save roughly ₪2,800 vs the balanced option — just confirm airflow on the three unverified models and budget separately for an electrician."},
+  lev:{name:"Lev Hamisrad", he:"לב המשרד · Tel Aviv", tag:"Best balance · our pick", color:"var(--lev)", hex:"#1F8A70", soft:"var(--lev-soft)",
+    total:8818, products:8793, delivery:25, price:6.8, product:8.5, service:7.0,
+    motor:"All DC · 6-speed", warranty:"15 yr motor · 2 yr parts", deliveryTxt:"₪25", install:"Not included",
+    status:"keep", finalist:true, tier:"balance",
+    why:["All ten are Westinghouse DC fans with 6 speeds, remote and a dimmable CCT light.","Published airflow & noise: Talia 52 = 6,143 CFM @ 45 dB; Magnolia 52 = 6,635 CFM.","15-year motor warranty; Jessica IP44 gives the pergola a light + outdoor rating."],
+    watch:["No installation — arrange a licensed electrician (WeFans resells the same range with a ₪99/fan install option).","Confirm the parents' room size; step up to Talia 52 if it's over ~25 m²."],
+    specs:["All DC · 6-speed","15-yr motor warranty","IP44 pergola + light","₪25 delivery"],
+    rec:"<b>Lev Hamisrad</b> is the best all-round choice: verified DC performance and a 15-year motor warranty for ₪8,818 — only ₪2,805 over the cheapest basket. This is the one we'd negotiate first."},
+  soho:{name:"Soho Air", he:"סוהו אייר · Haifa", tag:"Design & service", color:"var(--soho)", hex:"#D97742", soft:"var(--soho-soft)",
+    total:16150, products:16150, delivery:0, price:3.7, product:8.5, service:7.5,
+    motor:"All DC · 5–6 speed", warranty:"5 yr motor · 1 yr install", deliveryTxt:"Free · up to 20 days", install:"Company electrician option",
+    status:"keep", finalist:true, tier:"design",
+    why:["Designer Israeli brand (Soho Design, est. 1996) — the look the SWING quote was chasing, for less.","Published airflow on every model; Apolo Clear IP55 gives the pergola a true outdoor rating + light.","Dedicated fan company: free delivery, installer network, 1-year install warranty + free home visit, Haifa service lab."],
+    watch:["Premium price — about ₪7,300 over the balanced basket; you're paying for design and service.","Delivery up to 20 business days; office hours 9:00–13:30. The cheaper Tornado outdoor fan has only a 2-year warranty."],
+    specs:["Designer DC range","5-yr motor warranty","IP55 pergola + light","Free delivery"],
+    rec:"<b>Soho Air</b> is the choice if design and a dedicated service relationship matter most. It's the premium tier — roughly ₪7,300 over the balanced basket — with free delivery and a real installer network."},
+  wefans:{name:"WeFans", he:"ווסטינגהאוס importer", tag:"Alternate Westinghouse source", color:"var(--we)", hex:"#5B7083", soft:"#ECEFF2",
+    total:8793, products:8793, delivery:0, price:6.8, product:8.5, service:8.0,
+    motor:"All DC · 6-speed", warranty:"15 yr motor · 2 yr parts", deliveryTxt:"Delivered prices", install:"₪99 / fan option",
+    status:"out", finalist:false, tier:""},
+  pacific:{name:"Pacific", he:"פסיפיק", tag:"Wood-look basket", color:"var(--pac)", hex:"#7C5CBF", soft:"#EFEAF8",
+    total:9038, products:9008, delivery:30, price:6.7, product:7.0, service:6.0,
+    motor:"Mostly DC", warranty:"Varies by model", deliveryTxt:"₪30", install:"Not included",
+    status:"out", finalist:false, tier:""},
+  swing:{name:"SWING / Trendlight", he:"סווינג · טרנדלייט", tag:"Premium quote baseline", color:"var(--swing)", hex:"#C9A227", soft:"#F7F0D8",
+    total:17575, products:17575, delivery:0, price:3.4, product:9.0, service:6.5,
+    motor:"All DC", warranty:"Brand warranty", deliveryTxt:"Free with fan", install:"Not included",
+    status:"out", finalist:false, tier:""}
+};
+const ORDER = ["ksp","lev","soho","wefans","pacific","swing"];
+const FINALISTS = ["ksp","lev","soho"];
+const WEIGHTS = {price:.35, product:.40, service:.25};
+const composite = v => WEIGHTS.price*v.price + WEIGHTS.product*v.product + WEIGHTS.service*v.service;
+const money = n => "₪" + Math.round(n).toLocaleString("en-US");
+
+/* baskets: room lines per finalist (model names & URLs stay constant across languages) */
+const BASKETS = {
+  ksp:{intro:"The value floor. All ten from KSP with an LED on every fan. Strong on price and the pergola; verify airflow on the living, kitchen and study models before you commit.",
+    note:"<b>Watch:</b> Hercules 60 (living), Storm 48 (kitchen) and Storm 42 (study) have no published CFM — ask KSP to confirm airflow, or swap to a verified model. Venta bedroom warranty is 4 years; Semicom parts warranty is 1 year.",
+    neg:"Ask KSP for a single installed price for all ten and whether the NOV26 coupon stacks. Use the ₪6,013 total as your anchor when quoting Lev Hamisrad.",
+    lines:[
+      {room:"Bedrooms", sub:"kids ×3 + parents", model:"Venta Fresh Air 48″", spec:"Venta · white · IP54 · LED 22W", qty:4, unit:599, url:"https://www.ksp.co.il/"},
+      {room:"Living room", sub:"main space", model:"Hercules 60″", spec:"Semicom · wood/white · LED 20W", qty:1, unit:694, url:"https://www.ksp.co.il/"},
+      {room:"Additional living", sub:"kitchen / 2nd space", model:"Storm 48″", spec:"Semicom · wood/black · LED 25W", qty:1, unit:499, url:"https://www.ksp.co.il/"},
+      {room:"Pergola", sub:"outdoor ×2", model:"Star Outdoor 56″", spec:"Star · white · IP44 · 7,543 CFM · LED 24W", qty:2, unit:899, url:"https://star.co.il/"},
+      {room:"Mamad", sub:"safe room", model:"Genesis1 42″", spec:"Semicom · white · LED 18W", qty:1, unit:236, url:"https://www.ksp.co.il/"},
+      {room:"Study", sub:"home office", model:"Storm 42″", spec:"Semicom · wood/black · LED 25W", qty:1, unit:360, url:"https://www.ksp.co.il/"}
+    ]},
+  lev:{intro:"Our recommended balance. Ten Westinghouse DC fans — 6 speeds, remote, dimmable CCT light — with verified airflow and noise, a 15-year motor warranty, and an IP44 pergola fan that keeps its light.",
+    note:"<b>Watch:</b> installation is not included. WeFans (the importer) resells this exact range with a ₪99/fan install option if you want a one-stop installed price. Confirm the parents' room size before fixing 48″.",
+    neg:"Send this basket and ask for an all-in installed price. Mention the ₪6,013 KSP basket and ask Lev to match it or include installation / an extended parts warranty.",
+    lines:[
+      {room:"Bedrooms", sub:"kids ×3 + parents", model:"Talia 48″ DC", spec:"Westinghouse · white/oak · 28W CCT · remote · 45 dB", qty:4, unit:749, url:"https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-48-TALIA-%d7%98%d7%9c%d7%99%d7%94-DC-Westinghouse-i15529"},
+      {room:"Living room", sub:"main space", model:"Magnolia 52″ DC", spec:"3-blade mahogany · 24W CCT · 6,635 CFM · 48 dB", qty:1, unit:1312, url:"https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-%d7%9e%d7%92%d7%a0%d7%95%d7%9c%d7%99%d7%94-52-CCT-Magnolia-Westinghouse-i18701"},
+      {room:"Additional living", sub:"2nd space", model:"Talia 52″ DC", spec:"28W CCT · 6,143 CFM · 45 dB · remote", qty:1, unit:725, url:"https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-52-TALIA-%d7%98%d7%9c%d7%99%d7%94-DC-Westinghouse-i15532"},
+      {room:"Pergola", sub:"outdoor ×2", model:"Jessica 52″ IP44 DC", spec:"28W light · remote · covered outdoor", qty:2, unit:1137, url:"https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-52-JESSICA-%d7%92%d7%a1%d7%99%d7%a7%d7%94-IP44-Westinghouse-i15553"},
+      {room:"Mamad", sub:"safe room", model:"Longwood 42″ DC", spec:"white/oak · 24W CCT · 4,979 CFM · 48 dB", qty:1, unit:874, url:"https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-%d7%9c%d7%95%d7%a0%d7%92%d7%95%d7%95%d7%93-CCT-42-Longwood-Westinghouse-i18707"},
+      {room:"Study", sub:"home office", model:"Talia 42″ DC", spec:"28W CCT · 4,590 CFM · 45 dB · remote", qty:1, unit:612, url:"https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-42-TALIA-%d7%98%d7%9c%d7%99%d7%94-DC-Westinghouse-i15528"}
+    ]},
+  soho:{intro:"The premium design tier. Soho Air's designer DC range with published airflow on every model, free delivery, and a true IP55 outdoor fan with light for the pergola. Backed by a dedicated fan company and installer network.",
+    note:"<b>Watch:</b> delivery is up to 20 business days. The basket uses the 5-year Apolo Clear IP55 for the pergola; the cheaper Tornado IP55 (₪1,700) saves ₪1,530 but has no light and only a 2-year warranty. Installation by Soho's electrician adds a 1-year install warranty + free first-year home visit.",
+    neg:"Ask Soho for a project price on all ten plus their installer quote — a 10-fan order is exactly the kind of package they discount. Compare the installed total against Lev + a separate electrician.",
+    lines:[
+      {room:"Bedrooms", sub:"kids ×3 + parents", model:"Petit Pro 49 LED", spec:"DC · 6-speed · 5,936 CFM · 18W CCT · hugger · remote", qty:4, unit:1360, url:"https://www.sohoair.co.il/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-petit-pro-49-led/"},
+      {room:"Living room", sub:"main space", model:"Apolo Clear W+L 54″", spec:"DC · 6-speed · 5,537 CFM · light included", qty:1, unit:1700, url:"https://www.sohoair.co.il/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-apolo-clear-w-l/"},
+      {room:"Additional living", sub:"2nd space", model:"Petit Pro 49 LED", spec:"DC · 6-speed · 5,936 CFM · 18W CCT", qty:1, unit:1360, url:"https://www.sohoair.co.il/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-petit-pro-49-led/"},
+      {room:"Pergola", sub:"outdoor ×2", model:"Apolo Clear IP55 W+L", spec:"DC · IP55 · light included · outdoor", qty:2, unit:2465, url:"https://www.sohoair.co.il/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-apolo-clear-white-l/"},
+      {room:"Mamad", sub:"safe room", model:"Petit Pro 49 LED", spec:"DC · hugger · 18W CCT · 5,936 CFM", qty:1, unit:1360, url:"https://www.sohoair.co.il/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-petit-pro-49-led/"},
+      {room:"Study", sub:"home office", model:"Petit Pro 49 LED", spec:"DC · 6-speed · 18W CCT · remote", qty:1, unit:1360, url:"https://www.sohoair.co.il/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-petit-pro-49-led/"}
+    ]}
+};
+
+/* ---------- HEBREW OVERLAY (vendor + basket copy) ---------- */
+const HE = {
+  vendors:{
+    ksp:{sub:"", tag:"המחיר הנמוך ביותר",
+      motor:"AC/DC מעורב", warranty:"9–10 שנים מנוע · שנה חלקים", deliveryTxt:"₪30 · אפשרות איסוף", install:"לא כלול",
+      why:["הסל המלא הזול ביותר — ₪6,013 עם משלוח, כ-₪2,800 מתחת למועמד הבא.","לכל מאוורר תאורת LED; מאוורר הפרגולה Star Outdoor מזרים 7,543 CFM מאומתים.","קמעונאי גדול עם איסוף עצמי והחזרות סטנדרטיות."],
+      watch:["לחלק מדגמי הסלון/מטבח/חדר עבודה אין זרימת אוויר מפורסמת — אמתו לפני ההזמנה.","מנועי AC/DC מעורבים; אחריות חלקים לשנה בלבד; אין שירות התקנה."],
+      specs:["10 מאווררים · LED בכולם","Star Outdoor IP44","משלוח ₪30","איסוף עצמי זמין"],
+      rec:"<b>KSP</b> היא הבחירה שלכם אם התקציב מוביל. אתם חוסכים בערך ₪2,800 מול האפשרות המאוזנת — רק אמתו זרימת אוויר בשלושת הדגמים הלא מאומתים ותקצבו בנפרד חשמלאי."},
+    lev:{sub:"לב המשרד · תל אביב", tag:"האיזון הטוב ביותר · הבחירה שלנו",
+      motor:"הכול DC · 6 מהירויות", warranty:"15 שנה מנוע · שנתיים חלקים", deliveryTxt:"₪25", install:"לא כלול",
+      why:["כל העשרה הם מאווררי Westinghouse DC עם 6 מהירויות, שלט ותאורת CCT מתעמעמת.","זרימת אוויר ורעש מפורסמים: Talia 52 = 6,143 CFM ב-45 dB; Magnolia 52 = 6,635 CFM.","אחריות מנוע ל-15 שנה; Jessica IP44 נותנת לפרגולה תאורה + דירוג חוץ."],
+      watch:["אין התקנה — סדרו חשמלאי מורשה (WeFans מוכר מחדש את אותה סדרה עם אפשרות התקנה ב-₪99 למאוורר).","אשרו את גודל חדר ההורים; עברו ל-Talia 52 אם הוא מעל ~25 מ״ר."],
+      specs:["הכול DC · 6 מהירויות","אחריות מנוע 15 שנה","פרגולה IP44 + תאורה","משלוח ₪25"],
+      rec:"<b>לב המשרד</b> היא הבחירה הכוללת הטובה ביותר: ביצועי DC מאומתים ואחריות מנוע ל-15 שנה ב-₪8,818 — רק ₪2,805 מעל הסל הזול. זה הספק שהיינו מנהלים איתו משא ומתן קודם."},
+    soho:{sub:"סוהו אייר · חיפה", tag:"עיצוב ושירות",
+      motor:"הכול DC · 5–6 מהירויות", warranty:"5 שנים מנוע · שנה התקנה", deliveryTxt:"חינם · עד 20 ימים", install:"אפשרות חשמלאי החברה",
+      why:["מותג ישראלי מעוצב (Soho Design, נוסד 1996) — המראה שהצעת SWING רדפה אחריו, בפחות.","זרימת אוויר מפורסמת בכל דגם; Apolo Clear IP55 נותן לפרגולה דירוג חוץ אמיתי + תאורה.","חברת מאווררים ייעודית: משלוח חינם, רשת מתקינים, אחריות התקנה לשנה + ביקור בית חינם, מעבדת שירות בחיפה."],
+      watch:["מחיר פרימיום — כ-₪7,300 מעל הסל המאוזן; אתם משלמים על עיצוב ושירות.","משלוח עד 20 ימי עסקים; שעות פעילות 9:00–13:30. למאוורר החוץ הזול יותר Tornado יש אחריות של שנתיים בלבד."],
+      specs:["סדרת DC מעוצבת","אחריות מנוע 5 שנים","פרגולה IP55 + תאורה","משלוח חינם"],
+      rec:"<b>Soho Air</b> היא הבחירה אם עיצוב וקשר שירות ייעודי חשובים ביותר. זו רמת הפרימיום — בערך ₪7,300 מעל הסל המאוזן — עם משלוח חינם ורשת מתקינים אמיתית."},
+    wefans:{sub:"יבואן ווסטינגהאוס", tag:"מקור חלופי לווסטינגהאוס",
+      motor:"הכול DC · 6 מהירויות", warranty:"15 שנה מנוע · שנתיים חלקים", deliveryTxt:"מחירים עם משלוח", install:"אפשרות ₪99 / מאוורר"},
+    pacific:{sub:"פסיפיק", tag:"סל במראה עץ",
+      motor:"בעיקר DC", warranty:"משתנה לפי דגם", deliveryTxt:"₪30", install:"לא כלול"},
+    swing:{sub:"סווינג · טרנדלייט", tag:"בסיס הצעת פרימיום",
+      motor:"הכול DC", warranty:"אחריות מותג", deliveryTxt:"חינם עם המאוורר", install:"לא כלול"}
+  },
+  baskets:{
+    ksp:{intro:"רצפת המחיר. כל העשרה מ-KSP עם LED בכל מאוורר. חזק במחיר ובפרגולה; אמתו זרימת אוויר בדגמי הסלון, המטבח וחדר העבודה לפני שאתם מתחייבים.",
+      note:"<b>שימו לב:</b> ל-Hercules 60 (סלון), Storm 48 (מטבח) ו-Storm 42 (חדר עבודה) אין CFM מפורסם — בקשו מ-KSP לאשר זרימת אוויר, או החליפו לדגם מאומת. אחריות חדר השינה Venta היא 4 שנים; אחריות החלקים של Semicom היא שנה.",
+      neg:"בקשו מ-KSP מחיר כולל התקנה יחיד לכל העשרה והאם קופון NOV26 מצטבר. השתמשו בסכום ₪6,013 כעוגן כשאתם מתמחרים מול לב המשרד.",
+      lines:[
+        {room:"חדרי שינה", sub:"ילדים ×3 + הורים", spec:"Venta · לבן · IP54 · LED 22W"},
+        {room:"סלון", sub:"החלל המרכזי", spec:"Semicom · עץ/לבן · LED 20W"},
+        {room:"סלון נוסף", sub:"מטבח / חלל שני", spec:"Semicom · עץ/שחור · LED 25W"},
+        {room:"פרגולה", sub:"חוץ ×2", spec:"Star · לבן · IP44 · 7,543 CFM · LED 24W"},
+        {room:"ממ״ד", sub:"חדר בטוח", spec:"Semicom · לבן · LED 18W"},
+        {room:"חדר עבודה", sub:"משרד ביתי", spec:"Semicom · עץ/שחור · LED 25W"}
+      ]},
+    lev:{intro:"האיזון המומלץ שלנו. עשרה מאווררי Westinghouse DC — 6 מהירויות, שלט, תאורת CCT מתעמעמת — עם זרימת אוויר ורעש מאומתים, אחריות מנוע ל-15 שנה, ומאוורר פרגולה IP44 ששומר על התאורה שלו.",
+      note:"<b>שימו לב:</b> ההתקנה אינה כלולה. WeFans (היבואן) מוכר מחדש את אותה סדרה בדיוק עם אפשרות התקנה ב-₪99 למאוורר אם תרצו מחיר כולל התקנה ממקום אחד. אשרו את גודל חדר ההורים לפני שאתם קובעים 48″.",
+      neg:"שלחו את הסל הזה ובקשו מחיר כולל התקנה. הזכירו את סל KSP ב-₪6,013 ובקשו מלב להשוות אותו או לכלול התקנה / אחריות חלקים מורחבת.",
+      lines:[
+        {room:"חדרי שינה", sub:"ילדים ×3 + הורים", spec:"Westinghouse · לבן/אלון · 28W CCT · שלט · 45 dB"},
+        {room:"סלון", sub:"החלל המרכזי", spec:"3 להבים מהגוני · 24W CCT · 6,635 CFM · 48 dB"},
+        {room:"סלון נוסף", sub:"חלל שני", spec:"28W CCT · 6,143 CFM · 45 dB · שלט"},
+        {room:"פרגולה", sub:"חוץ ×2", spec:"תאורת 28W · שלט · חוץ מקורה"},
+        {room:"ממ״ד", sub:"חדר בטוח", spec:"לבן/אלון · 24W CCT · 4,979 CFM · 48 dB"},
+        {room:"חדר עבודה", sub:"משרד ביתי", spec:"28W CCT · 4,590 CFM · 45 dB · שלט"}
+      ]},
+    soho:{intro:"רמת העיצוב הפרימיום. סדרת ה-DC המעוצבת של Soho Air עם זרימת אוויר מפורסמת בכל דגם, משלוח חינם, ומאוורר חוץ IP55 אמיתי עם תאורה לפרגולה. מגובה בחברת מאווררים ייעודית ורשת מתקינים.",
+      note:"<b>שימו לב:</b> המשלוח עד 20 ימי עסקים. הסל משתמש ב-Apolo Clear IP55 עם 5 שנים לפרגולה; ה-Tornado IP55 הזול יותר (₪1,700) חוסך ₪1,530 אבל ללא תאורה ועם אחריות של שנתיים בלבד. התקנה על ידי החשמלאי של Soho מוסיפה אחריות התקנה לשנה + ביקור בית חינם בשנה הראשונה.",
+      neg:"בקשו מ-Soho מחיר פרויקט על כל העשרה בתוספת הצעת המתקין שלהם — הזמנה של 10 מאווררים היא בדיוק סוג החבילה שהם מתמחרים בהנחה. השוו את הסכום כולל ההתקנה מול לב + חשמלאי נפרד.",
+      lines:[
+        {room:"חדרי שינה", sub:"ילדים ×3 + הורים", spec:"DC · 6 מהירויות · 5,936 CFM · 18W CCT · צמוד תקרה · שלט"},
+        {room:"סלון", sub:"החלל המרכזי", spec:"DC · 6 מהירויות · 5,537 CFM · תאורה כלולה"},
+        {room:"סלון נוסף", sub:"חלל שני", spec:"DC · 6 מהירויות · 5,936 CFM · 18W CCT"},
+        {room:"פרגולה", sub:"חוץ ×2", spec:"DC · IP55 · תאורה כלולה · חוץ"},
+        {room:"ממ״ד", sub:"חדר בטוח", spec:"DC · צמוד תקרה · 18W CCT · 5,936 CFM"},
+        {room:"חדר עבודה", sub:"משרד ביתי", spec:"DC · 6 מהירויות · 18W CCT · שלט"}
+      ]}
+  }
+};
+
+/* ---------- UI STRINGS ---------- */
+const STR = {
+  en:{
+    docTitle:"Ceiling Fan Proposals · 10 Fans, One Vendor · Project IDIT",
+    brandTitle:"Fan Proposals", brandSmall:"One vendor · 10 fans",
+    navFinalists:"Finalists", navWhy:"Why these 3", navCharts:"Charts", navCompare:"Scorecard", navBaskets:"Full baskets", navNegotiate:"Negotiate", navMethod:"Method",
+    print:"Print / PDF",
+    heroEyebrow:"Procurement decision · November 2026",
+    heroH1:'Ten fans.<br>Six vendors.<br><em>Three worth a call.</em>',
+    heroLead:'You want to buy all ten ceiling fans from <b>one vendor</b> and negotiate the whole package. We priced a complete 10-fan basket at every Israeli vendor that can supply it, scored each on <b>total price</b>, <b>product quality</b> and <b>service</b>, and kept the three that each win on a different priority — including the newly researched <b>Soho Air</b> range.',
+    chip1:'Project <b>IDIT BENNATAN</b>', chip2:'Zichron Yaakov · new build', chip3:'Quote ref <b>06/018925</b>', chip4:'Prices <b>incl. 18% VAT</b>',
+    stat1:'fans across 7 rooms', stat2:'vendors priced end-to-end', stat3:'finalists to negotiate', stat4:'delivered price range',
+    priH:'What matters most to you?',
+    priP:"Tap a priority — we'll point you to the finalist that fits it. All three cover the same ten rooms with a light on every fan.",
+    priKsp:'Lowest price', priLev:'Best balance', priSoho:'Design & service',
+    finEyebrow:'The shortlist', finH:'Three finalists, one for each priority',
+    finP:'Each card is a complete, single-vendor proposal for all ten fans. Scores are out of 10; the full method is at the bottom. Tap “View full basket” for the itemized list you can send to the vendor.',
+    whyEyebrow:'How we narrowed it down', whyH:'Why these three made the cut',
+    whyP:"Six vendors can supply all ten fans. Three were set aside — not because they're bad, but because another finalist does the same job for less, or sells the identical range.",
+    whySetH:'Set aside (and why)',
+    elim1:'<b>WeFans</b> — the Westinghouse importer.<p>Sells the <b>same Talia / Carla / Magnolia range</b> as Lev Hamisrad at nearly the same price. Kept as an <b>alternate source</b> for the Lev basket — it adds a ₪99/fan installation option. Not a distinct choice.</p>',
+    elim2:'<b>SWING (Trendlight quote)</b> — premium Israeli brand.<p>A full 10-fan basket runs <b>≈₪17,575</b>, more than Soho Air for a similar design tier. The quoted Nexus light kit &amp; long rod also have <b>unresolved compatibility</b>. Soho offers the premium slot for less.</p>',
+    elim3:'<b>Pacific</b> — the wood-look basket.<p>At <b>₪9,038</b> it costs more than Lev Hamisrad, with <b>unpublished airflow</b> on key models and two items flagged low-stock. Lev gives verified DC performance for less.</p>',
+    whyRemainH:'The three that remain',
+    tierKspSmall:'Wins when price is the priority', tierLevSmall:'Best quality-per-shekel · our pick', tierSohoSmall:'Wins on design & dedicated service',
+    whyRemainP:'Together they span the whole decision: save money, balance it, or invest in design. You\'re not choosing “good vs bad” — you\'re choosing <b>which priority</b> matters for this house.',
+    chEyebrow:'See the differences', chH:'The metrics, side by side',
+    chP:'Hover any bar or point for details. Finalists are shown in colour; the three set-aside vendors are greyed.',
+    chPriceH:'Total delivered price · all 10 fans', chPriceSub:'Products + delivery, incl. VAT. Installation is separate everywhere (see baskets).',
+    chRadarH:'Finalist score radar', chRadarSub:'Price · Product · Service, each out of 10. Bigger area = stronger overall.',
+    chStackH:"What you're paying for", chStackSub:'Products vs delivery for each finalist. Soho ships free; its premium is the product itself.',
+    scEyebrow:'Full evaluation', scH:'Scorecard · all six vendors',
+    scP:'Composite = 35% price + 40% product + 25% service. “Keep” marks the three finalists; the others are alternate or dominated (see above).',
+    thVendor:'Vendor', thTotal:'Total ₪', thPrice:'Price /10', thProduct:'Product /10', thService:'Service /10', thComposite:'Composite', thMotor:'Motor', thWarranty:'Warranty', thDelivery:'Delivery', thInstall:'Install', thStatus:'Status',
+    bkEyebrow:'Ready to send', bkH:'The itemized proposals',
+    bkP:'One complete basket per finalist — every room, model, quantity and line price, plus a negotiation note. This is the document you hand a vendor and say “quote me this, installed.”',
+    ngEyebrow:'Use the leverage', ngH:'How to negotiate the whole package', ngP:'Buying all ten from one vendor is your leverage. Work through these steps before you pay.',
+    ng1h:'Send one itemized request', ng1p:'Email the chosen basket to the vendor and ask for a single <b>installed</b> price: exact SKU, finish, blade size, light kit, rod, remote, delivery and installation — all ten fans on one quote.',
+    ng2h:'Play the finalists against each other', ng2p:"Tell Lev Hamisrad you have a ₪6,013 KSP basket and a Soho design option. Ask each to <b>beat or match</b> the other's total, or throw in installation / extended warranty.",
+    ng3h:'Confirm stock & lead time in writing', ng3p:'“In stock” on a website is a claim. Get a <b>delivery date</b> tied to your construction schedule. Soho Air quotes up to 20 business days; SWING\'s quote is special-order, non-cancelable.',
+    ng4h:'Pin down warranty & who pays freight', ng4p:'Motor warranty ≠ parts warranty. Ask <b>who pays shipping on a repair</b>, and whether installation by their electrician extends coverage (Soho: 1-year install warranty + free home visit).',
+    ng5h:'Verify the outdoor & small-room specs', ng5p:"Pergola fans need a real outdoor rating (IP44 covered / IP55 exposed) and a light if you want one. Confirm the parents' room size before fixing a 48″ vs 52″ bedroom fan.",
+    ng6h:'Lock it before paying', ng6p:'Get the final all-in price, finish, lead time and warranty <b>in writing</b>, then pay. Keep this page and the original Trendlight quote as your reference baseline.',
+    mtEyebrow:'Transparency', mtH:'Method, sources & caveats', mtScoreH:'How scoring works',
+    mtScoreP:'Each vendor gets three sub-scores out of 10, then a weighted composite. Price score = 10 × (cheapest basket ÷ this basket), so the cheapest earns 10.',
+    wProduct:'Product quality', wPrice:'Total price', wService:'Service',
+    mtDetailP:'<b>Product</b> rewards DC motors, published airflow (CFM) &amp; noise (dB), included light, outdoor IP rating and warranty length. <b>Service</b> rewards delivery cost/speed, installation options, home-visit warranty and vendor specialization. The three finalists are the best option at each price tier after removing duplicates and dominated choices — not a single composite ranking.',
+    mtSrcH:'Key sources',
+    src1:'<a href="https://www.sohoair.co.il/" target="_blank" rel="noopener">Soho Air — official store</a> · indoor &amp; outdoor catalogs, prices &amp; specs checked 13 Nov 2026 (15% “SOHO SALE” live).',
+    src2:'<a href="https://www.sohoair.co.il/%D7%90%D7%95%D7%93%D7%95%D7%AA%D7%99%D7%A0%D7%95/" target="_blank" rel="noopener">Soho Air — about / warranty</a> · 5-yr motor warranty, Haifa service lab, installer network.',
+    src3:'<a href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%99-%d7%aa%d7%a7%d7%a8%d7%94--Westinghouse-c472" target="_blank" rel="noopener">Lev Hamisrad — Westinghouse range</a> · prices checked 13 Nov 2026.',
+    src4:'<a href="index.html">Local buyer\'s guide</a> · KSP &amp; Pacific baskets, SWING retail, verified 10 Nov 2026.',
+    src5:'Trendlight quote 06/018925 · SWING 7-fan baseline ₪11,583.35, dated 18 Sep 2026.',
+    src6:'<a href="dashboard.html">10-fan dashboard</a> · room plan &amp; November price refresh.',
+    callout:'<b>Read before ordering.</b> Prices include 18% VAT and were checked 10–13 Nov 2026; stock, exact finish and promotions change. Soho Air\'s <b>Tornado</b> outdoor fan carries only a <b>2-year</b> warranty (the basket uses the 5-year Apolo Clear IP55 instead). Soho delivery is up to <b>20 business days</b>. SWING\'s Nexus light kit &amp; long rod compatibility is unresolved. Installation by a licensed electrician is <b>not included</b> in any total except where noted. This is a planning aid, not a checkout — confirm everything in writing.',
+    foot1:'Ceiling Fan Proposals · Project IDIT · Zichron Yaakov · prepared 13 November 2026',
+    footGuide:"Full buyer's guide", footDash:'10-fan dashboard', footTop:'Back to top ↑',
+    rankBudget:'Budget winner', rankBalance:'Our pick · balance', rankPremium:'Premium choice',
+    cardDelivered:'all 10 fans delivered · incl. VAT', cardWhy:"Why it's here", cardWatch:'Watch out', cardBtn:'View full basket',
+    mPrice:'Price', mProduct:'Product', mService:'Service', axPrice:'Price', axProduct:'Product', axService:'Service',
+    finalistTag:'FINALIST', tipDelivered:'delivered', tipComposite:'Composite',
+    legProducts:'Products', legDelivery:'Delivery', freeShip:'free ship', shipSuffix:'ship',
+    badgeKeep:'Finalist', badgeOut:'Set aside',
+    bhRoom:'Room', bhModel:'Model & spec', bhQty:'Qty', bhUnit:'Unit', bhLine:'Line',
+    basketTitleSuffix:'complete 10-fan proposal', bsDelivered:'delivered · incl. VAT',
+    bsProducts:'Products', bsDelivery:'Delivery', bsGrand:'Total delivered', free:'Free',
+    productPage:'product page ↗', negLabel:'Negotiation note:',
+    ariaBack:'Back to top', ariaNav:'Main', ariaPri:'Choose a priority', ariaLang:'Language',
+    ariaPriceChart:'Bar chart of total price by vendor', ariaRadarChart:'Radar chart of the three finalists', ariaStackChart:'Stacked bars of product and delivery cost', ariaPrint:'Print / save as PDF'
+  },
+  he:{
+    docTitle:"הצעות מאווררי תקרה · 10 מאווררים, ספק אחד · פרויקט עידית",
+    brandTitle:"הצעות מאווררים", brandSmall:"ספק אחד · 10 מאווררים",
+    navFinalists:"המועמדים", navWhy:"למה השלושה", navCharts:"גרפים", navCompare:"טבלת ניקוד", navBaskets:"סלים מלאים", navNegotiate:"משא ומתן", navMethod:"מתודולוגיה",
+    print:"הדפסה / PDF",
+    heroEyebrow:"החלטת רכש · נובמבר 2026",
+    heroH1:'עשרה מאווררים.<br>שישה ספקים.<br><em>שלושה ששווה להתקשר אליהם.</em>',
+    heroLead:'אתם רוצים לקנות את כל עשרת מאווררי התקרה מ<b>ספק אחד</b> ולנהל משא ומתן על החבילה כולה. תמחרנו סל מלא של 10 מאווררים אצל כל ספק ישראלי שיכול לספק אותו, ניקדנו כל אחד לפי <b>מחיר כולל</b>, <b>איכות המוצר</b> ו<b>שירות</b>, והשארנו את השלושה שכל אחד מהם מנצח בעדיפות אחרת — כולל סדרת <b>Soho Air</b> שנחקרה לאחרונה.',
+    chip1:'פרויקט <b>עידית בן נתן</b>', chip2:'זכרון יעקב · בנייה חדשה', chip3:'מס׳ הצעה <b>06/018925</b>', chip4:'מחירים <b>כולל מע״מ 18%</b>',
+    stat1:'מאווררים ב-7 חדרים', stat2:'ספקים תומחרו מקצה לקצה', stat3:'מועמדים למשא ומתן', stat4:'טווח מחיר כולל משלוח',
+    priH:'מה הכי חשוב לכם?',
+    priP:'בחרו עדיפות — נכווין אתכם למועמד שמתאים לה. כל השלושה מכסים את אותם עשרה חדרים עם תאורה בכל מאוורר.',
+    priKsp:'המחיר הנמוך ביותר', priLev:'האיזון הטוב ביותר', priSoho:'עיצוב ושירות',
+    finEyebrow:'הרשימה המצומצמת', finH:'שלושה מועמדים, אחד לכל עדיפות',
+    finP:'כל כרטיס הוא הצעה מלאה מספק יחיד לכל עשרת המאווררים. הניקוד הוא מתוך 10; המתודולוגיה המלאה בתחתית. לחצו על "צפייה בסל המלא" לרשימה המפורטת שתוכלו לשלוח לספק.',
+    whyEyebrow:'איך צמצמנו', whyH:'למה השלושה האלה נבחרו',
+    whyP:'שישה ספקים יכולים לספק את כל עשרת המאווררים. שלושה הוצאו הצידה — לא בגלל שהם גרועים, אלא בגלל שמועמד אחר עושה את אותה עבודה בפחות, או מוכר את אותה סדרה בדיוק.',
+    whySetH:'הוצאו הצידה (ולמה)',
+    elim1:'<b>WeFans</b> — יבואן ווסטינגהאוס.<p>מוכר את <b>אותה סדרת Talia / Carla / Magnolia</b> כמו לב המשרד כמעט באותו מחיר. נשמר כ<b>מקור חלופי</b> לסל של לב — הוא מוסיף אפשרות התקנה ב-₪99 למאוורר. לא בחירה נפרדת.</p>',
+    elim2:'<b>SWING (הצעת טרנדלייט)</b> — מותג ישראלי פרימיום.<p>סל מלא של 10 מאווררים מגיע ל<b>≈₪17,575</b>, יותר מ-Soho Air עבור רמת עיצוב דומה. לערכת התאורה Nexus ולמוט הארוך בהצעה יש גם <b>אי-תאימות לא פתורה</b>. Soho מציע את משבצת הפרימיום בפחות.</p>',
+    elim3:'<b>Pacific</b> — סל במראה עץ.<p>ב-<b>₪9,038</b> הוא יקר יותר מלב המשרד, עם <b>זרימת אוויר לא מפורסמת</b> בדגמים מרכזיים ושני פריטים שמסומנים במלאי נמוך. לב נותן ביצועי DC מאומתים בפחות.</p>',
+    whyRemainH:'שלושת הנותרים',
+    tierKspSmall:'מנצח כשהמחיר הוא העדיפות', tierLevSmall:'האיכות הטובה ביותר לשקל · הבחירה שלנו', tierSohoSmall:'מנצח בעיצוב ובשירות ייעודי',
+    whyRemainP:'יחד הם מכסים את כל ההחלטה: לחסוך כסף, לאזן, או להשקיע בעיצוב. אתם לא בוחרים "טוב מול רע" — אתם בוחרים <b>איזו עדיפות</b> חשובה לבית הזה.',
+    chEyebrow:'ראו את ההבדלים', chH:'המדדים, זה לצד זה',
+    chP:'רחפו מעל כל עמודה או נקודה לפרטים. המועמדים מוצגים בצבע; שלושת הספקים שהוצאו הצידה מופיעים באפור.',
+    chPriceH:'מחיר כולל עם משלוח · כל 10 המאווררים', chPriceSub:'מוצרים + משלוח, כולל מע״מ. ההתקנה נפרדת בכל מקום (ראו סלים).',
+    chRadarH:'רדאר ניקוד המועמדים', chRadarSub:'מחיר · מוצר · שירות, כל אחד מתוך 10. שטח גדול יותר = חזק יותר בסך הכול.',
+    chStackH:'על מה אתם משלמים', chStackSub:'מוצרים מול משלוח לכל מועמד. Soho שולח חינם; הפרימיום שלו הוא המוצר עצמו.',
+    scEyebrow:'הערכה מלאה', scH:'טבלת ניקוד · כל ששת הספקים',
+    scP:'ציון משוקלל = 35% מחיר + 40% מוצר + 25% שירות. "נבחר" מסמן את שלושת המועמדים; האחרים חלופיים או נחותים (ראו למעלה).',
+    thVendor:'ספק', thTotal:'סה״כ ₪', thPrice:'מחיר /10', thProduct:'מוצר /10', thService:'שירות /10', thComposite:'משוקלל', thMotor:'מנוע', thWarranty:'אחריות', thDelivery:'משלוח', thInstall:'התקנה', thStatus:'סטטוס',
+    bkEyebrow:'מוכן לשליחה', bkH:'ההצעות המפורטות',
+    bkP:'סל מלא אחד לכל מועמד — כל חדר, דגם, כמות ומחיר שורה, בתוספת הערת משא ומתן. זה המסמך שאתם מגישים לספק ואומרים "תנו לי הצעה על זה, כולל התקנה."',
+    ngEyebrow:'נצלו את המינוף', ngH:'איך לנהל משא ומתן על החבילה כולה', ngP:'קניית כל העשרה מספק אחד היא המינוף שלכם. עברו על השלבים האלה לפני שאתם משלמים.',
+    ng1h:'שלחו בקשה מפורטת אחת', ng1p:'שלחו במייל את הסל הנבחר לספק ובקשו מחיר <b>כולל התקנה</b> יחיד: SKU מדויק, גימור, גודל להבים, ערכת תאורה, מוט, שלט, משלוח והתקנה — כל עשרת המאווררים בהצעה אחת.',
+    ng2h:'שחקו את המועמדים זה מול זה', ng2p:'ספרו ללב המשרד שיש לכם סל KSP ב-₪6,013 ואפשרות עיצוב של Soho. בקשו מכל אחד <b>לשפר או להשוות</b> את הסכום של האחר, או להוסיף התקנה / אחריות מורחבת.',
+    ng3h:'אשרו מלאי וזמן אספקה בכתב', ng3p:'"במלאי" באתר הוא הצהרה. קבלו <b>תאריך אספקה</b> שמתואם ללוח הבנייה שלכם. Soho Air מצטט עד 20 ימי עסקים; ההצעה של SWING היא הזמנה מיוחדת, ללא ביטול.',
+    ng4h:'בררו אחריות ומי משלם על המשלוח', ng4p:'אחריות מנוע ≠ אחריות חלקים. שאלו <b>מי משלם על המשלוח בתיקון</b>, והאם התקנה על ידי החשמלאי שלהם מאריכה את הכיסוי (Soho: אחריות התקנה לשנה + ביקור בית חינם).',
+    ng5h:'אמתו את מפרטי החוץ והחדרים הקטנים', ng5p:'מאווררי פרגולה צריכים דירוג חוץ אמיתי (IP44 מקורה / IP55 חשוף) ותאורה אם תרצו. אשרו את גודל חדר ההורים לפני שאתם קובעים מאוורר 48″ מול 52″ לחדר שינה.',
+    ng6h:'נעלו לפני התשלום', ng6p:'קבלו את המחיר הסופי הכולל, הגימור, זמן האספקה והאחריות <b>בכתב</b>, ואז שלמו. שמרו את הדף הזה ואת הצעת טרנדלייט המקורית כבסיס ההתייחסות שלכם.',
+    mtEyebrow:'שקיפות', mtH:'מתודולוגיה, מקורות והסתייגויות', mtScoreH:'איך הניקוד עובד',
+    mtScoreP:'כל ספק מקבל שלושה תת-ציונים מתוך 10, ואז ציון משוקלל. ציון מחיר = 10 × (הסל הזול ÷ הסל הזה), כך שהזול ביותר מקבל 10.',
+    wProduct:'איכות המוצר', wPrice:'מחיר כולל', wService:'שירות',
+    mtDetailP:'<b>מוצר</b> מתגמל מנועי DC, זרימת אוויר מפורסמת (CFM) ורעש (dB), תאורה כלולה, דירוג IP לחוץ ואורך אחריות. <b>שירות</b> מתגמל עלות/מהירות משלוח, אפשרויות התקנה, אחריות ביקור בית והתמחות הספק. שלושת המועמדים הם האפשרות הטובה ביותר בכל רמת מחיר לאחר הסרת כפילויות ואפשרויות נחותות — לא דירוג משוקלל יחיד.',
+    mtSrcH:'מקורות מרכזיים',
+    src1:'<a href="https://www.sohoair.co.il/" target="_blank" rel="noopener">Soho Air — חנות רשמית</a> · קטלוגים לפנים ולחוץ, מחירים ומפרטים נבדקו ב-13 בנוב׳ 2026 (מבצע "SOHO SALE" 15% פעיל).',
+    src2:'<a href="https://www.sohoair.co.il/%D7%90%D7%95%D7%93%D7%95%D7%AA%D7%99%D7%A0%D7%95/" target="_blank" rel="noopener">Soho Air — אודות / אחריות</a> · אחריות מנוע ל-5 שנים, מעבדת שירות בחיפה, רשת מתקינים.',
+    src3:'<a href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%99-%d7%aa%d7%a7%d7%a8%d7%94--Westinghouse-c472" target="_blank" rel="noopener">לב המשרד — סדרת ווסטינגהאוס</a> · מחירים נבדקו ב-13 בנוב׳ 2026.',
+    src4:'<a href="index.html">מדריך הקנייה המקומי</a> · סלי KSP ו-Pacific, קמעונאות SWING, אומת ב-10 בנוב׳ 2026.',
+    src5:'הצעת טרנדלייט 06/018925 · בסיס SWING ל-7 מאווררים ₪11,583.35, מתאריך 18 בספט׳ 2026.',
+    src6:'<a href="dashboard.html">לוח בקרה ל-10 מאווררים</a> · תוכנית חדרים ורענון מחירים לנובמבר.',
+    callout:'<b>קראו לפני ההזמנה.</b> המחירים כוללים מע״מ 18% ונבדקו ב-10–13 בנוב׳ 2026; מלאי, גימור מדויק ומבצעים משתנים. מאוורר החוץ <b>Tornado</b> של Soho Air נושא אחריות של <b>שנתיים</b> בלבד (הסל משתמש ב-Apolo Clear IP55 עם 5 שנים במקום). המשלוח של Soho עד <b>20 ימי עסקים</b>. התאימות של ערכת התאורה Nexus והמוט הארוך של SWING אינה פתורה. התקנה על ידי חשמלאי מורשה <b>אינה כלולה</b> באף סכום אלא אם צוין אחרת. זהו כלי תכנון, לא קופה — אשרו הכול בכתב.',
+    foot1:'הצעות מאווררי תקרה · פרויקט עידית · זכרון יעקב · הוכן ב-13 בנובמבר 2026',
+    footGuide:'מדריך הקנייה המלא', footDash:'לוח בקרה ל-10 מאווררים', footTop:'חזרה למעלה ↑',
+    rankBudget:'מנצח התקציב', rankBalance:'הבחירה שלנו · איזון', rankPremium:'בחירת הפרימיום',
+    cardDelivered:'כל 10 המאווררים עם משלוח · כולל מע״מ', cardWhy:'למה הוא כאן', cardWatch:'שימו לב', cardBtn:'צפייה בסל המלא',
+    mPrice:'מחיר', mProduct:'מוצר', mService:'שירות', axPrice:'מחיר', axProduct:'מוצר', axService:'שירות',
+    finalistTag:'מועמד', tipDelivered:'עם משלוח', tipComposite:'משוקלל',
+    legProducts:'מוצרים', legDelivery:'משלוח', freeShip:'משלוח חינם', shipSuffix:'משלוח',
+    badgeKeep:'מועמד', badgeOut:'הוצא הצידה',
+    bhRoom:'חדר', bhModel:'דגם ומפרט', bhQty:'כמות', bhUnit:'מחיר יח׳', bhLine:'סה״כ שורה',
+    basketTitleSuffix:'הצעה מלאה ל-10 מאווררים', bsDelivered:'עם משלוח · כולל מע״מ',
+    bsProducts:'מוצרים', bsDelivery:'משלוח', bsGrand:'סה״כ עם משלוח', free:'חינם',
+    productPage:'דף המוצר ↗', negLabel:'הערת משא ומתן:',
+    ariaBack:'חזרה למעלה', ariaNav:'ראשי', ariaPri:'בחרו עדיפות', ariaLang:'שפה',
+    ariaPriceChart:'תרשים עמודות של מחיר כולל לפי ספק', ariaRadarChart:'תרשים רדאר של שלושת המועמדים', ariaStackChart:'עמודות מוערמות של עלות מוצר ומשלוח', ariaPrint:'הדפסה / שמירה כ-PDF'
+  }
+};
+
+/* ---------- STATE + I18N ---------- */
+let lang="he";
+try{const s=localStorage.getItem("fanprops-lang"); if(s==="he"||s==="en")lang=s;}catch(e){}
+let currentPriority="lev", currentBasket="lev";
+const L=()=>STR[lang];
+function vcopy(id){const v=VENDORS[id]; if(lang!=="he")return v; return Object.assign({},v,HE.vendors[id]||{});}
+function bcopy(id){const b=BASKETS[id]; if(lang!=="he")return b; const h=HE.baskets[id]||{}; const lines=b.lines.map((l,i)=>Object.assign({},l,(h.lines&&h.lines[i])||{})); return Object.assign({},b,h,{lines});}
+function vsub(v){return lang==="he"?(v.sub||""):(v.he||"");}
+function applyStatic(){
+  const s=L();
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==="he"?"rtl":"ltr";
+  document.title=s.docTitle;
+  document.querySelectorAll("[data-i]").forEach(n=>{const k=n.getAttribute("data-i"); if(s[k]!=null)n.innerHTML=s[k];});
+  document.querySelectorAll("[data-i-aria]").forEach(n=>{const k=n.getAttribute("data-i-aria"); if(s[k]!=null)n.setAttribute("aria-label",s[k]);});
+  document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
+  tip.style.direction=lang==="he"?"rtl":"ltr";
+  tip.style.textAlign="start";
+}
+function renderAll(){applyStatic();renderCards();renderPriceChart();renderRadar();renderStack();renderTable();renderBaskets();setPriority(currentPriority);openBasket(currentBasket);}
+function setLang(l){if(l!==lang){lang=l;try{localStorage.setItem("fanprops-lang",l);}catch(e){}} renderAll();}
+
+/* ---------- HELPERS ---------- */
+const $ = s => document.querySelector(s);
+const el = (t,c,h)=>{const e=document.createElement(t); if(c)e.className=c; if(h!=null)e.innerHTML=h; return e;};
+const tip = $("#tip");
+function showTip(html,x,y){tip.innerHTML=html;tip.style.opacity=1;moveTip(x,y);}
+function moveTip(x,y){const w=tip.offsetWidth,h=tip.offsetHeight;let nx=x+14,ny=y+14;if(nx+w>innerWidth-8)nx=x-w-14;if(ny+h>innerHeight-8)ny=y-h-14;tip.style.left=nx+"px";tip.style.top=ny+"px";}
+function hideTip(){tip.style.opacity=0;}
+function bindTip(node,html){node.addEventListener("mouseenter",e=>showTip(html,e.clientX,e.clientY));node.addEventListener("mousemove",e=>moveTip(e.clientX,e.clientY));node.addEventListener("mouseleave",hideTip);}
+const SVGNS="http://www.w3.org/2000/svg";
+function svgEl(t,attrs){const e=document.createElementNS(SVGNS,t);for(const k in attrs)e.setAttribute(k,attrs[k]);return e;}
+
+/* ---------- FINALIST CARDS ---------- */
+function meter(lab,val){return `<div class="meter"><span class="lab">${lab}</span><span class="bar"><i style="width:${val*10}%"></i></span><span class="val num">${val.toFixed(1)}</span></div>`;}
+function renderCards(){
+  const s=L();
+  const wrap=$("#cards"); wrap.innerHTML="";
+  const rank={ksp:s.rankBudget,lev:s.rankBalance,soho:s.rankPremium};
+  FINALISTS.forEach(id=>{
+    const v=vcopy(id);
+    const card=el("article","vcard"); card.dataset.vendor=id;
+    card.style.setProperty("--accent",v.color); card.style.setProperty("--accent-soft",v.soft);
+    card.innerHTML=`
+      <div class="vc-top">
+        <span class="vc-rank">${rank[id]}</span>
+        <div class="vc-name">${v.name}<small>${vsub(v)}</small></div>
+        <div class="vc-tag">${v.tag}</div>
+      </div>
+      <div class="vc-price"><b class="num">${money(v.total)}</b><span>${s.cardDelivered}</span></div>
+      <div class="vc-meters">${meter(s.mPrice,v.price)}${meter(s.mProduct,v.product)}${meter(s.mService,v.service)}</div>
+      <div class="vc-body">
+        <h4>${s.cardWhy}</h4>
+        <ul>${v.why.map(w=>`<li>${w}</li>`).join("")}</ul>
+        <h4>${s.cardWatch}</h4>
+        <ul>${v.watch.map(w=>`<li class="warn">${w}</li>`).join("")}</ul>
+      </div>
+      <div class="vc-specs">${v.specs.map(sp=>`<span class="spec">${sp}</span>`).join("")}</div>
+      <div class="vc-foot"><button class="vc-btn" data-open="${id}">${s.cardBtn} <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>`;
+    wrap.append(card);
+  });
+  wrap.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>{openBasket(b.dataset.open);document.getElementById("baskets").scrollIntoView({behavior:"smooth"});}));
+}
+
+/* ---------- PRIORITY ---------- */
+function setPriority(id){
+  currentPriority=id;
+  document.querySelectorAll(".pri-btn").forEach(b=>b.classList.toggle("active",b.dataset.pri===id));
+  $("#priRec").innerHTML=vcopy(id).rec;
+  document.querySelectorAll(".vcard").forEach(c=>{
+    c.classList.toggle("pick",c.dataset.vendor===id);
+    c.classList.toggle("dim",c.dataset.vendor!==id);
+  });
+}
+
+/* ---------- PRICE CHART ---------- */
+function renderPriceChart(){
+  const s=L();
+  const svg=$("#priceChart"); svg.innerHTML="";
+  const W=1080,H=300, padL=150,padR=90,padT=14,padB=34;
+  const max=18000, plotW=W-padL-padR, plotH=H-padT-padB;
+  const rows=ORDER.length, gap=10, bh=(plotH-gap*(rows-1))/rows;
+  for(let g=0;g<=max;g+=5000){
+    const x=padL+plotW*g/max;
+    svg.append(svgEl("line",{x1:x,y1:padT,x2:x,y2:padT+plotH,stroke:"#E2DBCC","stroke-width":1}));
+    const t=svgEl("text",{x:x,y:H-10,"text-anchor":"middle","font-size":12,fill:"#6F6A5E"});t.textContent=g===0?"₪0":"₪"+(g/1000)+"k";svg.append(t);
+  }
+  ORDER.forEach((id,i)=>{
+    const v=vcopy(id), y=padT+i*(bh+gap), w=plotW*v.total/max;
+    const g=svgEl("g",{}); g.style.cursor="pointer";
+    const rect=svgEl("rect",{x:padL,y:y,width:w,height:bh,rx:6,fill:v.finalist?v.hex:"#C9C2B4",opacity:v.finalist?1:.55});
+    g.append(rect);
+    const lab=svgEl("text",{x:padL-12,y:y+bh/2+4,"text-anchor":"end","font-size":14,"font-weight":v.finalist?700:500,fill:v.finalist?"#1C2B2D":"#6F6A5E"});lab.textContent=v.name;g.append(lab);
+    const val=svgEl("text",{x:padL+w+10,y:y+bh/2+4,"font-size":14,"font-weight":700,fill:v.finalist?v.hex:"#6F6A5E"});val.textContent=money(v.total);g.append(val);
+    if(v.finalist){const star=svgEl("text",{x:padL+w-12,y:y+bh/2+4,"text-anchor":"end","font-size":11,fill:"#fff","font-weight":700});star.textContent=s.finalistTag;if(w>110)g.append(star);}
+    bindTip(g,`<b>${v.name}</b><br>${money(v.total)} ${s.tipDelivered}<br>${s.mPrice} ${v.price.toFixed(1)} · ${s.mProduct} ${v.product.toFixed(1)} · ${s.mService} ${v.service.toFixed(1)}<br>${s.tipComposite} ${composite(v).toFixed(1)}/10`);
+    svg.append(g);
+  });
+  $("#priceLegend").innerHTML=ORDER.map(id=>`<span><i style="background:${VENDORS[id].finalist?VENDORS[id].hex:'#C9C2B4'}"></i>${VENDORS[id].name}</span>`).join("");
+}
+
+/* ---------- RADAR ---------- */
+function renderRadar(){
+  const s=L();
+  const svg=$("#radarChart"); svg.innerHTML="";
+  const cx=230,cy=185,R=140;
+  const axes=[{k:"price",lab:s.axPrice,ang:-90},{k:"product",lab:s.axProduct,ang:30},{k:"service",lab:s.axService,ang:150}];
+  const pt=(ang,r)=>{const a=ang*Math.PI/180;return [cx+r*Math.cos(a),cy+r*Math.sin(a)];};
+  [2,4,6,8,10].forEach(r=>{
+    const poly=axes.map(a=>pt(a.ang,R*r/10).join(",")).join(" ");
+    svg.append(svgEl("polygon",{points:poly,fill:"none",stroke:"#E2DBCC","stroke-width":1}));
+  });
+  axes.forEach(a=>{
+    const [x,y]=pt(a.ang,R);
+    svg.append(svgEl("line",{x1:cx,y1:cy,x2:x,y2:y,stroke:"#E2DBCC","stroke-width":1}));
+    const [lx,ly]=pt(a.ang,R+26);
+    const t=svgEl("text",{x:lx,y:ly+4,"text-anchor":"middle","font-size":14,"font-weight":700,fill:"#43504F"});t.textContent=a.lab;svg.append(t);
+  });
+  FINALISTS.forEach(id=>{
+    const v=vcopy(id);
+    const poly=axes.map(a=>pt(a.ang,R*v[a.k]/10).join(",")).join(" ");
+    const p=svgEl("polygon",{points:poly,fill:v.hex,"fill-opacity":.14,stroke:v.hex,"stroke-width":2.5});
+    p.style.cursor="pointer";
+    bindTip(p,`<b>${v.name}</b><br>${s.mPrice} ${v.price.toFixed(1)} · ${s.mProduct} ${v.product.toFixed(1)} · ${s.mService} ${v.service.toFixed(1)}<br>${s.tipComposite} ${composite(v).toFixed(1)}/10`);
+    svg.append(p);
+    axes.forEach(a=>{const [x,y]=pt(a.ang,R*v[a.k]/10);svg.append(svgEl("circle",{cx:x,cy:y,r:4,fill:v.hex}));});
+  });
+  $("#radarLegend").innerHTML=FINALISTS.map(id=>`<span><i style="background:${VENDORS[id].hex}"></i>${VENDORS[id].name} · ${composite(VENDORS[id]).toFixed(1)}</span>`).join("");
+}
+
+/* ---------- STACK ---------- */
+function renderStack(){
+  const s=L();
+  const svg=$("#stackChart"); svg.innerHTML="";
+  const W=460,H=380,padL=70,padR=20,padT=20,padB=50;
+  const max=17000, plotW=W-padL-padR, plotH=H-padT-padB;
+  const bw=86, gap=(plotW-bw*3)/4;
+  for(let g=0;g<=max;g+=5000){
+    const y=padT+plotH-plotH*g/max;
+    svg.append(svgEl("line",{x1:padL,y1:y,x2:W-padR,y2:y,stroke:"#E2DBCC","stroke-width":1}));
+    const t=svgEl("text",{x:padL-8,y:y+4,"text-anchor":"end","font-size":11,fill:"#6F6A5E"});t.textContent=g===0?"0":"₪"+(g/1000)+"k";svg.append(t);
+  }
+  FINALISTS.forEach((id,i)=>{
+    const v=vcopy(id), x=padL+gap+i*(bw+gap);
+    const hp=plotH*v.products/max, hd=plotH*v.delivery/max;
+    const g=svgEl("g",{});g.style.cursor="pointer";
+    const yp=padT+plotH-hp;
+    g.append(svgEl("rect",{x:x,y:yp,width:bw,height:hp,rx:5,fill:v.hex}));
+    if(v.delivery>0)g.append(svgEl("rect",{x:x,y:yp-hd,width:bw,height:hd,rx:3,fill:"#B98A4A"}));
+    const tot=svgEl("text",{x:x+bw/2,y:yp-hd-8,"text-anchor":"middle","font-size":13,"font-weight":700,fill:v.hex});tot.textContent=money(v.total);g.append(tot);
+    const lab=svgEl("text",{x:x+bw/2,y:H-26,"text-anchor":"middle","font-size":12.5,"font-weight":700,fill:"#1C2B2D"});lab.textContent=v.name;g.append(lab);
+    const sub=svgEl("text",{x:x+bw/2,y:H-10,"text-anchor":"middle","font-size":11,fill:"#6F6A5E"});sub.textContent=v.delivery>0?("+"+money(v.delivery)+" "+s.shipSuffix):s.freeShip;g.append(sub);
+    bindTip(g,`<b>${v.name}</b><br>${s.legProducts} ${money(v.products)}<br>${s.legDelivery} ${v.delivery>0?money(v.delivery):s.free}<br>${s.bsGrand} ${money(v.total)}`);
+    svg.append(g);
+  });
+  $("#stackLegend").innerHTML=`<span><i style="background:#1F8A70"></i>${s.legProducts}</span><span><i style="background:#B98A4A"></i>${s.legDelivery}</span>`;
+}
+
+/* ---------- SCORECARD ---------- */
+function renderTable(){
+  const s=L();
+  const tb=$("#cmpTable tbody"); tb.innerHTML="";
+  ORDER.forEach(id=>{
+    const v=vcopy(id);
+    const tr=el("tr",v.finalist?"finalist":"");
+    tr.innerHTML=`
+      <td class="vname"><i style="background:${v.hex}"></i>${v.name}</td>
+      <td class="num"><b>${money(v.total)}</b></td>
+      <td class="num">${v.price.toFixed(1)}</td>
+      <td class="num">${v.product.toFixed(1)}</td>
+      <td class="num">${v.service.toFixed(1)}</td>
+      <td><span class="score-pill" style="color:${v.finalist?v.hex:'#6F6A5E'}">${composite(v).toFixed(1)}</span></td>
+      <td>${v.motor}</td>
+      <td>${v.warranty}</td>
+      <td>${v.deliveryTxt}</td>
+      <td>${v.install}</td>
+      <td>${v.finalist?`<span class="badge keep">${s.badgeKeep}</span>`:`<span class="badge out">${s.badgeOut}</span>`}</td>`;
+    tb.append(tr);
+  });
+}
+
+/* ---------- BASKETS ---------- */
+function renderBaskets(){
+  const s=L();
+  const tabs=$("#basketTabs"), panels=$("#basketPanels");
+  tabs.innerHTML=""; panels.innerHTML="";
+  FINALISTS.forEach(id=>{
+    const v=vcopy(id), b=bcopy(id);
+    const tab=el("button","btab"+(id===currentBasket?" active":""));
+    tab.style.setProperty("--accent",v.color);
+    tab.setAttribute("role","tab"); tab.dataset.basket=id;
+    tab.innerHTML=`<b>${v.name}</b><small>${v.tag}</small><span class="bt-p num" style="color:${v.hex}">${money(v.total)}</span>`;
+    tab.addEventListener("click",()=>openBasket(id));
+    tabs.append(tab);
+
+    const panel=el("div","bpanel"+(id===currentBasket?" active":"")); panel.dataset.panel=id;
+    panel.style.setProperty("--accent",v.color);
+    const rows=b.lines.map(l=>`
+      <div class="brow">
+        <span class="b-room">${l.room}<small>${l.sub}</small></span>
+        <span class="b-model"><b>${l.model}</b><small>${l.spec}</small><a href="${l.url}" target="_blank" rel="noopener">${s.productPage}</a></span>
+        <span class="b-qty num">${l.qty}</span>
+        <span class="b-unit num">${money(l.unit)}</span>
+        <span class="b-line num">${money(l.qty*l.unit)}</span>
+      </div>`).join("");
+    panel.innerHTML=`
+      <div class="basket">
+        <div class="basket-intro">
+          <div><h3>${v.name} · ${s.basketTitleSuffix}</h3><p>${b.intro}</p></div>
+          <div class="tot"><b class="num">${money(v.total)}</b><span>${s.bsDelivered}</span></div>
+        </div>
+        <div class="brow head"><span>${s.bhRoom}</span><span>${s.bhModel}</span><span>${s.bhQty}</span><span>${s.bhUnit}</span><span>${s.bhLine}</span></div>
+        ${rows}
+        <div class="bsum">
+          <div><span>${s.bsProducts}</span><b class="num">${money(v.products)}</b></div>
+          <div><span>${s.bsDelivery}</span><b class="num">${v.delivery>0?money(v.delivery):s.free}</b></div>
+          <div class="grand"><span>${s.bsGrand}</span><b class="num">${money(v.total)}</b></div>
+        </div>
+        <div class="bnote">${b.note}<div class="neg"><b>${s.negLabel}</b> ${b.neg}</div></div>
+      </div>`;
+    panels.append(panel);
+  });
+}
+function openBasket(id){
+  currentBasket=id;
+  document.querySelectorAll(".btab").forEach(t=>t.classList.toggle("active",t.dataset.basket===id));
+  document.querySelectorAll(".bpanel").forEach(p=>p.classList.toggle("active",p.dataset.panel===id));
+}
+
+/* ---------- INIT ---------- */
+renderAll();
+document.querySelectorAll(".pri-btn").forEach(b=>b.addEventListener("click",()=>setPriority(b.dataset.pri)));
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>
