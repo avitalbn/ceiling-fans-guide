@@ -1,0 +1,2594 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>מדריך רכישה · 10 מאווררי תקרה — פרויקט IDIT</title>
+<meta name="description" content="מדריך רכישה והשוואת מחירים למאווררי התקרה בפרויקט: הצעת טרנדלייט 06/018925 (דיימונד, וויב, נקסוס) ועוד שלושה מאווררי ווסטינגהאוס, ו־22 דגמים מ־KSP ומחסני תאורה — דרישות לפי חדר, ספיקה ושקט, שלושה סלי רכש מדורגים, מלכודות רכש וקישורים למוצרים.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F2EA;
+  --paper-2:#EFEAE0;
+  --card:#FFFFFF;
+  --ink:#1A1916;
+  --muted:#6F685C;
+  --line:#E1DACC;
+  --brass:#96683E;
+  --brass-2:#B98A5C;
+  --brass-soft:#F3EBE1;
+  --sage:#55654F;
+  --sage-soft:#EAEFE6;
+  --warn:#9C5238;
+  --warn-soft:#F6E9E3;
+  --radius:10px;
+  --shadow:0 1px 2px rgba(26,25,22,.04), 0 12px 32px -18px rgba(26,25,22,.25);
+  --max:1180px;
+  --font-body:"Assistant",-apple-system,"SF Hebrew","Arial Hebrew",Arial,sans-serif;
+  --font-display:"Frank Ruhl Libre","Assistant",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.num{font-variant-numeric:tabular-nums;unicode-bidi:isolate}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  background:rgba(246,242,234,.88);
+  backdrop-filter:saturate(1.2) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.topbar .wrap{display:flex;align-items:center;gap:26px;height:66px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:.01em;white-space:nowrap}
+.brand-mark{
+  width:30px;height:30px;border-radius:50%;border:1px solid var(--ink);
+  display:grid;place-items:center;flex:none;
+}
+.brand-mark svg{width:16px;height:16px}
+.brand small{display:block;font-weight:400;font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;line-height:1.2}
+.nav{display:flex;gap:4px;margin-inline-start:auto;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{
+  font-size:14.5px;color:var(--muted);padding:8px 12px;border-radius:100px;
+  white-space:nowrap;transition:.18s;
+}
+.nav a:hover{color:var(--ink);background:rgba(0,0,0,.035)}
+.nav a.active{color:var(--ink);background:var(--card);border:1px solid var(--line)}
+.print-btn{
+  display:inline-flex;align-items:center;gap:7px;border:1px solid var(--ink);
+  background:transparent;color:var(--ink);border-radius:100px;padding:8px 14px;
+  font-size:13.5px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.18s;
+}
+.print-btn:hover{background:var(--ink);color:var(--paper)}
+.print-btn svg{width:14px;height:14px}
+
+/* ---------- hero ---------- */
+.hero{padding:64px 0 0;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--brass);
+}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--brass)}
+h1{
+  font-family:var(--font-display);font-weight:500;font-size:clamp(42px,5.4vw,72px);
+  line-height:1.04;letter-spacing:-.015em;margin:20px 0 20px;
+}
+h1 em{font-style:normal;color:var(--brass)}
+.hero-lead{font-size:19px;color:#4C473D;max-width:52ch;margin:0 0 26px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.chip{
+  display:inline-flex;align-items:center;gap:7px;background:var(--card);
+  border:1px solid var(--line);border-radius:100px;padding:6px 12px;
+  font-size:13px;color:var(--muted);
+}
+.chip b{color:var(--ink);font-weight:600}
+.chip svg{width:13px;height:13px;color:var(--brass)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:13px 22px;border-radius:100px;font-size:15px;font-weight:600;
+  border:1px solid var(--ink);transition:.18s;cursor:pointer;
+}
+.btn svg{width:15px;height:15px}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-primary:hover{background:#000;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:rgba(0,0,0,.05)}
+
+.hero-visual{display:grid;grid-template-columns:1.35fr .85fr;grid-template-rows:1fr 1fr;gap:12px;min-height:470px}
+.hv{border-radius:var(--radius);overflow:hidden;position:relative;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}
+.hv img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.hv:hover img{transform:scale(1.03)}
+.hv-main{grid-row:1 / span 2}
+.hv-main img{object-position:center}
+.hv figcaption{
+  position:absolute;inset-inline:0;bottom:0;padding:26px 16px 13px;
+  background:linear-gradient(transparent,rgba(20,19,17,.66));
+  color:#fff;font-size:12.5px;letter-spacing:.04em;
+}
+.hv-side figcaption{padding:20px 12px 10px;font-size:11.5px}
+
+/* stats */
+.stats{
+  margin-top:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.stat{padding:24px 26px;border-inline-start:1px solid var(--line)}
+.stat:first-child{border-inline-start:0;padding-inline-start:0}
+.stat-label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.stat-value{font-family:var(--font-display);font-size:33px;line-height:1.1;letter-spacing:-.01em}
+.stat-value small{font-family:var(--font-body);font-size:14px;color:var(--muted);letter-spacing:0}
+.stat-note{font-size:12.5px;color:var(--muted);margin-top:4px}
+
+/* ---------- sections ---------- */
+section{padding:78px 0}
+section.tight{padding:56px 0}
+.section-head{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;margin-bottom:38px}
+.section-head .eyebrow{margin-bottom:12px}
+h2{font-family:var(--font-display);font-weight:500;font-size:clamp(30px,3.4vw,44px);line-height:1.15;letter-spacing:-.01em;margin:0 0 12px}
+.section-lead{max-width:68ch;color:#4C473D;font-size:17.5px;margin:0}
+.section-index{font-family:var(--font-display);font-size:15px;color:var(--brass);letter-spacing:.1em;white-space:nowrap;padding-bottom:6px}
+.rule{height:1px;background:var(--line);margin:0}
+
+/* ---------- overview cards ---------- */
+.model-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.mini{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;transition:.22s;box-shadow:var(--shadow);
+}
+.mini:hover{transform:translateY(-3px);box-shadow:0 2px 3px rgba(26,25,22,.04),0 22px 40px -22px rgba(26,25,22,.3)}
+.mini-img{aspect-ratio:16/10;background:var(--paper-2);display:grid;place-items:center;overflow:hidden}
+.mini-img img{width:100%;height:100%;object-fit:contain;padding:14px}
+.mini-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.mini-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.mini-name{font-family:var(--font-display);font-size:23px;line-height:1.1}
+.mini-qty{font-size:12px;background:var(--paper-2);border-radius:100px;padding:3px 9px;color:var(--muted);white-space:nowrap}
+.mini-desc{font-size:14px;color:var(--muted);margin:0}
+.mini-prices{display:flex;align-items:baseline;gap:9px;margin-top:auto;padding-top:12px;border-top:1px dashed var(--line)}
+.mini-price{font-size:21px;font-weight:700}
+.mini-price-label{font-size:11.5px;color:var(--muted);display:block;font-weight:400}
+.saving{color:var(--sage);font-size:13px;font-weight:600;margin-inline-start:auto}
+
+/* ---------- product detail ---------- */
+.product{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  box-shadow:var(--shadow);overflow:hidden;margin-bottom:26px;
+}
+.product-head{
+  display:flex;gap:22px;align-items:center;flex-wrap:wrap;
+  padding:24px 28px;border-bottom:1px solid var(--line);
+  background:linear-gradient(90deg,var(--card),#FCFAF6);
+}
+.p-index{font-family:var(--font-display);font-size:15px;color:var(--brass);letter-spacing:.08em}
+.p-title{font-family:var(--font-display);font-size:29px;line-height:1.1;margin:0}
+.p-title span{font-family:var(--font-body);font-size:14px;color:var(--muted);font-weight:400;margin-inline-start:8px}
+.p-tag{font-size:14px;color:var(--muted);margin:0 0 0 auto;text-align:end}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.badge{font-size:11.5px;letter-spacing:.02em;border:1px solid var(--line);border-radius:100px;padding:3px 9px;color:var(--muted);background:var(--card)}
+.badge.dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.badge.green{background:var(--sage-soft);color:var(--sage);border-color:#D6DFCE}
+.badge.brass{background:var(--brass-soft);color:var(--brass);border-color:#E8D8C4}
+
+.product-body{display:grid;grid-template-columns:1.02fr .98fr;gap:0}
+.p-media{padding:24px;border-inline-end:1px solid var(--line);background:#FBF9F5}
+.gallery-main{
+  aspect-ratio:4/3;background:var(--card);border:1px solid var(--line);border-radius:8px;
+  display:grid;place-items:center;overflow:hidden;position:relative;
+}
+.gallery-main img{width:100%;height:100%;object-fit:contain;padding:12px}
+.gallery-main .zoom-tag{
+  position:absolute;top:10px;inset-inline-start:10px;font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);background:rgba(255,255,255,.9);padding:3px 8px;border-radius:100px;border:1px solid var(--line);
+}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.thumbs[data-thumbs="diamond"]{grid-template-columns:repeat(5,1fr)}
+.thumb{
+  aspect-ratio:1/1;background:var(--card);border:1px solid var(--line);border-radius:6px;
+  overflow:hidden;padding:5px;cursor:pointer;transition:.16s;
+}
+.thumb img{width:100%;height:100%;object-fit:contain}
+.thumb:hover{border-color:var(--brass-2)}
+.thumb.active{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink) inset}
+.video-chip{
+  display:flex;align-items:center;gap:12px;margin-top:12px;padding:10px;
+  border:1px solid var(--line);border-radius:8px;background:var(--card);cursor:pointer;
+  width:100%;text-align:start;transition:.18s;color:var(--ink);
+}
+.video-chip:hover{border-color:var(--ink);transform:translateY(-1px)}
+.vc-thumb{width:86px;height:56px;border-radius:5px;overflow:hidden;flex:none;position:relative;background:#000}
+.vc-thumb img{width:100%;height:100%;object-fit:cover;opacity:.86}
+.vc-thumb::after{
+  content:"";position:absolute;inset:0;margin:auto;width:24px;height:24px;border-radius:50%;
+  background:rgba(255,255,255,.92);
+  clip-path:polygon(0 0,0 100%,100% 50%);transform:scale(.55);
+}
+.vc-txt{font-size:13.5px;font-weight:600;line-height:1.35}
+.vc-txt small{display:block;color:var(--muted);font-weight:400;font-size:11.5px;margin-top:1px}
+
+.p-info{padding:26px 28px 28px}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:0 22px;margin:0 0 20px}
+.spec{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dotted var(--line);font-size:14px}
+.spec dt{color:var(--muted);white-space:nowrap}
+.spec dd{margin:0;font-weight:600;text-align:end}
+.spec.wide{grid-column:1/-1}
+.note{
+  font-size:13.5px;line-height:1.6;border-inline-start:2px solid var(--brass-2);
+  background:var(--brass-soft);padding:11px 14px;border-radius:0 8px 8px 0;margin:0 0 22px;color:#4E4438;
+}
+.note.warn{border-color:var(--warn);background:var(--warn-soft);color:#5C3A2C}
+.note b{font-weight:700}
+
+.price-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.price-box{border:1px solid var(--line);border-radius:9px;padding:13px 15px;background:#FCFBF8}
+.price-box.best{background:var(--sage-soft);border-color:#CFDBC6}
+.pb-label{font-size:11.5px;letter-spacing:.05em;color:var(--muted);margin-bottom:3px}
+.pb-value{font-size:24px;font-weight:700;line-height:1.2}
+.pb-sub{font-size:11.5px;color:var(--muted)}
+.pb-sub.delta{color:var(--sage);font-weight:600}
+
+.offers-title{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.offer{
+  display:grid;grid-template-columns:auto 1fr auto auto;gap:10px;align-items:center;
+  padding:9px 4px;border-bottom:1px solid var(--line);font-size:14px;transition:.15s;
+}
+.offer:hover{background:#FAF7F1}
+.offer:last-child{border-bottom:0}
+.off-dot{width:26px;height:26px;border-radius:50%;background:var(--paper-2);display:grid;place-items:center;font-size:11px;font-weight:700;color:var(--muted);flex:none}
+.offer-name{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.offer-name a{font-weight:600;border-bottom:1px solid transparent}
+.offer-name a:hover{border-color:var(--ink)}
+.tag-best{font-size:10px;letter-spacing:.06em;background:var(--sage);color:#fff;border-radius:3px;padding:1px 5px;font-weight:700}
+.off-price{font-weight:700;font-size:15px;white-space:nowrap}
+.off-price small{font-weight:400;color:var(--muted);font-size:11px}
+.off-go{width:26px;height:26px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--muted);transition:.15s}
+.off-go svg{width:12px;height:12px;transform:scaleX(-1)}
+.offer:hover .off-go{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* ---------- comparison table ---------- */
+.table-card{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+.table-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+thead th{
+  text-align:start;font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--muted);background:#FAF7F1;padding:13px 14px;border-bottom:1px solid var(--line);white-space:nowrap;
+}
+tbody td{padding:13px 14px;border-bottom:1px solid #EFE9DE;vertical-align:middle}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:#FCFAF6}
+td.name-cell b{display:block;font-weight:600}
+td.name-cell small{color:var(--muted);font-size:12px}
+td.name-cell a{border-bottom:1px solid var(--line)}
+td.name-cell a:hover{border-color:var(--ink)}
+td.price{font-weight:700;white-space:nowrap}
+td.price small{display:block;font-weight:400;color:var(--muted);font-size:11px}
+td.best{color:var(--sage);font-weight:700}
+.totals-row td{background:var(--ink);color:var(--paper);font-weight:700;border:0}
+.totals-row td small{color:#BDB6A6}
+.pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:100px;background:var(--paper-2);color:var(--muted);white-space:nowrap}
+.pill.green{background:var(--sage-soft);color:var(--sage)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+
+/* calculator */
+.calc{display:grid;grid-template-columns:1.05fr .95fr;gap:0;margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.calc-controls{padding:26px 28px;border-inline-end:1px solid var(--line)}
+.calc-title{font-family:var(--font-display);font-size:23px;margin:0 0 4px}
+.calc-sub{font-size:13.5px;color:var(--muted);margin:0 0 18px}
+.calc-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.calc-row:last-of-type{border-bottom:0}
+.calc-row-label b{display:block;font-size:14.5px}
+.calc-row-label small{color:var(--muted);font-size:12px}
+.stepper{display:flex;align-items:center;gap:2px;border:1px solid var(--line);border-radius:100px;overflow:hidden;background:#FCFBF8}
+.stepper button{width:30px;height:30px;border:0;background:transparent;font-size:17px;cursor:pointer;color:var(--muted);line-height:1}
+.stepper button:hover{background:var(--paper-2);color:var(--ink)}
+.stepper input{width:38px;border:0;text-align:center;font-family:inherit;font-size:15px;font-weight:700;background:transparent;color:var(--ink);outline:none}
+.calc-toggle{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--muted);margin-top:14px;cursor:pointer}
+.calc-toggle input{accent-color:var(--ink);width:16px;height:16px}
+.calc-results{padding:26px 28px;background:#FBF9F4;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.res-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:14.5px}
+.res-row span{color:var(--muted)}
+.res-row b{font-size:17px}
+.res-big{border-top:1px solid var(--line);padding-top:13px;margin-top:4px;display:flex;justify-content:space-between;align-items:baseline}
+.res-big span{font-size:14px;color:var(--muted)}
+.res-big b{font-family:var(--font-display);font-size:34px;color:var(--sage);line-height:1}
+.res-note{font-size:11.5px;color:var(--muted);line-height:1.5;margin:2px 0 0}
+
+/* ---------- alternatives ---------- */
+.alt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.alt{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  display:flex;flex-direction:column;transition:.2s;box-shadow:var(--shadow);
+}
+.alt:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(26,25,22,.05),0 24px 44px -24px rgba(26,25,22,.32)}
+.alt-img{aspect-ratio:4/3;background:#FBF9F5;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.alt-img img{width:100%;height:100%;object-fit:contain;padding:12px}
+.alt-flag{position:absolute;top:10px;inset-inline-start:10px;font-size:10.5px;letter-spacing:.06em;background:var(--card);border:1px solid var(--line);border-radius:100px;padding:3px 8px;color:var(--muted)}
+.alt-body{padding:17px 19px 19px;display:flex;flex-direction:column;gap:7px;flex:1}
+.alt-name{font-family:var(--font-display);font-size:21px;line-height:1.15;margin:0}
+.alt-name small{font-family:var(--font-body);font-size:12px;color:var(--muted);display:block;margin-top:2px}
+.alt-spec{font-size:12.5px;color:var(--muted);margin:0}
+.alt-price{display:flex;align-items:baseline;gap:8px;margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+.alt-price b{font-size:20px}
+.alt-price span{font-size:11.5px;color:var(--muted)}
+.alt-link{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:600;color:var(--brass);margin-top:2px}
+.alt-link svg{width:11px;height:11px;transform:scaleX(-1)}
+.alt-link:hover{text-decoration:underline}
+
+/* ---------- wider market ---------- */
+.alt-divider{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin:38px 0 16px;padding-top:28px;border-top:1px solid var(--line)}
+.alt-divider h3{font-family:var(--font-display);font-size:26px;font-weight:500;margin:5px 0 6px;line-height:1.2}
+.alt-divider p{margin:0;font-size:14px;color:var(--muted);max-width:66ch;line-height:1.6}
+.alt-grid.quad{grid-template-columns:repeat(4,1fr);gap:14px}
+.alt-grid.quad .alt-img{aspect-ratio:1/1}
+.alt-grid.quad .alt-img img{padding:14px}
+.alt-grid.quad .alt-name{font-size:18px}
+.alt-grid.quad .alt-body{padding:14px 15px 16px;gap:6px}
+.alt-grid.quad .alt-price b{font-size:19px}
+.alt-grid.quad .alt-spec{font-size:11.8px;line-height:1.5}
+.alt-spec.spec-chips{display:flex;flex-wrap:wrap;justify-content:flex-start;row-gap:2px;column-gap:14px}
+.spec-chips i{font-style:normal;white-space:nowrap}
+.alt-flag.hot{background:var(--sage);color:#fff;border-color:var(--sage)}
+
+/* ---------- market comparison ---------- */
+.market-note{
+  display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline;justify-content:space-between;
+  background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:10px;
+  padding:13px 16px;margin:0 0 22px;font-size:12.5px;color:var(--muted);line-height:1.6;
+}
+.market-note b{color:var(--ink)}
+.req-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 24px}
+.req{
+  background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:16px 16px 15px;position:relative;overflow:hidden;
+}
+.req::before{content:"";position:absolute;inset-inline-start:16px;top:0;width:24px;height:2px;background:var(--brass-2)}
+.req.warn::before{background:var(--warn)}
+.req-n{font-family:var(--font-display);font-size:12px;letter-spacing:.1em;color:var(--brass);margin-bottom:3px}
+.req h3{font-size:15px;margin:0 0 5px;line-height:1.3}
+.req p{margin:0;font-size:12.5px;line-height:1.6;color:var(--muted)}
+.req p b{color:var(--ink)}
+.req-grid.two{grid-template-columns:1fr 1fr;margin-bottom:0}
+
+.cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 10px}
+.cap{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.cap-head{padding:17px 20px 14px;border-bottom:1px solid var(--line);background:#FBF9F5}
+.cap-head .eyebrow{font-size:10.5px}
+.cap-head h3{font-family:var(--font-display);font-size:21px;font-weight:500;margin:5px 0 2px}
+.cap-head p{margin:0;font-size:12.5px;color:var(--muted)}
+.cap-body{padding:12px 20px 17px}
+.cap-row{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dotted var(--line);font-size:13px}
+.cap-row:last-of-type{border-bottom:0}
+.cap-row span{color:var(--muted)}
+.cap-row b{text-align:end;font-weight:600}
+.cap-msg{margin-top:10px;border-radius:8px;padding:10px 12px;font-size:12.5px;line-height:1.6}
+.cap-msg.good{border:1px solid #CFDBC6;background:var(--sage-soft);color:#3F4C3A}
+.cap-msg.bad{border:1px solid #E3CABC;background:var(--warn-soft);color:#5C3A2C}
+.cap-msg b{font-weight:700}
+
+tr.group-row td{background:#F2ECE1;border-bottom:1px solid var(--line);padding:8px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);font-weight:700}
+thead th.best{color:var(--sage);background:var(--sage-soft)}
+td.best{color:var(--sage);font-weight:700;background:rgba(85,101,79,.05)}
+.st{display:inline-block;font-size:10.5px;line-height:1.4;border-radius:100px;padding:2px 8px;white-space:nowrap;background:var(--paper-2);color:var(--muted);font-weight:600}
+.st.ok{background:var(--sage-soft);color:var(--sage)}
+.st.mid{background:var(--brass-soft);color:var(--brass)}
+.st.no{background:var(--warn-soft);color:var(--warn)}
+
+/* baskets */
+.baskets{border:1px solid var(--line);background:var(--card);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin-top:18px}
+.basket-tabs{display:grid;grid-template-columns:repeat(3,1fr);background:#FAF7F1;border-bottom:1px solid var(--line)}
+.basket-tab{
+  appearance:none;border:0;border-inline-start:1px solid var(--line);background:transparent;
+  color:var(--muted);font-family:inherit;font-size:13.5px;padding:13px 10px 12px;cursor:pointer;
+  text-align:center;transition:.15s;line-height:1.35;
+}
+.basket-tab:first-child{border-inline-start:0}
+.basket-tab b{display:block;font-size:17px;color:var(--ink);margin-top:1px}
+.basket-tab small{display:block;font-size:10.5px;color:var(--muted);margin-top:1px}
+.basket-tab:hover{background:rgba(0,0,0,.03)}
+.basket-tab.active{background:var(--ink);color:#C9C2B4}
+.basket-tab.active b{color:var(--paper)}
+.basket-tab.active small{color:#B7B0A2}
+.basket-panel{display:none}
+.basket-panel.active{display:block}
+.basket-intro{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;padding:16px 20px 15px;border-bottom:1px solid var(--line)}
+.basket-intro h3{font-family:var(--font-display);font-size:21px;font-weight:500;margin:0 0 3px}
+.basket-intro p{margin:0;font-size:13px;color:var(--muted);max-width:74ch;line-height:1.6}
+.basket-intro .st{flex:none;margin-top:4px}
+.basket-row{display:grid;grid-template-columns:86px minmax(0,1fr) 38px 84px 94px;gap:10px;align-items:center;padding:8px 20px;border-bottom:1px solid #F1ECE2;font-size:13px}
+.basket-row.head{padding-top:9px;padding-bottom:7px;background:#FCFAF6;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.basket-row.head span:nth-child(n+3){text-align:end}
+.b-room{color:var(--muted);font-size:11.5px}
+.b-model b{display:block;font-weight:600;font-size:13.5px;line-height:1.35}
+.b-model small{display:block;color:var(--muted);font-size:11px;line-height:1.4}
+.b-qty{text-align:center;color:var(--muted)}
+.b-unit{text-align:end;color:var(--muted);font-size:12px}
+.b-line{text-align:end;font-weight:700;white-space:nowrap}
+.basket-sum{display:grid;grid-template-columns:1fr 1fr 1.15fr;border-top:1px solid var(--line);background:#FBF9F4}
+.basket-sum>div{padding:13px 20px;border-inline-start:1px solid var(--line)}
+.basket-sum>div:first-child{border-inline-start:0}
+.basket-sum span{display:block;font-size:10.5px;letter-spacing:.05em;color:var(--muted);margin-bottom:2px}
+.basket-sum b{font-size:17px;white-space:nowrap}
+.basket-sum .grand b{font-family:var(--font-display);font-size:27px;color:var(--sage);line-height:1.1}
+.basket-sum .grand span{color:var(--sage)}
+.basket-save{padding:10px 20px 15px;font-size:12px;color:var(--muted);background:#FBF9F4;line-height:1.55}
+.basket-save b{color:var(--sage)}
+
+/* ---------- add-on section ---------- */
+.strip-label{
+  grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  margin-top:8px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);
+}
+.strip-label a{font-size:12px;letter-spacing:.02em;text-transform:none;font-weight:600;color:var(--ink);border-bottom:1px solid var(--line)}
+.addon-total{
+  display:grid;grid-template-columns:1.02fr 1fr;gap:26px;align-items:center;margin-top:18px;
+  background:var(--ink);color:var(--paper);border-radius:12px;padding:24px 28px;
+}
+.addon-total .eyebrow{color:#D8C3A5;margin-bottom:0}
+.addon-total .eyebrow::before{background:#D8C3A5}
+.addon-total .big{font-family:var(--font-display);font-size:40px;line-height:1;display:block;margin:9px 0 6px}
+.addon-total .sub{font-size:12.5px;color:#BDB6A6;display:block;line-height:1.5}
+.addon-side{display:grid;gap:8px;border-inline-start:1px solid #3B372F;padding-inline-start:26px}
+.addon-side div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:13.5px;color:#BDB6A6}
+.addon-side b{font-size:16.5px;color:var(--paper);white-space:nowrap}
+.room-tag{position:absolute;top:14px;inset-inline-end:14px;font-size:10.5px;letter-spacing:.06em;background:var(--sage-soft);color:var(--sage);border-radius:100px;padding:2px 8px}
+.room-add{border-style:dashed;border-color:#CFC5B2}
+.tradeoff{
+  margin-top:18px;border:1px solid var(--line);border-inline-start:3px solid var(--brass-2);
+  background:rgba(255,255,255,.55);border-radius:8px;padding:18px 20px;
+}
+.tradeoff h4{font-family:var(--font-display);font-size:18px;font-weight:500;margin:0 0 7px}
+.tradeoff p{margin:0;font-size:13.5px;line-height:1.65;color:#4C473D}
+.tradeoff p + p{margin-top:6px}
+
+.callout{
+  margin-top:24px;border:1px solid #D9CBB6;background:linear-gradient(180deg,#FBF6EE,#F7F0E4);
+  border-radius:12px;padding:26px 28px;
+}
+.callout h3{font-family:var(--font-display);font-size:24px;margin:0 0 10px;font-weight:500}
+.callout p{margin:0 0 10px;font-size:15px;color:#4E4438}
+.callout p:last-child{margin:0}
+.rec-list{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:9px}
+.rec-list li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:#463D31}
+.rec-list .dot{width:7px;height:7px;border-radius:50%;background:var(--brass);margin-top:8px;flex:none}
+
+/* ---------- rooms ---------- */
+.rooms{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.room{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:7px;position:relative;overflow:hidden}
+.room::before{content:"";position:absolute;inset-inline-start:0;top:0;bottom:0;width:3px;background:var(--brass-2)}
+.room:nth-child(3)::before,.room:nth-child(4)::before{background:var(--sage)}
+.room-name{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.room-fan{font-family:var(--font-display);font-size:21px;line-height:1.15}
+.room-qty{font-size:12.5px;color:var(--brass);font-weight:700}
+.room-note{font-size:12.5px;color:var(--muted);line-height:1.5;margin-top:auto}
+.sizing{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.size-item{border:1px dashed var(--line);border-radius:8px;padding:13px 15px;background:rgba(255,255,255,.5);font-size:13px;color:var(--muted)}
+.size-item b{display:block;font-size:16px;color:var(--ink);margin-bottom:2px}
+
+/* ---------- videos ---------- */
+.vid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.vid{
+  border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card);
+  cursor:pointer;text-align:start;padding:0;color:var(--ink);transition:.2s;box-shadow:var(--shadow);
+}
+.vid:hover{transform:translateY(-2px);border-color:#CFC5B2}
+.vid-poster{position:relative;aspect-ratio:16/9;background:#111;overflow:hidden}
+.vid-poster img{width:100%;height:100%;object-fit:cover;opacity:.9;transition:.4s}
+.vid:hover .vid-poster img{opacity:1;transform:scale(1.02)}
+.play{
+  position:absolute;inset:0;margin:auto;width:46px;height:46px;border-radius:50%;
+  background:rgba(255,255,255,.94);display:grid;place-items:center;color:var(--ink);
+  box-shadow:0 4px 16px rgba(0,0,0,.25);
+}
+.play svg{width:14px;height:14px;margin-inline-start:2px}
+.vid-dur{position:absolute;bottom:8px;inset-inline-end:8px;background:rgba(0,0,0,.72);color:#fff;font-size:11px;padding:1px 6px;border-radius:3px}
+.vid-txt{padding:12px 14px 14px}
+.vid-txt b{display:block;font-size:14px;line-height:1.35}
+.vid-txt span{font-size:12px;color:var(--muted)}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:22px}
+.modal.open{display:grid}
+.modal-back{position:absolute;inset:0;background:rgba(18,17,15,.82);backdrop-filter:blur(5px)}
+.modal-box{position:relative;width:min(980px,100%);background:#000;border-radius:10px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5);z-index:1}
+.modal-frame{aspect-ratio:16/9;background:#000}
+.modal-frame iframe{width:100%;height:100%;border:0;display:block}
+.modal-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:10px 14px;background:#151412;color:#EDE8DE;font-size:13px}
+.modal-bar a{color:#D8C3A5;text-decoration:underline}
+.modal-close{background:none;border:1px solid #4B463D;color:#EDE8DE;border-radius:100px;padding:5px 12px;cursor:pointer;font-size:12px}
+
+/* ---------- checklist ---------- */
+.check-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:26px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 28px;box-shadow:var(--shadow)}
+.panel h3{font-family:var(--font-display);font-size:23px;margin:0 0 4px;font-weight:500}
+.panel .panel-sub{font-size:13.5px;color:var(--muted);margin:0 0 18px}
+.check{display:flex;gap:11px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #EFE9DE;cursor:pointer}
+.check:last-of-type{border-bottom:0}
+.check input{appearance:none;width:19px;height:19px;border:1px solid #BFB5A4;border-radius:5px;flex:none;margin-top:2px;cursor:pointer;position:relative;transition:.15s;background:#fff}
+.check input:checked{background:var(--ink);border-color:var(--ink)}
+.check input:checked::after{content:"";position:absolute;inset:0;margin:auto;width:8px;height:4px;border-inline-start:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
+.check span{font-size:14px;line-height:1.5}
+.check input:checked + span{color:var(--muted);text-decoration:line-through}
+.progress{display:flex;align-items:center;gap:12px;margin-top:16px;font-size:12px;color:var(--muted)}
+.progress-bar{height:5px;background:var(--paper-2);border-radius:100px;overflow:hidden;flex:1}
+.progress-bar i{display:block;height:100%;width:0;background:var(--sage);transition:.25s}
+.q-list{list-style:none;counter-reset:q;padding:0;margin:0;display:grid;gap:12px}
+.q-list li{counter-increment:q;display:flex;gap:11px;font-size:14px;line-height:1.55;color:#463D31}
+.q-list li::before{
+  content:counter(q,decimal-leading-zero);font-family:var(--font-display);font-size:13px;color:var(--brass);
+  flex:none;padding-top:1px;
+}
+.q-list b{color:var(--ink)}
+
+/* ---------- footer ---------- */
+footer{background:#1A1916;color:#CFC8B9;margin-top:40px;padding:54px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:40px;margin-bottom:34px}
+footer h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8F887A;margin:0 0 12px;font-weight:600}
+footer p{font-size:13.5px;line-height:1.7;margin:0 0 8px;color:#B7B0A2}
+footer a{color:#E7E1D6;border-bottom:1px solid #4A453B}
+footer a:hover{border-color:#E7E1D6}
+.foot-title{font-family:var(--font-display);font-size:26px;color:#F6F2EA;margin:0 0 10px;line-height:1.2}
+.foot-list{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:13px}
+.foot-bottom{border-top:1px solid #35322B;padding-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11.5px;color:#8F887A}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* responsive */
+@media(max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero-visual{min-height:400px}
+  .product-body{grid-template-columns:1fr}
+  .p-media{border-inline-end:0;border-bottom:1px solid var(--line)}
+  .alt-grid{grid-template-columns:repeat(2,1fr)}
+  .alt-grid.quad{grid-template-columns:repeat(2,1fr)}
+  .req-grid{grid-template-columns:repeat(2,1fr)}
+  .cap-grid{grid-template-columns:1fr}
+  .rooms{grid-template-columns:repeat(2,1fr)}
+  .vid-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .wrap{padding:0 18px}
+  .topbar .wrap{height:60px;gap:12px}
+  .nav{display:none}
+  .print-btn span{display:none}
+  .brand small{display:none}
+  section{padding:54px 0}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat{padding:18px 16px}
+  .stat:nth-child(3){border-inline-start:0;padding-inline-start:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .model-strip,.alt-grid,.alt-grid.quad,.vid-grid,.rooms{grid-template-columns:1fr}
+  .req-grid,.req-grid.two{grid-template-columns:1fr}
+  .basket-row{grid-template-columns:66px minmax(0,1fr) 34px 76px;padding:8px 14px;gap:7px}
+  .basket-row.head{display:none}
+  .b-unit{display:none}
+  .basket-sum{grid-template-columns:1fr 1fr}
+  .basket-sum .grand{grid-column:1/-1;border-top:1px solid var(--line);border-inline-start:0}
+  .basket-tab{font-size:12px;padding:11px 6px}
+  .basket-tab b{font-size:15px}
+  .basket-tab small{display:none}
+  .basket-intro{padding:14px 16px}
+  .alt-divider{flex-direction:column;align-items:flex-start;gap:8px}
+  .section-head{grid-template-columns:1fr}
+  .section-index{display:none}
+  .calc{grid-template-columns:1fr}
+  .calc-controls{border-inline-end:0;border-bottom:1px solid var(--line)}
+  .check-grid{grid-template-columns:1fr}
+  .specs{grid-template-columns:1fr}
+  .spec.wide{grid-column:auto}
+  .p-tag{margin:0;text-align:start}
+  .price-pair{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .hero{padding-top:42px}
+  .hero-visual{grid-template-columns:1fr 1fr;grid-template-rows:auto auto;min-height:0}
+  .hv-main{grid-row:auto;grid-column:1/-1;aspect-ratio:4/3}
+  .hv-side{aspect-ratio:4/3}
+  .sizing{grid-template-columns:1fr}
+  .addon-total{grid-template-columns:1fr;gap:18px}
+  .addon-side{border-inline-start:0;padding-inline-start:0;border-top:1px solid #3B372F;padding-top:14px}
+}
+@media print{
+  .topbar,.print-btn,.hero-actions,.video-chip,.modal,.calc-toggle{display:none!important}
+  body{background:#fff}
+  .product,.mini,.alt,.panel,.table-card,.callout{box-shadow:none}
+  .addon-total{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .addon-total .eyebrow,.addon-total .sub{color:var(--muted)}
+  .addon-total .eyebrow::before{background:var(--muted)}
+  .addon-side{border-color:var(--line)}
+  .addon-side div{color:var(--muted)}
+  .addon-side b{color:var(--ink)}
+  .basket-tabs{display:none}
+  .basket-panel{display:block!important;break-inside:avoid}
+  .basket-panel+.basket-panel{border-top:2px solid var(--line)}
+  .req,.cap,.baskets{box-shadow:none}
+  section{padding:26px 0;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="חזרה לראש העמוד">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 12c-2.8-4.5-7-5.5-9-3.5S3 15 8 15.5 12 12 12 12Z"/><path d="M12 12c4.5-2.8 5.5-7 3.5-9S13 3 12.5 8 12 12 12 12Z"/><path d="M12 12c2.8 4.5 7 5.5 9 3.5S21 9 16 8.5 12 12 12 12Z"/><circle cx="12" cy="12" r="1.4"/></svg>
+      </span>
+      <span>מאווררי תקרה<small>Procurement guide</small></span>
+    </a>
+    <nav class="nav" aria-label="ניווט ראשי">
+      <a href="../Ceiling_Fan_Proposals_Vendor_Decision.html" style="color:var(--brass);font-weight:700">הצעות ספקים</a>
+      <a href="#overview">סקירה</a>
+      <a href="#models">הדגמים</a>
+      <a href="#addition">התוספת</a>
+      <a href="#compare">מחירים</a>
+      <a href="#competitors">מול השוק</a>
+      <a href="#alternatives">חלופות</a>
+      <a href="#rooms">חדרים</a>
+      <a href="#videos">וידאו</a>
+      <a href="#checklist">צ׳קליסט</a>
+    </nav>
+    <button class="print-btn" onclick="window.print()" aria-label="הדפסה / שמירה כ-PDF">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2M7 14h10v7H7z"/></svg>
+      <span>הדפסה</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">השוואת רכש · נובמבר 2026</div>
+        <h1>שבעה בהצעה.<br>שלושה בתוספת.<br><em>מחיר אחד נכון.</em></h1>
+        <p class="hero-lead">מדריך העבודה לרכישת מאווררי התקרה בבית החדש בזכרון יעקב — מה כתוב בהצעת טרנדלייט, מה מוסיפים לה, ומה מצאנו בשוק הרחב: 22 דגמים מ־KSP ומחסני תאורה, מסוננים לפי תאורה, צבע, שקט וקיבולת.</p>
+        <div class="hero-meta">
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 3h10v18l-5-3-5 3z"/></svg>
+            הצעה <b>06/018925</b>
+          </span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+            <b>18.09.2026</b>
+          </span>
+          <span class="chip">עבור <b>IDIT BENNATAN</b></span>
+          <span class="chip">זכרון יעקב · בית פרטי</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#addition">
+            לתוספת 3 המאווררים
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#competitors">להשוואת השוק</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="תמונות המאווררים בהצעה">
+        <figure class="hv hv-main">
+          <img src="assets/diamond-lifestyle.jpg" alt="מאוורר תקרה דיימונד סטורם לבן עם להבי אלון">
+          <figcaption>Diamond Storm · 48″ / 56″ · לבן עם להבי טיק</figcaption>
+        </figure>
+        <figure class="hv hv-side">
+          <img src="assets/wave-lifestyle.jpg" alt="מאוורר חוץ וויב 52 אינץ' עם תאורת LED">
+          <figcaption>Wave Outdoor · 52″</figcaption>
+        </figure>
+        <figure class="hv hv-side">
+          <img src="assets/nexus-lifestyle.jpg" alt="מאוורר תקרה נקסוס 54 אינץ' בחלל מגורים">
+          <figcaption>Nexus · 54″</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-label">בפרויקט</div>
+        <div class="stat-value num">10 <small>מאווררים</small></div>
+        <div class="stat-note">7 בהצעה · 3 תוספת לסלון, ממ״ד ועבודה</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">עלות כוללת</div>
+        <div class="stat-value num">₪16,079</div>
+        <div class="stat-note">13,668 בהצעה + 2,411 תוספת עם משלוח · כולל מע״מ</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">מחיר טוב בשוק</div>
+        <div class="stat-value num">₪13,695</div>
+        <div class="stat-note">10 מאווררים · כולל משלוח 25 ₪ · ניסני ולב המשרד</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">סל מאוזן · LED</div>
+        <div class="stat-value num" style="color:var(--sage)">₪6,600</div>
+        <div class="stat-note">10 מאווררים מחדש · חיסכון ₪9,479 מול ההצעה</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OVERVIEW ============ -->
+<section id="overview">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">מה בעצם מזמינים</div>
+        <h2>התמונה הגדולה</h2>
+        <p class="section-lead">ההצעה משלבת שלושה דגמים מתוצרת <b>Swing</b>, מיובאים בישראל על ידי טכנולייט. כולם תוכננו לאותו קו עיצובי — שלושה להבים, גוף לבן, מנוע שקט — אבל מיועדים לחללים שונים. לחללים שלא נכנסו להצעה — <b>סלון, ממ״ד וחדר עבודה</b> — הוספנו שלושה מאווררי <b>ווסטינגהאוס</b> מ״לב המשרד״. המחירים בהצעה הם <b>לפני מע״מ</b>; בהמשך המדריך הכול מומר למחירי מדף כולל מע״מ, כדי שההשוואה תהיה הוגנת.</p>
+      </div>
+      <div class="section-index">01 — OVERVIEW</div>
+    </div>
+
+    <div class="model-strip">
+      <article class="mini">
+        <div class="mini-img"><img src="assets/diamond-white-48.jpg" alt="Diamond Storm לבן 48 אינץ'"></div>
+        <div class="mini-body">
+          <div class="mini-top"><h3 class="mini-name">Diamond Storm</h3><span class="mini-qty">×4</span></div>
+          <p class="mini-desc">חדרי השינה. מנוע DC, שלט, 6 מהירויות, ערכת LED אופציונלית.</p>
+          <div class="mini-prices">
+            <div><span class="mini-price-label">בהצעה ליח׳</span><span class="mini-price num">₪1,512</span></div>
+            <div><span class="mini-price-label">בשוק</span><span class="mini-price num">₪1,450</span></div>
+            <span class="saving num">−₪62</span>
+          </div>
+        </div>
+      </article>
+      <article class="mini">
+        <div class="mini-img"><img src="assets/wave-white.jpg" alt="Wave Outdoor לבן 52 אינץ'"></div>
+        <div class="mini-body">
+          <div class="mini-top"><h3 class="mini-name">Wave Outdoor</h3><span class="mini-qty">×2</span></div>
+          <p class="mini-desc">הפרגולה. 52″, מנוע AC, תאורת LED 23W כלולה, מפסק קיר 55.</p>
+          <div class="mini-prices">
+            <div><span class="mini-price-label">בהצעה ליח׳</span><span class="mini-price num">₪1,344</span></div>
+            <div><span class="mini-price-label">בשוק</span><span class="mini-price num">₪949</span></div>
+            <span class="saving num">−₪395</span>
+          </div>
+        </div>
+      </article>
+      <article class="mini">
+        <div class="mini-img"><img src="assets/nexus-white.jpg" alt="Nexus לבן 54 אינץ'"></div>
+        <div class="mini-body">
+          <div class="mini-top"><h3 class="mini-name">Nexus</h3><span class="mini-qty">×1</span></div>
+          <p class="mini-desc">החלל הגדול / אי המטבח. 54″, DC, שלט, מוט 300 ס״מ ומודול תאורה בהצעה.</p>
+          <div class="mini-prices">
+            <div><span class="mini-price-label">בהצעה ליח׳</span><span class="mini-price num">₪2,241</span></div>
+            <div><span class="mini-price-label">בשוק</span><span class="mini-price num">₪1,800</span></div>
+            <span class="saving num">−₪441</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="strip-label">
+        <span>התוספת · ווסטינגהאוס מ״לב המשרד״</span>
+        <a href="#addition">לפירוט המלא ←</a>
+      </div>
+
+      <article class="mini">
+        <div class="mini-img"><img src="assets/wh-talia52.jpg" alt="ווסטינגהאוס טליה 52 אינץ' עם תאורה לבנה"></div>
+        <div class="mini-body">
+          <div class="mini-top"><h3 class="mini-name">Talia 52″</h3><span class="mini-qty">תוספת</span></div>
+          <p class="mini-desc">הסלון. DC, תאורה 2,800lm CCT ושלט — הכי הרבה תמורה לכסף.</p>
+          <div class="mini-prices">
+            <div><span class="mini-price-label">מחיר</span><span class="mini-price num">₪725</span></div>
+            <span class="pill green" style="margin-inline-start:auto">תאורה ושלט כלולים</span>
+          </div>
+        </div>
+      </article>
+      <article class="mini">
+        <div class="mini-img"><img src="assets/wh-longwood42.jpg" alt="ווסטינגהאוס לונגווד 42 אינץ' לבן עם להבי אלון"></div>
+        <div class="mini-body">
+          <div class="mini-top"><h3 class="mini-name">Longwood 42″</h3><span class="mini-qty">תוספת</span></div>
+          <p class="mini-desc">הממ״ד. גוף לבן מט ולהבי אלון, 20 מ״ר, תאורה 2,450lm.</p>
+          <div class="mini-prices">
+            <div><span class="mini-price-label">מחיר</span><span class="mini-price num">₪1,049</span></div>
+            <span class="pill green" style="margin-inline-start:auto">תאורה ושלט כלולים</span>
+          </div>
+        </div>
+      </article>
+      <article class="mini">
+        <div class="mini-img"><img src="assets/wh-talia42.jpg" alt="ווסטינגהאוס טליה 42 אינץ' שחור"></div>
+        <div class="mini-body">
+          <div class="mini-top"><h3 class="mini-name">Talia 42″</h3><span class="mini-qty">תוספת</span></div>
+          <p class="mini-desc">חדר העבודה. 612 ₪ למאוורר DC עם תאורה חזקה ושלט.</p>
+          <div class="mini-prices">
+            <div><span class="mini-price-label">מחיר</span><span class="mini-price num">₪612</span></div>
+            <span class="pill green" style="margin-inline-start:auto">תאורה ושלט כלולים</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="note" style="margin-top:22px;margin-bottom:0">
+      <b>איך לקרוא את המחירים:</b> בהצעה המחיר ליחידה מופיע לפני מע״מ, ובסוף נוסף מע״מ 18%. בדף הזה מוצגים גם <b>המחיר בהצעה כולל מע״מ</b> וגם <b>המחיר הטוב שמצאנו ברשת, כולל מע״מ</b>. השוואה בין השניים היא ההשוואה הנכונה — ולא מול שורת ה״מחיר יחידה״ בהצעה. שלושת מאווררי התוספה אינם חלק מההצעה; הם נרכשים בנפרד ב״לב המשרד״, ומחירם כבר כולל תאורה ושלט. <b>המחירים אומתו בעגלת קנייה:</b> 2,386 ₪ לשלושה, ועם משלוח עם שליח — 2,411 ₪ עד הבית (איסוף עצמי מהמסגר 78 חינם).
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODELS ============ -->
+<section id="models" style="background:linear-gradient(180deg,rgba(255,255,255,.35),transparent 30%)">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">הדגמים לעומק</div>
+        <h2>מה קונים, בדיוק</h2>
+        <p class="section-lead">שלוש סקירות מלאות: מפרט, מה כלול, פירוק שורות ההצעה, המחירים בכל חנות שמצאנו, וסרטון התקנה. כל הקישורים נבדקו ומגיעים לדף המוצר עצמו.</p>
+      </div>
+      <div class="section-index">02 — MODELS</div>
+    </div>
+
+    <!-- DIAMOND -->
+    <article class="product reveal">
+      <div class="product-head">
+        <div class="p-index">01</div>
+        <div>
+          <h3 class="p-title">Swing Diamond Storm <span>דיימונד · 42″ / 48″ / 56″</span></h3>
+          <div class="badges">
+            <span class="badge dark">DC · 32W</span>
+            <span class="badge green">25 שנות אחריות מנוע</span>
+            <span class="badge">פנים בלבד</span>
+            <span class="badge brass">4 יחידות</span>
+          </div>
+        </div>
+        <p class="p-tag">חדרי הילדים 48″ ×3<br>חדר ההורים 56″ ×1</p>
+      </div>
+      <div class="product-body">
+        <div class="p-media">
+          <div class="gallery-main" data-gallery="diamond">
+            <span class="zoom-tag">תמונת מוצר</span>
+            <img src="assets/diamond-lifestyle.jpg" alt="מאוורר דיימונד סטורם לבן עם להבי טיק">
+          </div>
+          <div class="thumbs" data-thumbs="diamond">
+            <button class="thumb active" data-src="assets/diamond-lifestyle.jpg" aria-label="דיימונד לבן להבי טיק"><img src="assets/diamond-lifestyle.jpg" alt=""></button>
+            <button class="thumb" data-src="assets/diamond-white-48.jpg" aria-label="דיימונד לבן 48"><img src="assets/diamond-white-48.jpg" alt=""></button>
+            <button class="thumb" data-src="assets/diamond-storm-light-black.jpg" aria-label="דיימונד עם תאורה"><img src="assets/diamond-storm-light-black.jpg" alt=""></button>
+            <button class="thumb" data-src="assets/diamond-white-detail.jpg" aria-label="דיימונד זווית נוספת"><img src="assets/diamond-white-detail.jpg" alt=""></button>
+            <button class="thumb" data-src="assets/diamond-white-56.jpg" aria-label="דיימונד לבן 56 אינץ'"><img src="assets/diamond-white-56.jpg" alt=""></button>
+          </div>
+          <button class="video-chip" data-video="KFtvDCXSMuA" data-title="Swing Diamond Storm — סקירה">
+            <span class="vc-thumb"><img src="assets/yt-KFtvDCXSMuA.jpg" alt=""></span>
+            <span class="vc-txt">צפייה בדיימונד סטורם<small>סקירת מוצר · 0:19 · ערוץ Swing</small></span>
+          </button>
+        </div>
+
+        <div class="p-info">
+          <dl class="specs">
+            <div class="spec"><dt>גדלים</dt><dd>42″ · 48″ · 56″</dd></div>
+            <div class="spec"><dt>מנוע</dt><dd>DC 32W · 6 מהירויות</dd></div>
+            <div class="spec"><dt>שליטה</dt><dd>שלט אלחוטי כלול</dd></div>
+            <div class="spec"><dt>תאורה</dt><dd>LED 18W אופציונלי</dd></div>
+            <div class="spec"><dt>מצב חורף</dt><dd>כן — היפוך סיבוב</dd></div>
+            <div class="spec"><dt>שיפוע תקרה</dt><dd>עד 15°</dd></div>
+            <div class="spec"><dt>מוט</dt><dd>15 ס״מ כלול</dd></div>
+            <div class="spec"><dt>אחריות</dt><dd>25 שנה למנוע</dd></div>
+            <div class="spec wide"><dt>חלל מתאים</dt><dd><span dir="ltr">8–13+</span> מ״ר · שקט לחדרי שינה</dd></div>
+          </dl>
+
+          <div class="note">
+            <b>מה מיוחד כאן:</b> מנוע DC חסכוני ושקט במיוחד, שישה הילוכים ושלט עם מחווני LED. זה המאוורר הנכון לחדר שינה — פחות רעש, פחות צריכת חשמל, והרבה שליטה. הלהבים הרחבים (Storm) נותנים תחושת אוויר גם במהירות נמוכה.
+          </div>
+
+          <div class="price-pair">
+            <div class="price-box">
+              <div class="pb-label">בהצעת טרנדלייט</div>
+              <div class="pb-value num">₪1,512 <small style="font-size:12px;font-weight:400">ליח׳</small></div>
+              <div class="pb-sub">1,281.55 ₪ לפני מע״מ לאחר 5% הנחה</div>
+            </div>
+            <div class="price-box best">
+              <div class="pb-label">המחיר הטוב בשוק</div>
+              <div class="pb-value num">₪1,450</div>
+              <div class="pb-sub delta">ניסני חשמל · כולל להבים ובחירת מידה</div>
+            </div>
+          </div>
+
+          <div class="offers-title"><span>איפה אפשר לקנות</span><span>מחיר כולל מע״מ</span></div>
+          <div class="offer">
+            <span class="off-dot">נ</span>
+            <span class="offer-name"><a href="https://www.nisanihashmal.co.il/items/971610-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%93%D7%99%D7%99%D7%9E%D7%95%D7%A0%D7%93-%D7%A1%D7%98%D7%95%D7%A8%D7%9D-Swingfans" target="_blank" rel="noopener">ניסני חשמל</a><span class="tag-best">הזול</span></span>
+            <span class="off-price num">₪1,450 <small>מחיר מבצע</small></span>
+            <a class="off-go" href="https://www.nisanihashmal.co.il/items/971610-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%93%D7%99%D7%99%D7%9E%D7%95%D7%A0%D7%93-%D7%A1%D7%98%D7%95%D7%A8%D7%9D-Swingfans" target="_blank" rel="noopener" aria-label="מעבר לניסני חשמל"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="offer">
+            <span class="off-dot">ל</span>
+            <span class="offer-name"><a href="https://lagatbaor.co.il/product/%D7%93%D7%99%D7%99%D7%9E%D7%95%D7%A0%D7%93-%D7%A1%D7%98%D7%95%D7%A8%D7%9D/" target="_blank" rel="noopener">לגעת באור</a></span>
+            <span class="off-price num">₪1,499</span>
+            <a class="off-go" href="https://lagatbaor.co.il/product/%D7%93%D7%99%D7%99%D7%9E%D7%95%D7%A0%D7%93-%D7%A1%D7%98%D7%95%D7%A8%D7%9D/" target="_blank" rel="noopener" aria-label="מעבר ללגעת באור"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="offer">
+            <span class="off-dot">ט</span>
+            <span class="offer-name"><a href="https://www.tlite.co.il/product/diamond/" target="_blank" rel="noopener">טכנולייט</a> <span class="pill">יבואן</span></span>
+            <span class="off-price num">₪1,499</span>
+            <a class="off-go" href="https://www.tlite.co.il/product/diamond/" target="_blank" rel="noopener" aria-label="מעבר לטכנולייט"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="offer">
+            <span class="off-dot">S</span>
+            <span class="offer-name"><a href="https://www.swingfans.co.il/product/diamond-storm/" target="_blank" rel="noopener">Swingfans</a> <span class="pill">אתר המותג</span></span>
+            <span class="off-price num">₪1,499</span>
+            <a class="off-go" href="https://www.swingfans.co.il/product/diamond-storm/" target="_blank" rel="noopener" aria-label="מעבר ל-Swingfans"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="offer">
+            <span class="off-dot">X</span>
+            <span class="offer-name"><a href="https://www.extra-light.co.il/items/6534232-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%93%D7%99%D7%99%D7%9E%D7%95%D7%A0%D7%93-%D7%A1%D7%98%D7%95%D7%A8%D7%9D" target="_blank" rel="noopener">Extra Light</a></span>
+            <span class="off-price num">₪1,499</span>
+            <a class="off-go" href="https://www.extra-light.co.il/items/6534232-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%93%D7%99%D7%99%D7%9E%D7%95%D7%A0%D7%93-%D7%A1%D7%98%D7%95%D7%A8%D7%9D" target="_blank" rel="noopener" aria-label="מעבר ל-Extra Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="offer">
+            <span class="off-dot">D</span>
+            <span class="offer-name"><a href="https://danielightdesign.co.il/product/mwwrr-thkrh-dyymwnd-stwr/" target="_blank" rel="noopener">דניאל לייט דיזיין</a></span>
+            <span class="off-price num">₪1,499</span>
+            <a class="off-go" href="https://danielightdesign.co.il/product/mwwrr-thkrh-dyymwnd-stwr/" target="_blank" rel="noopener" aria-label="מעבר לדניאל לייט דיזיין"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <p class="res-note" style="margin-top:10px">המחיר בהצעה כולל את גוף המאוורר בלבד (שורה 85102). שורת הלהבים (853) וערכת התאורה (85137) מופיעות בנפרד — ראו פירוק מלא בהמשך.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- WAVE -->
+    <article class="product reveal">
+      <div class="product-head">
+        <div class="p-index">02</div>
+        <div>
+          <h3 class="p-title">Swing Wave Outdoor <span>וויב חוץ · 52″</span></h3>
+          <div class="badges">
+            <span class="badge dark">AC · 70W</span>
+            <span class="badge green">3 שנות אחריות מנוע</span>
+            <span class="badge">חוץ / פנים</span>
+            <span class="badge brass">2 יחידות</span>
+          </div>
+        </div>
+        <p class="p-tag">פרגולה<br>×2</p>
+      </div>
+      <div class="product-body">
+        <div class="p-media">
+          <div class="gallery-main" data-gallery="wave">
+            <span class="zoom-tag">תמונת מוצר</span>
+            <img src="assets/wave-white.jpg" alt="מאוורר חוץ וויב 52 לבן עם תאורה">
+          </div>
+          <div class="thumbs" data-thumbs="wave">
+            <button class="thumb active" data-src="assets/wave-white.jpg" aria-label="וויב לבן"><img src="assets/wave-white.jpg" alt=""></button>
+            <button class="thumb" data-src="assets/wave-main.jpg" aria-label="וויב לבן להבי טיק"><img src="assets/wave-main.jpg" alt=""></button>
+            <button class="thumb" data-src="assets/wave-detail.jpg" aria-label="וויב שחור"><img src="assets/wave-detail.jpg" alt=""></button>
+            <button class="thumb" data-src="assets/wave-lifestyle.jpg" aria-label="וויב בחלל"><img src="assets/wave-lifestyle.jpg" alt=""></button>
+          </div>
+          <button class="video-chip" data-video="x7NzcP-elwo" data-title="SWING Wave — סרטון התקנה">
+            <span class="vc-thumb"><img src="assets/yt-x7NzcP-elwo.jpg" alt=""></span>
+            <span class="vc-txt">התקנת וויב צעד-אחר-צעד<small>סרטון התקנה · 2:12 · ערוץ Swing</small></span>
+          </button>
+        </div>
+
+        <div class="p-info">
+          <dl class="specs">
+            <div class="spec"><dt>קוטר</dt><dd>52″</dd></div>
+            <div class="spec"><dt>מנוע</dt><dd>AC · 3 מהירויות</dd></div>
+            <div class="spec"><dt>שליטה</dt><dd>מפסק קיר 55 כלול</dd></div>
+            <div class="spec"><dt>תאורה</dt><dd>LED 23W · 1,700 לומן</dd></div>
+            <div class="spec"><dt>שלט</dt><dd>אופציונלי (85111)</dd></div>
+            <div class="spec"><dt>מצב חורף</dt><dd>כן — היפוך סיבוב</dd></div>
+            <div class="spec"><dt>שיפוע תקרה</dt><dd>עד 15°</dd></div>
+            <div class="spec"><dt>אחריות</dt><dd>3 שנים למנוע</dd></div>
+            <div class="spec wide"><dt>חלל מתאים</dt><dd><span dir="ltr">10–13</span> מ״ר · פרגולה ומרפסת</dd></div>
+          </dl>
+
+          <div class="note warn">
+            <b>שתי נקודות לבדיקה:</b> (1) ההצעה מציינת מנוע AC 70W, בעוד אתר לגעת באור מפרסם צריכה של 48.3W — כדאי לבקש מפרט טכני רשמי. (2) הוויב נשלט במפסק קיר כברירת מחדל; להפעלה מהשלט צריך להוסיף מקלט ושלט (85111, 249 ₪ לפני מע״מ, לא נכלל בהצעה).
+          </div>
+
+          <div class="price-pair">
+            <div class="price-box">
+              <div class="pb-label">בהצעת טרנדלייט</div>
+              <div class="pb-value num">₪1,344 <small style="font-size:12px;font-weight:400">ליח׳</small></div>
+              <div class="pb-sub">1,139.05 ₪ לפני מע״מ לאחר 5% הנחה</div>
+            </div>
+            <div class="price-box best">
+              <div class="pb-label">המחיר הטוב בשוק</div>
+              <div class="pb-value num">₪949</div>
+              <div class="pb-sub delta">ניסני חשמל · כולל תאורת 23W</div>
+            </div>
+          </div>
+
+          <div class="offers-title"><span>איפה אפשר לקנות</span><span>מחיר כולל מע״מ</span></div>
+          <div class="offer">
+            <span class="off-dot">נ</span>
+            <span class="offer-name"><a href="https://www.nisanihashmal.co.il/items/2536302-%D7%95%D7%95%D7%99%D7%91-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%97%D7%95%D7%A5-52-Swingfans" target="_blank" rel="noopener">ניסני חשמל</a><span class="tag-best">הזול</span></span>
+            <span class="off-price num">₪949 <small>מרשימת 1,200</small></span>
+            <a class="off-go" href="https://www.nisanihashmal.co.il/items/2536302-%D7%95%D7%95%D7%99%D7%91-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%97%D7%95%D7%A5-52-Swingfans" target="_blank" rel="noopener" aria-label="מעבר לניסני חשמל"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="offer">
+            <span class="off-dot">ל</span>
+            <span class="offer-name"><a href="https://lagatbaor.co.il/product/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%95%D7%95%D7%99%D7%91-%D7%97%D7%95%D7%A5-wave-outdoor/" target="_blank" rel="noopener">לגעת באור</a></span>
+            <span class="off-price num">₪1,199</span>
+            <a class="off-go" href="https://lagatbaor.co.il/product/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%95%D7%95%D7%99%D7%91-%D7%97%D7%95%D7%A5-wave-outdoor/" target="_blank" rel="noopener" aria-label="מעבר ללגעת באור"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="offer">
+            <span class="off-dot">ט</span>
+            <span class="offer-name"><a href="https://www.tlite.co.il/product/wave/" target="_blank" rel="noopener">טכנולייט</a> <span class="pill">יבואן</span></span>
+            <span class="off-price num">₪1,199</span>
+            <a class="off-go" href="https://www.tlite.co.il/product/wave/" target="_blank" rel="noopener" aria-label="מעבר לטכנולייט"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="offer">
+            <span class="off-dot">S</span>
+            <span class="offer-name"><a href="https://www.swingfans.co.il/product/wave/" target="_blank" rel="noopener">Swingfans</a> <span class="pill">אתר המותג</span></span>
+            <span class="off-price num">₪1,199</span>
+            <a class="off-go" href="https://www.swingfans.co.il/product/wave/" target="_blank" rel="noopener" aria-label="מעבר ל-Swingfans"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="offer">
+            <span class="off-dot">D</span>
+            <span class="offer-name"><a href="https://danielightdesign.co.il/product/mwwrr-thkrh-wyyb-xw/" target="_blank" rel="noopener">דניאל לייט דיזיין</a></span>
+            <span class="off-price num">₪1,199</span>
+            <a class="off-go" href="https://danielightdesign.co.il/product/mwwrr-thkrh-wyyb-xw/" target="_blank" rel="noopener" aria-label="מעבר לדניאל לייט דיזיין"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- NEXUS -->
+    <article class="product reveal">
+      <div class="product-head">
+        <div class="p-index">03</div>
+        <div>
+          <h3 class="p-title">Swing Nexus <span>נקסוס · 54″</span></h3>
+          <div class="badges">
+            <span class="badge dark">DC</span>
+            <span class="badge green">25 שנות אחריות מנוע</span>
+            <span class="badge">פנים בלבד</span>
+            <span class="badge brass">יחידה 1</span>
+          </div>
+        </div>
+        <p class="p-tag">אי המטבח / חלל גדול<br>עם מוט 300 ס״מ</p>
+      </div>
+      <div class="product-body">
+        <div class="p-media">
+          <div class="gallery-main" data-gallery="nexus">
+            <span class="zoom-tag">תמונת מוצר</span>
+            <img src="assets/nexus-white.jpg" alt="מאוורר תקרה נקסוס לבן 54 אינץ'">
+          </div>
+          <div class="thumbs" data-thumbs="nexus">
+            <button class="thumb active" data-src="assets/nexus-white.jpg" aria-label="נקסוס לבן"><img src="assets/nexus-white.jpg" alt=""></button>
+            <button class="thumb" data-src="assets/nexus-main.jpg" aria-label="נקסוס זהב"><img src="assets/nexus-main.jpg" alt=""></button>
+            <button class="thumb" data-src="assets/nexus-gold-white.jpg" aria-label="נקסוס זהב לבן"><img src="assets/nexus-gold-white.jpg" alt=""></button>
+            <button class="thumb" data-src="assets/nexus-lifestyle.jpg" aria-label="נקסוס בחלל"><img src="assets/nexus-lifestyle.jpg" alt=""></button>
+          </div>
+          <button class="video-chip" data-video="2AYtQNyM2U4" data-title="SWING Nexus with Light — התקנה">
+            <span class="vc-thumb"><img src="assets/yt-2AYtQNyM2U4.jpg" alt=""></span>
+            <span class="vc-txt">נקסוס עם תאורה — התקנה<small>סרטון התקנה · 2:23 · ערוץ Swing</small></span>
+          </button>
+        </div>
+
+        <div class="p-info">
+          <dl class="specs">
+            <div class="spec"><dt>קוטר</dt><dd>54″</dd></div>
+            <div class="spec"><dt>מנוע</dt><dd>DC · 6 מהירויות</dd></div>
+            <div class="spec"><dt>שליטה</dt><dd>שלט אלחוטי כלול</dd></div>
+            <div class="spec"><dt>תאורה</dt><dd>מודול 23W בהצעה</dd></div>
+            <div class="spec"><dt>גובה תקרה</dt><dd>מ־2.6 מ׳</dd></div>
+            <div class="spec"><dt>מוט</dt><dd>15 ס״מ + מוט 300 ס״מ</dd></div>
+            <div class="spec"><dt>שיפוע תקרה</dt><dd>עד 15°</dd></div>
+            <div class="spec"><dt>אחריות</dt><dd>25 שנה למנוע</dd></div>
+            <div class="spec wide"><dt>חלל מתאים</dt><dd>13+ מ״ר · סלון, חלל פתוח, אי</dd></div>
+          </dl>
+
+          <div class="note">
+            <b>למה נקסוס:</b> קוטר 54″ ושלושה להבים מעוצבים — מתאים לחלל גדול או תקרה גבוהה. ההצעה מוסיפה מוט הארכה עד 300 ס״מ (85117) ומודול תאורה 23W (85125), מה שמעלה את העלות הכוללת של נקודה זו. שווה לוודא שגובה התקרה אכן מחייב מוט ארוך.
+          </div>
+
+          <div class="price-pair">
+            <div class="price-box">
+              <div class="pb-label">בהצעת טרנדלייט</div>
+              <div class="pb-value num">₪2,241</div>
+              <div class="pb-sub">1,899.05 ₪ לפני מע״מ · לא כולל מוט ותאורה</div>
+            </div>
+            <div class="price-box best">
+              <div class="pb-label">המחיר הטוב בשוק</div>
+              <div class="pb-value num">₪1,800</div>
+              <div class="pb-sub delta">ניסני חשמל · גרסה ללא תאורה</div>
+            </div>
+          </div>
+
+          <div class="offers-title"><span>איפה אפשר לקנות</span><span>מחיר כולל מע״מ</span></div>
+          <div class="offer">
+            <span class="off-dot">נ</span>
+            <span class="offer-name"><a href="https://www.nisanihashmal.co.il/items/5887003-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%A0%D7%A7%D7%A1%D7%95%D7%A1-54-NEXUS-SWINGFANS" target="_blank" rel="noopener">ניסני חשמל</a><span class="tag-best">הזול</span><span class="pill">ללא תאורה</span></span>
+            <span class="off-price num">₪1,800 <small>מרשימת 2,000</small></span>
+            <a class="off-go" href="https://www.nisanihashmal.co.il/items/5887003-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%A0%D7%A7%D7%A1%D7%95%D7%A1-54-NEXUS-SWINGFANS" target="_blank" rel="noopener" aria-label="מעבר לניסני חשמל"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="offer">
+            <span class="off-dot">ל</span>
+            <span class="offer-name"><a href="https://lagatbaor.co.il/product/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%A0%D7%A7%D7%A1%D7%95%D7%A1-ne/" target="_blank" rel="noopener">לגעת באור</a></span>
+            <span class="off-price num">₪1,999</span>
+            <a class="off-go" href="https://lagatbaor.co.il/product/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%A0%D7%A7%D7%A1%D7%95%D7%A1-ne/" target="_blank" rel="noopener" aria-label="מעבר ללגעת באור"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="offer">
+            <span class="off-dot">ט</span>
+            <span class="offer-name"><a href="https://www.tlite.co.il/product/nexus/" target="_blank" rel="noopener">טכנולייט</a> <span class="pill">יבואן</span></span>
+            <span class="off-price num">₪1,999</span>
+            <a class="off-go" href="https://www.tlite.co.il/product/nexus/" target="_blank" rel="noopener" aria-label="מעבר לטכנולייט"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="offer">
+            <span class="off-dot">X</span>
+            <span class="offer-name"><a href="https://www.extra-light.co.il/items/6531913-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%A0%D7%A7%D7%A1%D7%95%D7%A1" target="_blank" rel="noopener">Extra Light</a></span>
+            <span class="off-price num">₪1,999</span>
+            <a class="off-go" href="https://www.extra-light.co.il/items/6531913-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%A0%D7%A7%D7%A1%D7%95%D7%A1" target="_blank" rel="noopener" aria-label="מעבר ל-Extra Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="offer">
+            <span class="off-dot">D</span>
+            <span class="offer-name"><a href="https://danielightdesign.co.il/product/mwwrr-thkrh-nksws/" target="_blank" rel="noopener">דניאל לייט דיזיין</a></span>
+            <span class="off-price num">₪1,999</span>
+            <a class="off-go" href="https://danielightdesign.co.il/product/mwwrr-thkrh-nksws/" target="_blank" rel="noopener" aria-label="מעבר לדניאל לייט דיזיין"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ ADD-ON (3 FANS) ============ -->
+<section id="addition" style="background:linear-gradient(180deg,rgba(255,255,255,.35),transparent 30%)">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">שלושה חללים שנשארו בחוץ</div>
+        <h2>התוספת: סלון, ממ״ד וחדר עבודה</h2>
+        <p class="section-lead">ההצעה של טרנדלייט מכסה שבעה מאווררים — חדרי שינה, פרגולה ואי המטבח. הסלון, הממ״ד וחדר העבודה לא הופיעו בה. בדקנו את מחלקת ווסטינגהאוס ב״לב המשרד״ ומצאנו שלושה דגמים שמגיעים עם תאורה ושלט במחיר: <b>₪2,386 לשלושה</b>, ו־<b>₪2,411 עד הבית</b> עם משלוח — פחות ממחצית מהמחיר של אותה תוספת במשפחת סווינג. המחיר אומת בפועל בעגלת קנייה, לא רק בדף המוצר.</p>
+      </div>
+      <div class="section-index">03 — ADD-ON</div>
+    </div>
+
+    <div class="alt-grid">
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag hot">סלון · הבחירה שלנו</span><img loading="lazy" src="assets/wh-talia52.jpg" alt="ווסטינגהאוס טליה 52 אינץ' עם תאורה לבנה"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Talia 52″ <small>ווסטינגהאוס · 132 ס״מ · לסלון</small></h3>
+          <p class="alt-spec">DC · 6 מהירויות · תאורה 28W CCT 2,800lm עם עמעם · שלט · 6,143 CFM · 45dB · עד 36 מ״ר</p>
+          <p class="alt-spec" style="color:#4C473D">החלל הגדול מקבל את הקוטר הגדול. התאורה חזקה מספיק כדי לא להוסיף גוף תאורה נפרד, והשישה הילוכים מאפשרים אוויר עדין גם כשהמאוורר עובד קבוע. 45dB — השקט בקבוצה.</p>
+          <div class="alt-price"><b class="num">₪725</b><span>כולל תאורה ושלט · מחיר שאומת בסל</span></div>
+          <a class="alt-link" href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-52-TALIA-%d7%98%d7%9c%d7%99%d7%94-DC-Westinghouse-i15532" target="_blank" rel="noopener">לעמוד המוצר בלב המשרד <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">ממ״ד · לבן ושקט</span><img loading="lazy" src="assets/wh-longwood42.jpg" alt="ווסטינגהאוס לונגווד 42 אינץ' לבן עם להבי אלון"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Longwood 42″ <small>ווסטינגהאוס · 105 ס״מ · לממ״ד</small></h3>
+          <p class="alt-spec">DC · 6 מהירויות · תאורה 24W CCT 2,450lm · שלט · 4,979 CFM · 48dB · עד 20 מ״ר</p>
+          <p class="alt-spec" style="color:#4C473D">בחדר קטן ואטום פחות אוויר הוא יתרון: 42″ מתאים לחדר של עד 20 מ״ר, 4,979 CFM ו־48dB. הגוף הלבן מט עם להבי אלון נעלם בתקרה לבנה; 2,450lm מספיקים לממ״ד. קיבוע — בתקרה בלבד, לא בקירות האטומים.</p>
+          <div class="alt-price"><b class="num">₪1,049</b><span>כולל תאורה ושלט · מחיר שאומת בסל</span></div>
+          <a class="alt-link" href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-%d7%9c%d7%95%d7%a0%d7%92%d7%95%d7%95%d7%93-CCT-42-Longwood-Westinghouse-i18707" target="_blank" rel="noopener">לעמוד המוצר בלב המשרד <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">חדר עבודה · הכי משתלם</span><img loading="lazy" src="assets/wh-talia42.jpg" alt="ווסטינגהאוס טליה 42 אינץ' שחור"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Talia 42″ <small>ווסטינגהאוס · 105 ס״מ · לעבודה</small></h3>
+          <p class="alt-spec">DC · 6 מהירויות · תאורה 28W CCT 2,800lm עם עמעם · שלט · 4,590 CFM · 45dB · עד 20 מ״ר</p>
+          <p class="alt-spec" style="color:#4C473D">המחיר הנמוך בפרויקט: 612 ₪ למאוורר DC מלא, עם תאורה חזקה ושלט. 42″ מספיק בהחלט לחדר עבודה, וה־45dB שקטים מספיק לשיחות. גוף שחור; לחדר בהיר במיוחד — Longwood 42 בלבן.</p>
+          <div class="alt-price"><b class="num">₪612</b><span>כולל תאורה ושלט · מחיר שאומת בסל</span></div>
+          <a class="alt-link" href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-42-TALIA-%d7%98%d7%9c%d7%99%d7%94-DC-Westinghouse-i15528" target="_blank" rel="noopener">לעמוד המוצר בלב המשרד <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="addon-total">
+      <div>
+        <div class="eyebrow">סה״כ התוספת — עד הבית</div>
+        <b class="big num">₪2,411</b>
+        <span class="sub">2,386 ₪ מוצרים + 25 ₪ משלוח עם שליח · כולל מע״מ · איסוף עצמי 0 ₪</span>
+      </div>
+      <div class="addon-side">
+        <div><span>כל הפרויקט: הצעה + תוספת</span><b class="num">₪16,079</b></div>
+        <div><span>כל הפרויקט במחירי השוק</span><b class="num">₪13,695</b></div>
+        <div><span>שדרוג הסלון ל־Magnolia 52</span><b class="num">+₪587</b></div>
+        <div><span>איסוף עצמי מהמסגר 78</span><b class="num">−₪25</b></div>
+      </div>
+    </div>
+    <p class="res-note" style="margin:10px 0 0;max-width:82ch">אומת בעגלת קנייה ב־10.11.2026: <span dir="ltr">Talia 52 + Longwood 42 + Talia 42</span> = <b>2,386 ₪ כולל מע״מ</b>, בדיוק כמחירי דפי המוצר. בקופה: <b>משלוח עם שליח 25 ₪</b> לכל ההזמנה (1 עד 7 ימי עבודה), דחוף בת״א רבתי 120 ₪, איסוף עצמי 0 ₪. הקרטונים גדולים — לאמת טלפונית שהתעריף חל; התקנה אינה כלולה. שדרוג ל־Magnolia 52: <span dir="ltr">2,998 ₪</span> עד הבית. בדפים אין בורר צבע או ערכה — רק כמות.</p>
+
+    <div class="alt-divider" style="margin-top:34px">
+      <div>
+        <div class="eyebrow">אם רוצים אחידות עם הסווינג</div>
+        <h3>אותה תוספת, במשפחה של טרנדלייט</h3>
+        <p>טרנדלייט יכולה להוסיף שלושה מאווררים תואמים. היתרון: שפה עיצובית זהה לחדרי השינה, אחריות 25 שנה למנוע והתקנה אחת. החיסרון: כל מאוורר צריך ערכת תאורה בנפרד — וזה מכפיל את הפער.</p>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>חדר</th>
+              <th>דגם Swing</th>
+              <th>מחיר מדף + ערכת LED</th>
+              <th>פער מול ההמלצה</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>סלון</td>
+              <td class="name-cell"><b>Onyx 54″</b><small>DC · שלט · 3 להבים</small></td>
+              <td class="price num">₪1,889</td>
+              <td class="price num" style="color:var(--warn)">+₪1,164</td>
+            </tr>
+            <tr>
+              <td>ממ״ד</td>
+              <td class="name-cell"><b>Pebble 42″</b><small>DC · שלט · 3 או 4 להבים</small></td>
+              <td class="price num">₪1,433</td>
+              <td class="price num" style="color:var(--warn)">+₪384</td>
+            </tr>
+            <tr>
+              <td>חדר עבודה</td>
+              <td class="name-cell"><b>Diamond 48″</b><small>DC · שלט · 6 מהירויות</small></td>
+              <td class="price num">₪1,740</td>
+              <td class="price num" style="color:var(--warn)">+₪1,128</td>
+            </tr>
+            <tr class="totals-row">
+              <td>סה״כ</td>
+              <td>3 מאווררים + 3 ערכות תאורה</td>
+              <td class="num">₪5,062</td>
+              <td class="num">+₪2,676</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="res-note" style="margin:12px 0 0;max-width:82ch">מחירי מדף כולל מע״מ: Onyx ו־Pebble לפי טכנולייט, Diamond לפי ניסני; ערכת LED 22W ב־290 ₪. הנחות ההצעה — 5% על המאווררים ו־8% על התאורה — לא מחושבות כאן. בפועל הפער מצטמצם לכ־2,400 ₪, אבל עדיין כמעט פי שניים מהתוספת של לב המשרד.</p>
+  </div>
+</section>
+
+<!-- ============ COMPARE ============ -->
+<section id="compare">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">השוואת מחירים</div>
+        <h2>ההצעה מול המדף</h2>
+        <p class="section-lead">כל שורה בהצעה, מול המחיר הטוב שמצאנו בחנות ישראלית — שניהם כולל מע״מ. השורות מסודרות לפי סדר ההצעה, כולל אביזרים. שימו לב במיוחד לשורת הלהבים: ייתכן שהיא כפולה.</p>
+      </div>
+      <div class="section-index">04 — PRICING</div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>שורה</th>
+              <th>פריט</th>
+              <th>כמות</th>
+              <th>מחיר הצעה ליח׳<br><span style="font-weight:400;text-transform:none">לפני מע״מ</span></th>
+              <th>מחיר הצעה ליח׳<br><span style="font-weight:400;text-transform:none">כולל מע״מ</span></th>
+              <th>המחיר הטוב בשוק</th>
+              <th>ספק / קישור</th>
+              <th>פער ליח׳</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="num">9</td>
+              <td class="name-cell"><b>Diamond 85102</b><small>גוף מאוורר DC 32W לבן + שלט</small></td>
+              <td class="num">4</td>
+              <td class="price num">₪1,281.55</td>
+              <td class="price num">₪1,512.23</td>
+              <td class="price best num">₪1,450.00</td>
+              <td><a href="https://www.nisanihashmal.co.il/items/971610-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%93%D7%99%D7%99%D7%9E%D7%95%D7%A0%D7%93-%D7%A1%D7%98%D7%95%D7%A8%D7%9D-Swingfans" target="_blank" rel="noopener" style="border-bottom:1px solid var(--line)">ניסני חשמל</a></td>
+              <td class="price num" style="color:var(--sage)">−₪62</td>
+            </tr>
+            <tr>
+              <td class="num">10</td>
+              <td class="name-cell"><b>Storm blades 853</b><small>להבי סטורם 48″ / 56″ לבן</small></td>
+              <td class="num">4</td>
+              <td class="price num">₪142.50</td>
+              <td class="price num">₪168.15</td>
+              <td class="price best num">כלול</td>
+              <td><span class="pill warn">לבדוק מול הספק</span></td>
+              <td class="price num" style="color:var(--warn)">−₪168*</td>
+            </tr>
+            <tr>
+              <td class="num">11</td>
+              <td class="name-cell"><b>Light kit 85137</b><small>ערכת LED 18W · 3000K · מתאים לדיימונד</small></td>
+              <td class="num">4</td>
+              <td class="price num">₪285.00</td>
+              <td class="price num">₪336.30</td>
+              <td class="price best num">₪290.00 <small>22W</small></td>
+              <td><a href="https://www.nisanihashmal.co.il/items/6017146--%D7%A7%D7%99%D7%98-%D7%AA%D7%90%D7%95%D7%A8%D7%94-LED-22W-%D7%9C%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-SWING-Swingfans" target="_blank" rel="noopener" style="border-bottom:1px solid var(--line)">ניסני חשמל</a></td>
+              <td class="price num" style="color:var(--sage)">−₪46</td>
+            </tr>
+            <tr>
+              <td class="num">21</td>
+              <td class="name-cell"><b>Wave 85117</b><small>וויב חוץ 52″ לבן · AC · תאורה 23W</small></td>
+              <td class="num">2</td>
+              <td class="price num">₪1,139.05</td>
+              <td class="price num">₪1,344.08</td>
+              <td class="price best num">₪949.00</td>
+              <td><a href="https://www.nisanihashmal.co.il/items/2536302-%D7%95%D7%95%D7%99%D7%91-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%97%D7%95%D7%A5-52-Swingfans" target="_blank" rel="noopener" style="border-bottom:1px solid var(--line)">ניסני חשמל</a></td>
+              <td class="price num" style="color:var(--sage)">−₪395</td>
+            </tr>
+            <tr>
+              <td class="num">58</td>
+              <td class="name-cell"><b>Nexus 85070</b><small>נקסוס 54″ DC + שלט</small></td>
+              <td class="num">1</td>
+              <td class="price num">₪1,899.05</td>
+              <td class="price num">₪2,240.88</td>
+              <td class="price best num">₪1,800.00</td>
+              <td><a href="https://www.nisanihashmal.co.il/items/5887003-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%A0%D7%A7%D7%A1%D7%95%D7%A1-54-NEXUS-SWINGFANS" target="_blank" rel="noopener" style="border-bottom:1px solid var(--line)">ניסני חשמל</a></td>
+              <td class="price num" style="color:var(--sage)">−₪441</td>
+            </tr>
+            <tr>
+              <td class="num">59</td>
+              <td class="name-cell"><b>85125 · מודול תאורה</b><small>LED 23W · 3000K · ניתן לעמעום</small></td>
+              <td class="num">1</td>
+              <td class="price num">₪285.00</td>
+              <td class="price num">₪336.30</td>
+              <td class="price best num">₪290.00</td>
+              <td><a href="https://www.nisanihashmal.co.il/items/6017146--%D7%A7%D7%99%D7%98-%D7%AA%D7%90%D7%95%D7%A8%D7%94-LED-22W-%D7%9C%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-SWING-Swingfans" target="_blank" rel="noopener" style="border-bottom:1px solid var(--line)">ניסני חשמל</a></td>
+              <td class="price num" style="color:var(--sage)">−₪46</td>
+            </tr>
+            <tr>
+              <td class="num">60</td>
+              <td class="name-cell"><b>85117 · מוט הארכה</b><small>מוט עד 300 ס״מ · כולל כלוב ומגבים</small></td>
+              <td class="num">1</td>
+              <td class="price num">₪285.00</td>
+              <td class="price num">₪336.30</td>
+              <td class="price num">—</td>
+              <td><span class="pill">אין מדף ציבורי</span></td>
+              <td class="price num">—</td>
+            </tr>
+            <tr class="totals-row">
+              <td></td>
+              <td>סה״כ בהצעה — 7 מאווררים</td>
+              <td class="num">17</td>
+              <td class="num">₪11,583.35</td>
+              <td class="num">₪13,668.35</td>
+              <td class="num">₪11,284.30<small style="display:block;font-size:10.5px;color:var(--muted);font-weight:400">ללא שורת הלהבים</small></td>
+              <td colspan="2">חיסכון ₪2,384 · אם הלהבים אכן נדרשים: ₪1,711</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="res-note" style="margin:12px 0 0;max-width:82ch">* שורת הלהבים: ברשת המאוורר נמכר עם להבים כלולים (בחירת גודל וצבע). אם גם בהצעה המאוורר מגיע עם להבים, שורת 853 היא חיוב כפול של כ־₪673 כולל מע״מ — שאלו את טרנדלייט לפני אישור. מחירי המדף נבדקו ב־10.11.2026 וכוללים מע״מ; ייתכנו שינויי מלאי ומחיר.</p>
+
+    <div class="note" style="margin-top:14px;margin-bottom:0">
+      <b>עם התוספת:</b> שלושת המאווררים הנוספים (סלון, ממ״ד וחדר עבודה) נרכשים בנפרד ב״לב המשרד״ ב־<b>₪2,386</b>, ועם משלוח עם שליח — <b>₪2,411 עד הבית</b>. סך הפרויקט (הצעה + תוספת) מגיע ל־<b>₪16,079</b>, ובמחירי השוק ל־<b>₪13,695</b> — פער של ₪2,384, אותו חיסכון. פירוט מלא בסעיף <a href="#addition" style="border-bottom:1px solid var(--line);font-weight:600">התוספת</a>.
+    </div>
+
+    <!-- CALCULATOR -->
+    <div class="calc">
+      <div class="calc-controls">
+        <h3 class="calc-title">מחשבון הרכישה</h3>
+        <p class="calc-sub">שנו כמויות וראו את הפער בין ההצעה למחירי השוק בזמן אמת.</p>
+        <div class="calc-row">
+          <div class="calc-row-label"><b>Diamond Storm</b><small>חדרי שינה · ליחידה</small></div>
+          <div class="stepper">
+            <button type="button" data-step="-1" data-target="qDiamond" aria-label="הפחתת כמות דיימונד">−</button>
+            <input id="qDiamond" type="number" value="4" min="0" max="20" inputmode="numeric">
+            <button type="button" data-step="1" data-target="qDiamond" aria-label="הוספת כמות דיימונד">+</button>
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-row-label"><b>Wave Outdoor</b><small>פרגולה · ליחידה</small></div>
+          <div class="stepper">
+            <button type="button" data-step="-1" data-target="qWave" aria-label="הפחתת כמות וויב">−</button>
+            <input id="qWave" type="number" value="2" min="0" max="20" inputmode="numeric">
+            <button type="button" data-step="1" data-target="qWave" aria-label="הוספת כמות וויב">+</button>
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-row-label"><b>Nexus 54″</b><small>חלל גדול · ליחידה</small></div>
+          <div class="stepper">
+            <button type="button" data-step="-1" data-target="qNexus" aria-label="הפחתת כמות נקסוס">−</button>
+            <input id="qNexus" type="number" value="1" min="0" max="20" inputmode="numeric">
+            <button type="button" data-step="1" data-target="qNexus" aria-label="הוספת כמות נקסוס">+</button>
+          </div>
+        </div>
+        <label class="calc-toggle">
+          <input type="checkbox" id="withAccessories" checked>
+          לכלול אביזרים: להבים, ערכות תאורה ומוט
+        </label>
+      </div>
+      <div class="calc-results" aria-live="polite">
+        <div class="res-row"><span>עלות לפי הצעת טרנדלייט</span><b class="num" id="quoteTotal">₪13,668</b></div>
+        <div class="res-row"><span>עלות במחירי השוק</span><b class="num" id="marketTotal">₪11,284</b></div>
+        <div class="res-big"><span>חיסכון פוטנציאלי</span><b class="num" id="savingTotal">₪2,384</b></div>
+        <p class="res-note" id="calcNote">כולל מע״מ. מבוסס על ניסני חשמל לדיימונד/וויב/נקסוס, ערכת LED 22W ומחיר ההצעה למוט. אינו כולל משלוח והתקנה.</p>
+      </div>
+    </div>
+    <p class="res-note" style="margin:10px 0 0">המחשבון מכסה את שבעת המאווררים בהצעה. שלושת מאווררי התוספת (₪2,386) אינם כלולים בו — הם נרכשים בנפרד ומופיעים ב<a href="#addition" style="border-bottom:1px solid var(--line);font-weight:600">סעיף התוספת</a>.</p>
+    <p class="res-note" style="margin:6px 0 0">השוואת השוק הרחב — 22 דגמים מ־KSP ומחסני תאורה, כולל סל חלופי לכל חדר — <a href="#competitors" style="border-bottom:1px solid var(--line);font-weight:600">בסעיף 05</a>.</p>
+  </div>
+</section>
+
+<!-- ============ COMPETITORS ============ -->
+<section id="competitors" style="background:linear-gradient(180deg,rgba(255,255,255,.55),transparent 24%)">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">השוק הרחב · KSP ומחסני תאורה</div>
+        <h2>מי באמת עומד בארבע הדרישות</h2>
+        <p class="section-lead">סרקנו יותר מ־30 מאווררי תקרה ב־KSP ובמחסני תאורה (lighting.co.il). 22 דגמים נכנסו להשוואה, אבל רק קומץ עומד בכל ארבע הדרישות: <b>תאורה מובנית, צבע להבים לפי חדר, מנוע שקט וקיבולת שמתאימה לשטח</b>. כל המחירים כולל מע״מ, נכון ל־10.11.2026.</p>
+      </div>
+      <div class="section-index">05 — MARKET</div>
+    </div>
+
+    <div class="market-note">
+      <span><b>שיטת הבדיקה:</b> דפי מוצר ועגלת קנייה — לא מחירוני PDF.</span>
+      <span><b>״לא מפורסם״</b> = הנתון לא הופיע בדף ולא אושר טלפונית; לא הומצא נתון חסר.</span>
+      <span><b>התקנה</b> אינה כלולה באף מחיר.</span>
+    </div>
+
+    <div class="req-grid">
+      <div class="req">
+        <div class="req-n">01 · תאורה</div>
+        <h3>LED מובנה — לא תוספת</h3>
+        <p>כל עשרת המאווררים חייבים גוף תאורה מובנה עם CCT. דגם שמוכר תאורה בנפרד נפסל — כמו <b>Talia 48 ב־657 ₪</b>, שהתוספת מקפיצה אותו לכ־947 ₪.</p>
+      </div>
+      <div class="req">
+        <div class="req-n">02 · צבע</div>
+        <h3>עץ בציבורי, לבן בפרטי</h3>
+        <p>סלון, מטבח, עבודה ומרפסת — גוון עץ. ממ״ד וחדרי שינה — להבים לבנים. <b>״עץ״ בתעשייה</b> הוא לרוב MDF, ABS או Polywood, לא עץ מלא.</p>
+      </div>
+      <div class="req">
+        <div class="req-n">03 · שקט</div>
+        <h3>DC, 6 הילוכים, עד 50dB</h3>
+        <p>רק לחמישה מתוך 22 הדגמים יש נתון dB מפורסם. <b>Talia 52</b> הוא היחיד שמשלב 52″ עם 45dB; <b>Young</b> מצהיר 50dB; <b>Star Outdoor</b> 51.7dB במקסימום.</p>
+      </div>
+      <div class="req">
+        <div class="req-n">04 · קיבולת</div>
+        <h3>CFM, לא רק קוטר</h3>
+        <p>סלון <span dir="ltr">28–32</span> מ״ר דורש <b><span dir="ltr">≥5,500 CFM</span></b>; מרפסת <span dir="ltr">20–24</span> מ״ר — <b><span dir="ltr">≥6,000 CFM</span></b> ו־IP44. קוטר גדול בלי נתון ספיקה הוא הבטחה, לא מפרט.</p>
+      </div>
+    </div>
+
+    <div class="alt-divider">
+      <div>
+        <div class="eyebrow">לפני שמשווים דגמים</div>
+        <h3>מה כל חדר דורש</h3>
+        <p>השטחים הם הערכה לפי תוכנית הבית. אם הסלון פתוח למטבח — חשבו אותם כחלל אחד, והקיבולת הנדרשת מצטברת.</p>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>חדר</th><th>כמות</th><th>שטח (הערכה)</th><th>קוטר</th><th>ספיקה מינימלית</th><th>להבים</th><th>מה מכריע</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><b>סלון</b></td><td>1</td><td class="num"><span dir="ltr">28–32</span> מ״ר</td><td class="num"><span dir="ltr">56–60″</span></td><td class="num"><span dir="ltr">≥5,500 CFM</span></td><td>גוון עץ</td><td>LED חזק, DC, ≤45dB</td></tr>
+            <tr><td><b>מרפסת מקורה</b></td><td>2</td><td class="num"><span dir="ltr">20–24</span> מ״ר</td><td class="num">56″</td><td class="num"><span dir="ltr">≥6,000 CFM · IP44+</span></td><td>גוון עץ (או לבן)</td><td>עמידות רטיבות, כיסוי</td></tr>
+            <tr><td><b>מטבח</b></td><td>1</td><td class="num"><span dir="ltr">14–18</span> מ״ר</td><td class="num"><span dir="ltr">48–52″</span></td><td class="num"><span dir="ltr">≥4,500 CFM</span></td><td>גוון עץ</td><td>ניקוי קל, IP20+</td></tr>
+            <tr><td><b>חדר עבודה</b></td><td>1</td><td class="num"><span dir="ltr">12–14</span> מ״ר</td><td class="num"><span dir="ltr">42–48″</span></td><td class="num"><span dir="ltr">≥4,000 CFM</span></td><td>גוון עץ</td><td>שקט לשיחות</td></tr>
+            <tr><td><b>ממ״ד</b></td><td>1</td><td class="num"><span dir="ltr">10–12</span> מ״ר</td><td class="num">42″</td><td class="num"><span dir="ltr">≥3,500 CFM</span></td><td>לבן</td><td>תאורה חזקה, קיבוע תקרה</td></tr>
+            <tr><td><b>חדרי שינה</b></td><td>4</td><td class="num"><span dir="ltr">12–18</span> מ״ר</td><td class="num"><span dir="ltr">48–52″</span></td><td class="num"><span dir="ltr">≥4,500 CFM</span></td><td>לבן</td><td>DC, ≤45–50dB</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="alt-divider">
+      <div>
+        <div class="eyebrow">שני החללים שקובעים את הסל</div>
+        <h3>סלון ומרפסת: הקיבולת מכריעה</h3>
+        <p>אלה שני המקומות שבהם קוטר יפה לא מספיק. השווינו כל מועמד לפי ספיקה מפורסמת, שטח מדורג, שקט ועמידות — לא לפי גודל הלהב.</p>
+      </div>
+    </div>
+
+    <div class="cap-grid">
+      <div class="cap">
+        <div class="cap-head">
+          <div class="eyebrow">סלון · <span dir="ltr">28–32</span> מ״ר</div>
+          <h3>דרישה: <span dir="ltr">≥5,500 CFM</span> ו־<span dir="ltr">≤45dB</span></h3>
+          <p>חלל פתוח עם תקרה גבוהה; המאוורר עובד שעות ארוכות.</p>
+        </div>
+        <div class="cap-body">
+          <div class="cap-row"><span>זוכה בנתונים</span><b>Talia 52 · <span dir="ltr">6,143 CFM</span> · 45dB</b></div>
+          <div class="cap-row"><span>שטח מדורג</span><b>עד 36 מ״ר</b></div>
+          <div class="cap-row"><span>חלופת גוון עץ</span><b>Strong 60 wood · <span dir="ltr">16–28</span> מ״ר</b></div>
+          <div class="cap-row"><span>קוטר בלי CFM</span><b>Hercules 60 · 60″</b></div>
+          <div class="cap-row"><span>מחיר</span><b>Talia 725 · Strong 1,299.90 · Hercules 694</b></div>
+          <div class="cap-msg good"><b>ההכרעה:</b> Talia 52 מנצחת בפער של <span dir="ltr">643 CFM</span> מעל הדרישה, עם נתון השקט הטוב בקבוצה — 45dB. מול Hercules היא יקרה ב־31 ₪ בלבד — לא שווה לוותר על נתון מאומת.</div>
+          <div class="cap-msg bad"><b>הסתייגות:</b> Strong 60 wood מדורג ל־28 מ״ר בלבד — הקצה התחתון של הסלון — וגם אזל מהמלאי. אם הסלון גדול מ־30 מ״ר, 60″ לא פותר את הבעיה לבד.</div>
+        </div>
+      </div>
+
+      <div class="cap">
+        <div class="cap-head">
+          <div class="eyebrow">מרפסת מקורה · <span dir="ltr">20–24</span> מ״ר · ×2</div>
+          <h3>דרישה: <span dir="ltr">≥6,000 CFM</span> ו־IP44</h3>
+          <p>שני מאווררים, חשיפה ללחות ולאבק; לא לגשם ישיר.</p>
+        </div>
+        <div class="cap-body">
+          <div class="cap-row"><span>זוכה בספיקה</span><b>Star Outdoor 56 · <span dir="ltr">7,543 CFM</span></b></div>
+          <div class="cap-row"><span>עמידות ושקט</span><b>IP44 · LED 24W · 51.7dB</b></div>
+          <div class="cap-row"><span>חלופת גוון עץ</span><b>Atlanta 56 · IP44 · CFM לא מפורסם</b></div>
+          <div class="cap-row"><span>נפסל על שטח</span><b>Monsoon 52 · <span dir="ltr">12–16</span> מ״ר</b></div>
+          <div class="cap-row"><span>מחיר ליחידה</span><b>Star 899 · Atlanta 1,290 · Monsoon 999.90</b></div>
+          <div class="cap-msg good"><b>ההכרעה:</b> Star Outdoor 56 הוא היחיד שמפרסם גם <span dir="ltr">7,543 CFM</span> וגם IP44 — מרווח של 25% מעל הדרישה. שניים ממנו מכסים את המרפסת ב־1,798 ₪.</div>
+          <div class="cap-msg bad"><b>הסתייגות:</b> Atlanta נותן מראה עץ ו־IP44 אבל בלי CFM. אל תאשרו אותו בלי אישור ספיקה בכתב. וגם IP44 אינו עמידות לגשם ישיר — רק למרפסת מקורה.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alt-divider">
+      <div>
+        <div class="eyebrow">שמונת הדגמים שקובעים את הסל</div>
+        <h3>המועמדים — מקרוב</h3>
+        <p>אלה הדגמים שנכנסו לחישוב הסלים. ליד כל אחד: מה הוא נותן, מה חסר, ולמי הוא מתאים.</p>
+      </div>
+    </div>
+
+    <div class="alt-grid quad">
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag hot">סלון · מומלץ</span><img loading="lazy" src="assets/wh-talia52.jpg" alt="ווסטינגהאוס טליה 52 אינץ' עם להבי עץ ותאורה"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Talia 52″ <small>ווסטינגהאוס · 132 ס״מ</small></h3>
+          <p class="alt-spec spec-chips"><i dir="auto">DC</i><i dir="auto">6 הילוכים</i><i dir="auto">6,143 CFM</i><i dir="auto">45dB</i><i dir="auto">LED 28W CCT</i><i dir="auto">36 מ״ר</i></p>
+          <p class="alt-spec" style="color:#4C473D">הנתון המאומת היחיד ברמה הזו: <span dir="ltr">6,143 CFM</span>, 45dB ותאורה חזקה ב־725 ₪. הבחירה לסלון.</p>
+          <div class="alt-price"><b class="num">₪725</b><span>כולל תאורה ושלט</span></div>
+          <a class="alt-link" href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-52-TALIA-%d7%98%d7%9c%d7%99%d7%94-DC-Westinghouse-i15532" target="_blank" rel="noopener">לב המשרד <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag hot">מרפסת · ספיקה</span><img loading="lazy" src="assets/ksp-490936.jpg" alt="סטאר אאוטדור 56 אינץ' לבן עם תאורת LED"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Star Outdoor 56″ <small>סטאר · 142 ס״מ</small></h3>
+          <p class="alt-spec spec-chips"><i dir="auto">DC 32W</i><i dir="auto">6 הילוכים</i><i dir="auto">7,543 CFM</i><i dir="auto">IP44</i><i dir="auto">LED 24W CCT</i></p>
+          <p class="alt-spec" style="color:#4C473D">הכי חזק בקטגוריית החוץ. שניים מכסים מרפסת של <span dir="ltr">20–24</span> מ״ר. לבן — לגוון עץ יש את אטלנטה.</p>
+          <div class="alt-price"><b class="num">₪899</b><span>KSP · כולל תאורה</span></div>
+          <a class="alt-link" href="https://ksp.co.il/web/item/490936" target="_blank" rel="noopener">לעמוד המוצר ב־KSP <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">מטבח · הערך</span><img loading="lazy" src="assets/ksp-454495.jpg" alt="נorther יאנג 48 אינץ' עם להבי גוון עץ וגוף לבן"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Young 48″ <small>Norther · 122 ס״מ</small></h3>
+          <p class="alt-spec spec-chips"><i dir="auto">DC 32W</i><i dir="auto">6 הילוכים</i><i dir="auto">160 m³/min</i><i dir="auto">50dB</i><i dir="auto">LED 24W</i><i dir="auto">MDF</i></p>
+          <p class="alt-spec" style="color:#4C473D">הזול עם נתוני ספיקה ורעש מפורסמים. להבי MDF בגוון עץ וגוף לבן — מתאים למטבח.</p>
+          <div class="alt-price"><b class="num">₪499</b><span>KSP · כולל תאורה</span></div>
+          <a class="alt-link" href="https://ksp.co.il/web/item/454495" target="_blank" rel="noopener">לעמוד המוצר ב־KSP <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">סלון · גוון עץ</span><img loading="lazy" src="assets/pacific-strong60-wood.jpg" alt="פסיפיק סטרונג 60 אינץ' בגוון עץ"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Strong 60″ wood <small>Pacific · 152 ס״מ</small></h3>
+          <p class="alt-spec spec-chips"><i dir="auto">DC 45W</i><i dir="auto">5 הילוכים</i><i dir="auto">172 RPM</i><i dir="auto">LED 24W</i><i dir="auto">16–28 מ״ר</i><i dir="auto">IP20</i></p>
+          <p class="alt-spec" style="color:#4C473D">המראה הגדול והעץ. אבל <span dir="ltr">16–28</span> מ״ר ואזל מהמלאי — לבדוק תאריך אספקה לפני שמתאהבים.</p>
+          <div class="alt-price"><b class="num">₪1,299.90</b><span>מחסני תאורה · אזל</span></div>
+          <a class="alt-link" href="https://www.lighting.co.il/75372022" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">מרפסת · גוון עץ</span><img loading="lazy" src="assets/ksp-200142.jpg" alt="נorther אטלנטה 56 אינץ' בגוון עץ עם IP44"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Atlanta 56″ <small>Norther · 142 ס״מ</small></h3>
+          <p class="alt-spec spec-chips"><i dir="auto">DC 40W</i><i dir="auto">250 RPM</i><i dir="auto">LED 24W 2,400lm</i><i dir="auto">IP44</i><i dir="auto">2 מוטים</i></p>
+          <p class="alt-spec" style="color:#4C473D">אביזר החוץ היחיד עם מראה עץ ו־IP44. ה־CFM לא מפורסם — צריך אישור לפני הזמנה.</p>
+          <div class="alt-price"><b class="num">₪1,290</b><span>KSP · יחידה אחרונה</span></div>
+          <a class="alt-link" href="https://ksp.co.il/web/item/200142" target="_blank" rel="noopener">לעמוד המוצר ב־KSP <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag hot">חדרים · לבן ו־DC</span><img loading="lazy" src="assets/ksp-375347.jpg" alt="סמיקום רוי 52 אינץ' לבן עם תאורה"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">ROY 52″ <small>Semicom · 132 ס״מ</small></h3>
+          <p class="alt-spec spec-chips"><i dir="auto">DC</i><i dir="auto">6 הילוכים</i><i dir="auto">LED 32W CCT</i><i dir="auto">שלט</i><i dir="auto">אחריות 1+10</i></p>
+          <p class="alt-spec" style="color:#4C473D">לבן, DC ו־10 שנות אחריות למנוע ב־715 ₪. השדרוג השקול ל־Venta בחדרי השינה.</p>
+          <div class="alt-price"><b class="num">₪715</b><span>KSP · כולל תאורה</span></div>
+          <a class="alt-link" href="https://ksp.co.il/web/item/375347" target="_blank" rel="noopener">לעמוד המוצר ב־KSP <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">חדרים · תקציב</span><img loading="lazy" src="assets/ksp-271376.jpg" alt="ונטה פרש אייר 48 אינץ' לבן עם תאורה"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Venta Fresh Air 48″ <small>Venta · 122 ס״מ</small></h3>
+          <p class="alt-spec spec-chips"><i dir="auto">LED 22W CCT</i><i dir="auto">IP54</i><i dir="auto">57W</i><i dir="auto">שלט</i><i dir="auto">אחריות 1+4</i></p>
+          <p class="alt-spec" style="color:#4C473D">הזול עם LED מובנה ו־IP54. מנוע 57W ואחריות 4 שנים בלבד — פשרה מול ROY.</p>
+          <div class="alt-price"><b class="num">₪599</b><span>KSP · כולל תאורה</span></div>
+          <a class="alt-link" href="https://ksp.co.il/web/item/271376" target="_blank" rel="noopener">לעמוד המוצר ב־KSP <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">ממ״ד · תקציב</span><img loading="lazy" src="assets/ksp-454933.jpg" alt="סמיקום ג'נסיס 42 אינץ' לבן עם תאורה"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Genesis1 42″ <small>Semicom · 107 ס״מ</small></h3>
+          <p class="alt-spec spec-chips"><i dir="auto">LED 18W CCT</i><i dir="auto">3 הילוכים</i><i dir="auto">שלט</i><i dir="auto">אחריות 1+9</i></p>
+          <p class="alt-spec" style="color:#4C473D">42″ לבן ב־236 ₪ — הפתרון הזול לממ״ד. המנוע לא מסומן כ־DC; אם השקט קריטי — Strong 42 לבן.</p>
+          <div class="alt-price"><b class="num">₪236</b><span>KSP · כולל תאורה</span></div>
+          <a class="alt-link" href="https://ksp.co.il/web/item/454933" target="_blank" rel="noopener">לעמוד המוצר ב־KSP <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="alt-divider">
+      <div>
+        <div class="eyebrow">הטבלה המלאה</div>
+        <h3>22 דגמים, מפרט מול מפרט</h3>
+        <p>אותו סדר כמו הדרישות: קודם להבי עץ לחללים הציבוריים, אחר כך חוץ, ולבסוף לבן לממ״ד ולחדרי השינה. לחיצה על שם הדגם פותחת את דף המוצר.</p>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>דגם</th><th>קוטר</th><th>להבים</th><th>ספיקה</th><th>שקט</th><th>תאורה</th><th>IP</th><th>מחיר</th><th>התאמה</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="group-row"><td colspan="9">סלון · מטבח · חדר עבודה — להבי עץ או גוון עץ</td></tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-52-TALIA-%d7%98%d7%9c%d7%99%d7%94-DC-Westinghouse-i15532" target="_blank" rel="noopener">Talia 52″</a></b><small>ווסטינגהאוס · DC · 6 הילוכים</small></td>
+              <td class="num">52″</td><td>עץ כהה</td><td class="num"><span dir="ltr">6,143 CFM</span></td><td class="num">45dB</td><td>28W CCT · 2,800lm</td><td>—</td><td class="price">₪725</td><td><span class="st ok">מומלץ לסלון</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://ksp.co.il/web/item/193975" target="_blank" rel="noopener">Hercules 60″</a></b><small>סמיקום · DC · 5 הילוכים</small></td>
+              <td class="num">60″</td><td>עץ/לבן</td><td>לא מפורסם</td><td>לא מפורסם</td><td>20W CCT</td><td>—</td><td class="price">₪694</td><td><span class="st mid">חסר נתון</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://www.lighting.co.il/75372022" target="_blank" rel="noopener">Strong 60″ wood</a></b><small>Pacific · DC 45W · 5 הילוכים</small></td>
+              <td class="num">60″</td><td>גוון עץ</td><td>לא מפורסם · <span dir="ltr">16–28</span> מ״ר</td><td>לא מפורסם</td><td>24W CCT</td><td class="num">IP20</td><td class="price">₪1,299.90</td><td><span class="st no">אזל</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://www.lighting.co.il/75372003" target="_blank" rel="noopener">Ice 52″ wood</a></b><small>Pacific · DC 30W · 6 הילוכים</small></td>
+              <td class="num">52″</td><td>גוון עץ</td><td>לא מפורסם · <span dir="ltr">12–16</span> מ״ר</td><td>לא מפורסם</td><td>24W CCT</td><td class="num">IP20</td><td class="price">₪1,099.90</td><td><span class="st mid">שטח בינוני</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://ksp.co.il/web/item/454495" target="_blank" rel="noopener">Young 48″</a></b><small>Norther · DC 32W · 6 הילוכים</small></td>
+              <td class="num">48″</td><td>MDF עץ/לבן</td><td class="num"><span dir="ltr">160 m³/min</span></td><td class="num">50dB</td><td>24W CCT</td><td class="num">IP20</td><td class="price">₪499</td><td><span class="st ok">הזול המאומת</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://ksp.co.il/web/item/387119" target="_blank" rel="noopener">Storm 48″</a></b><small>סמיקום · DC · 6 הילוכים</small></td>
+              <td class="num">48″</td><td>עץ/שחור</td><td>לא מפורסם</td><td>לא מפורסם</td><td>25W CCT</td><td class="num">IP20</td><td class="price">₪499</td><td><span class="st mid">עיצוב בלבד</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://ksp.co.il/web/item/387113" target="_blank" rel="noopener">Storm 42″</a></b><small>סמיקום · DC · 6 הילוכים</small></td>
+              <td class="num">42″</td><td>עץ/שחור</td><td>לא מפורסם</td><td>לא מפורסם</td><td>25W CCT</td><td class="num">IP20</td><td class="price">₪360</td><td><span class="st no">יחידה אחרונה</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://www.lighting.co.il/75372016" target="_blank" rel="noopener">Strong 42″ wood</a></b><small>Pacific · DC 31W · 6 הילוכים</small></td>
+              <td class="num">42″</td><td>גוון עץ</td><td>לא מפורסם</td><td>לא מפורסם</td><td>22W</td><td class="num">IP20</td><td class="price">₪799.90</td><td><span class="st mid">יקר לנתונים</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://ksp.co.il/web/item/310359" target="_blank" rel="noopener">Young 42″</a></b><small>Norther · DC 32W · 6 הילוכים</small></td>
+              <td class="num">42″</td><td>MDF עץ/לבן</td><td>לא מפורסם</td><td>לא מפורסם</td><td>24W CCT</td><td class="num">IP20</td><td class="price">₪427</td><td><span class="st ok">לעבודה</span></td>
+            </tr>
+
+            <tr class="group-row"><td colspan="9">מרפסת · חוץ — IP44 ומעלה</td></tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://ksp.co.il/web/item/490936" target="_blank" rel="noopener">Star Outdoor 56″</a></b><small>סטאר · DC 32W · 6 הילוכים</small></td>
+              <td class="num">56″</td><td>לבן</td><td class="num"><span dir="ltr">7,543 CFM</span></td><td class="num">51.7dB</td><td>24W CCT · עמעום</td><td class="num">IP44</td><td class="price">₪899</td><td><span class="st ok">מומלץ למרפסת</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://ksp.co.il/web/item/200142" target="_blank" rel="noopener">Atlanta 56″</a></b><small>Norther · DC 40W · 250 RPM</small></td>
+              <td class="num">56″</td><td>גוון עץ (ABS)</td><td>לא מפורסם</td><td>לא מפורסם</td><td>24W CCT · 2,400lm</td><td class="num">IP44</td><td class="price">₪1,290</td><td><span class="st mid">חסר CFM</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://www.lighting.co.il/75372006" target="_blank" rel="noopener">Monsoon 52″</a></b><small>Pacific · DC 30W · 5 הילוכים</small></td>
+              <td class="num">52″</td><td>לא צוין</td><td>לא מפורסם · <span dir="ltr">12–16</span> מ״ר</td><td>לא מפורסם</td><td>24W CCT</td><td class="num">IP44</td><td class="price">₪999.90</td><td><span class="st no">קטן למרפסת</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b>Wave 52″</b><small>Swing · בהצעה</small></td>
+              <td class="num">52″</td><td>לבן</td><td>לא מפורסם</td><td>לא מפורסם</td><td>LED מובנה</td><td>—</td><td class="price">₪949<small>שוק</small></td><td><span class="st mid">בהצעה</span></td>
+            </tr>
+
+            <tr class="group-row"><td colspan="9">ממ״ד · חדרי שינה — להבים לבנים</td></tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://ksp.co.il/web/item/377524" target="_blank" rel="noopener">Talia 48″</a></b><small>ווסטינגהאוס · DC 24W</small></td>
+              <td class="num">48″</td><td>לבן/פולי</td><td class="num"><span dir="ltr">161 m³/min</span></td><td class="num">45dB</td><td>לא כלול — 28W בתוספת</td><td>—</td><td class="price">₪657<small>בלי תאורה</small></td><td><span class="st no">תאורה לא כלולה</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://ksp.co.il/web/item/375347" target="_blank" rel="noopener">ROY 52″</a></b><small>סמיקום · DC · 6 הילוכים</small></td>
+              <td class="num">52″</td><td>לבן</td><td>לא מפורסם</td><td>לא מפורסם</td><td>32W CCT</td><td>—</td><td class="price">₪715</td><td><span class="st ok">מומלץ לחדרים</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://ksp.co.il/web/item/271376" target="_blank" rel="noopener">Venta Fresh Air 48″</a></b><small>Venta · 57W</small></td>
+              <td class="num">48″</td><td>לבן</td><td>לא מפורסם</td><td>לא מפורסם</td><td>22W CCT</td><td class="num">IP54</td><td class="price">₪599</td><td><span class="st mid">אחריות 4 שנים</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://www.lighting.co.il/75372056" target="_blank" rel="noopener">Spirit 52″ white</a></b><small>Pacific · DC 24W</small></td>
+              <td class="num">52″</td><td>לבן</td><td>לא מפורסם · <span dir="ltr">10–14</span> מ״ר</td><td>לא מפורסם</td><td>24W</td><td class="num">IP20</td><td class="price">₪349.90</td><td><span class="st ok">הזול</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://www.lighting.co.il/75372019" target="_blank" rel="noopener">Ice 62″ white</a></b><small>Pacific · DC 45W · 6 הילוכים</small></td>
+              <td class="num">62″</td><td>לבן</td><td>לא מפורסם · <span dir="ltr">18–25</span> מ״ר</td><td>לא מפורסם</td><td>24W</td><td class="num">IP20</td><td class="price">₪1,499</td><td><span class="st mid">לחדר גדול</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://www.lighting.co.il/75372014" target="_blank" rel="noopener">Strong 42″ white</a></b><small>Pacific · DC 31W · 6 הילוכים</small></td>
+              <td class="num">42″</td><td>לבן</td><td>לא מפורסם · <span dir="ltr">8–12</span> מ״ר</td><td>לא מפורסם</td><td>22W</td><td class="num">IP20</td><td class="price">₪679.90</td><td><span class="st mid">יקר לממ״ד</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://ksp.co.il/web/item/454933" target="_blank" rel="noopener">Genesis1 42″</a></b><small>סמיקום · 3 הילוכים</small></td>
+              <td class="num">42″</td><td>לבן</td><td>לא מפורסם</td><td>לא מפורסם</td><td>18W CCT</td><td>—</td><td class="price">₪236</td><td><span class="st ok">הזול לממ״ד</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b><a href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-%d7%9c%d7%95%d7%a0%d7%92%d7%95%d7%95%d7%93-CCT-42-Longwood-Westinghouse-i18707" target="_blank" rel="noopener">Longwood 42″</a></b><small>ווסטינגהאוס · DC · 6 הילוכים</small></td>
+              <td class="num">42″</td><td>לבן/אלון</td><td class="num"><span dir="ltr">4,979 CFM</span></td><td class="num">48dB</td><td>24W CCT</td><td>—</td><td class="price">₪1,049</td><td><span class="st mid">הקיים — יקר</span></td>
+            </tr>
+            <tr>
+              <td class="name-cell"><b>Diamond Storm 48″</b><small>Swing · DC 32W · בהצעה</small></td>
+              <td class="num">48″</td><td>לבן/טיק</td><td>לא מפורסם</td><td>לא מפורסם</td><td>18W</td><td>—</td><td class="price">₪1,740<small>שוק · כולל תאורה</small></td><td><span class="st mid">בהצעה</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="alt-divider">
+      <div>
+        <div class="eyebrow">אותו בית, שלוש בחירות</div>
+        <h3>השוואת סלים לפי חדר</h3>
+        <p>עמודת ההצעה כוללת את שבעת המאווררים שבהצעה ואת שלוש התוספות במחיר לב המשרד. עמודת השוק מחליפה את דגמי ההצעה במחירי ניסני. המשלוח בעמודות אלה 25 ₪.</p>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>חדר</th><th>הצעה 06/018925</th><th>שוק נוכחי</th><th>חסכוני</th><th class="best">מאוזן · מומלץ</th><th>עץ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><b>סלון</b> <small>×1</small></td><td class="num">₪725</td><td class="num">₪725</td><td class="num">₪694</td><td class="num best">₪725</td><td class="num">₪1,299.90</td></tr>
+            <tr><td><b>מרפסת</b> <small>×2</small></td><td class="num">₪2,688</td><td class="num">₪1,898</td><td class="num">₪1,798</td><td class="num best">₪1,798</td><td class="num">₪2,580</td></tr>
+            <tr><td><b>מטבח</b> <small>×1</small></td><td class="num">₪2,913</td><td class="num">₪2,426</td><td class="num">₪499</td><td class="num best">₪499</td><td class="num">₪1,099.90</td></tr>
+            <tr><td><b>חדר עבודה</b> <small>×1</small></td><td class="num">₪612</td><td class="num">₪612</td><td class="num">₪360</td><td class="num best">₪427</td><td class="num">₪799.90</td></tr>
+            <tr><td><b>ממ״ד</b> <small>×1</small></td><td class="num">₪1,049</td><td class="num">₪1,049</td><td class="num">₪236</td><td class="num best">₪236</td><td class="num">₪679.90</td></tr>
+            <tr><td><b>חדרי שינה</b> <small>×4</small></td><td class="num">₪8,067</td><td class="num">₪6,960</td><td class="num">₪2,396</td><td class="num best">₪2,860</td><td class="num">₪2,548.70</td></tr>
+            <tr><td><b>משלוח</b> <small>אומדן</small></td><td class="num">₪25</td><td class="num">₪25</td><td class="num">₪30</td><td class="num best">₪55</td><td class="num">₪30</td></tr>
+            <tr class="totals-row"><td>סה״כ עד הבית</td><td class="num">₪16,079</td><td class="num">₪13,695</td><td class="num">₪6,013</td><td class="num">₪6,600</td><td class="num">₪9,038</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="res-note" style="margin:10px 0 0;max-width:88ch">המספרים מעוגלים לשקל; החישוב המדויק בלשוניות שלמטה. ההשוואה אינה דגם־לדגם: הסלים מחליפים את Swing בחדרי השינה ואת Nexus במטבח, ולכן החיסכון הוא תוצאה של בחירה מחדש — לא הנחה על אותה עגלה.</p>
+
+    <div class="alt-divider">
+      <div>
+        <div class="eyebrow">שלושה סלים, עשרה מאווררים</div>
+        <h3>בחרו לפי סדר העדיפויות</h3>
+        <p>כל סל מכסה את אותם עשרה חדרים, עם LED בכל מאוורר. ההבדל הוא בכמה מהנתונים מאומתים, ובאיך החלל נראה. לחצו על לשונית כדי להחליף.</p>
+      </div>
+    </div>
+
+    <div class="baskets">
+      <div class="basket-tabs" role="tablist" aria-label="בחירת סל רכש">
+        <button class="basket-tab" id="tab-value" role="tab" aria-selected="false" aria-controls="panel-value" tabindex="-1" data-basket="value">חסכוני<b class="num">₪6,013</b><small>KSP · הרף התחתון</small></button>
+        <button class="basket-tab active" id="tab-balanced" role="tab" aria-selected="true" aria-controls="panel-balanced" data-basket="balanced">מאוזן<b class="num">₪6,600</b><small>הבחירה שלנו</small></button>
+        <button class="basket-tab" id="tab-wood" role="tab" aria-selected="false" aria-controls="panel-wood" tabindex="-1" data-basket="wood">עץ<b class="num">₪9,038</b><small>מראה לפני נתונים</small></button>
+      </div>
+
+      <div class="basket-panel" id="panel-value" role="tabpanel" aria-labelledby="tab-value" data-panel="value">
+        <div class="basket-intro">
+          <div>
+            <h3>הרף התחתון — 6,013 ₪</h3>
+            <p>כולם KSP, כולם עם LED. הסל עומד בצבע ובתאורה, אבל בסלון, במטבח ובמשרד אין נתוני ספיקה מאומתים. מתאים למי שמוכן למדוד אוויר בפועל — לא להזמין בלי בדיקה.</p>
+          </div>
+          <span class="st mid">הזול</span>
+        </div>
+        <div class="basket-row head"><span>חדר</span><span>דגם</span><span>כמות</span><span>ליחידה</span><span>סה״כ</span></div>
+        <div class="basket-row"><span class="b-room">סלון</span><span class="b-model"><b>Hercules 60″</b><small>סמיקום · עץ/לבן · LED 20W</small></span><span class="b-qty">1</span><span class="b-unit num">₪694</span><span class="b-line num">₪694</span></div>
+        <div class="basket-row"><span class="b-room">מרפסת</span><span class="b-model"><b>Star Outdoor 56″</b><small>סטאר · לבן · IP44 · <span dir="ltr">7,543 CFM</span></small></span><span class="b-qty">2</span><span class="b-unit num">₪899</span><span class="b-line num">₪1,798</span></div>
+        <div class="basket-row"><span class="b-room">מטבח</span><span class="b-model"><b>Storm 48″</b><small>סמיקום · עץ/שחור · LED 25W</small></span><span class="b-qty">1</span><span class="b-unit num">₪499</span><span class="b-line num">₪499</span></div>
+        <div class="basket-row"><span class="b-room">עבודה</span><span class="b-model"><b>Storm 42″</b><small>סמיקום · עץ/שחור · LED 25W</small></span><span class="b-qty">1</span><span class="b-unit num">₪360</span><span class="b-line num">₪360</span></div>
+        <div class="basket-row"><span class="b-room">ממ״ד</span><span class="b-model"><b>Genesis1 42″</b><small>סמיקום · לבן · LED 18W</small></span><span class="b-qty">1</span><span class="b-unit num">₪236</span><span class="b-line num">₪236</span></div>
+        <div class="basket-row"><span class="b-room">חדרי שינה</span><span class="b-model"><b>Venta Fresh Air 48″</b><small>Venta · לבן · IP54 · LED 22W</small></span><span class="b-qty">4</span><span class="b-unit num">₪599</span><span class="b-line num">₪2,396</span></div>
+        <div class="basket-sum">
+          <div><span>סה״כ מוצרים</span><b class="num">₪5,983</b></div>
+          <div><span>משלוח (אומדן)</span><b class="num">₪30</b></div>
+          <div class="grand"><span>סה״כ עד הבית</span><b class="num">₪6,013</b></div>
+        </div>
+        <div class="basket-save">חיסכון מול הצעת טרנדלייט: <b>₪10,066</b> (62.6%) · מול מחירי השוק הנוכחיים: <b>₪7,682</b>. כולל אומדן משלוח, לא כולל התקנה.</div>
+      </div>
+
+      <div class="basket-panel active" id="panel-balanced" role="tabpanel" aria-labelledby="tab-balanced" data-panel="balanced">
+        <div class="basket-intro">
+          <div>
+            <h3>הסל המאוזן — 6,600 ₪</h3>
+            <p>הבחירה שלנו. Talia 52 לסלון עם <span dir="ltr">6,143 CFM</span>, Young למטבח ולעבודה, ו־ROY לבן לחדרי השינה. תוספת של 587 ₪ מול הסל החסכוני קונה בדיוק את מה שנמדד: ספיקה בסלון, DC לבן בחדרים, ושקט מתועד ב־45dB.</p>
+          </div>
+          <span class="st ok">מומלץ</span>
+        </div>
+        <div class="basket-row head"><span>חדר</span><span>דגם</span><span>כמות</span><span>ליחידה</span><span>סה״כ</span></div>
+        <div class="basket-row"><span class="b-room">סלון</span><span class="b-model"><b>Talia 52″</b><small>ווסטינגהאוס · עץ · <span dir="ltr">6,143 CFM</span> · 45dB</small></span><span class="b-qty">1</span><span class="b-unit num">₪725</span><span class="b-line num">₪725</span></div>
+        <div class="basket-row"><span class="b-room">מרפסת</span><span class="b-model"><b>Star Outdoor 56″</b><small>סטאר · לבן · IP44 · <span dir="ltr">7,543 CFM</span></small></span><span class="b-qty">2</span><span class="b-unit num">₪899</span><span class="b-line num">₪1,798</span></div>
+        <div class="basket-row"><span class="b-room">מטבח</span><span class="b-model"><b>Young 48″</b><small>Norther · MDF עץ/לבן · <span dir="ltr">160 m³/min</span></small></span><span class="b-qty">1</span><span class="b-unit num">₪499</span><span class="b-line num">₪499</span></div>
+        <div class="basket-row"><span class="b-room">עבודה</span><span class="b-model"><b>Young 42″</b><small>Norther · MDF עץ/לבן · LED 24W</small></span><span class="b-qty">1</span><span class="b-unit num">₪427</span><span class="b-line num">₪427</span></div>
+        <div class="basket-row"><span class="b-room">ממ״ד</span><span class="b-model"><b>Genesis1 42″</b><small>סמיקום · לבן · LED 18W</small></span><span class="b-qty">1</span><span class="b-unit num">₪236</span><span class="b-line num">₪236</span></div>
+        <div class="basket-row"><span class="b-room">חדרי שינה</span><span class="b-model"><b>ROY 52″</b><small>סמיקום · לבן · DC · LED 32W</small></span><span class="b-qty">4</span><span class="b-unit num">₪715</span><span class="b-line num">₪2,860</span></div>
+        <div class="basket-sum">
+          <div><span>סה״כ מוצרים</span><b class="num">₪6,545</b></div>
+          <div><span>משלוח (אומדן)</span><b class="num">₪55</b></div>
+          <div class="grand"><span>סה״כ עד הבית</span><b class="num">₪6,600</b></div>
+        </div>
+        <div class="basket-save">חיסכון מול הצעת טרנדלייט: <b>₪9,479</b> (59.0%) · מול מחירי השוק הנוכחיים: <b>₪7,095</b>. כולל אומדן משלוח, לא כולל התקנה.</div>
+      </div>
+
+      <div class="basket-panel" id="panel-wood" role="tabpanel" aria-labelledby="tab-wood" data-panel="wood">
+        <div class="basket-intro">
+          <div>
+            <h3>סל העץ — 9,038 ₪</h3>
+            <p>מראה עץ בכל החללים הציבוריים, כולל אטלנטה במרפסת. המחיר: שני דגמים באזל/יחידה אחרונה, ואטלנטה בלי CFM מפורסם. החלפת אטלנטה בסטאר חוסכת 782 ₪ ומחזירה נתון מאומת — אבל מוותרת על העץ.</p>
+          </div>
+          <span class="st mid">עיצוב</span>
+        </div>
+        <div class="basket-row head"><span>חדר</span><span>דגם</span><span>כמות</span><span>ליחידה</span><span>סה״כ</span></div>
+        <div class="basket-row"><span class="b-room">סלון</span><span class="b-model"><b>Strong 60″ wood</b><small>Pacific · גוון עץ · אזל</small></span><span class="b-qty">1</span><span class="b-unit num">₪1,299.90</span><span class="b-line num">₪1,299.90</span></div>
+        <div class="basket-row"><span class="b-room">מרפסת</span><span class="b-model"><b>Atlanta 56″</b><small>Norther · עץ/ABS · IP44 · יחידה אחרונה</small></span><span class="b-qty">2</span><span class="b-unit num">₪1,290</span><span class="b-line num">₪2,580</span></div>
+        <div class="basket-row"><span class="b-room">מטבח</span><span class="b-model"><b>Ice 52″ wood</b><small>Pacific · גוון עץ · <span dir="ltr">12–16</span> מ״ר</small></span><span class="b-qty">1</span><span class="b-unit num">₪1,099.90</span><span class="b-line num">₪1,099.90</span></div>
+        <div class="basket-row"><span class="b-room">עבודה</span><span class="b-model"><b>Strong 42″ wood</b><small>Pacific · גוון עץ · LED 22W</small></span><span class="b-qty">1</span><span class="b-unit num">₪799.90</span><span class="b-line num">₪799.90</span></div>
+        <div class="basket-row"><span class="b-room">ממ״ד</span><span class="b-model"><b>Strong 42″ white</b><small>Pacific · לבן · <span dir="ltr">8–12</span> מ״ר</small></span><span class="b-qty">1</span><span class="b-unit num">₪679.90</span><span class="b-line num">₪679.90</span></div>
+        <div class="basket-row"><span class="b-room">חדרי שינה</span><span class="b-model"><b>Spirit 52″ ×3 + Ice 62″</b><small>Pacific · לבן · 3×349.90 + 1,499</small></span><span class="b-qty">4</span><span class="b-unit num">—</span><span class="b-line num">₪2,548.70</span></div>
+        <div class="basket-sum">
+          <div><span>סה״כ מוצרים</span><b class="num">₪9,008</b></div>
+          <div><span>משלוח (אומדן)</span><b class="num">₪30</b></div>
+          <div class="grand"><span>סה״כ עד הבית</span><b class="num">₪9,038</b></div>
+        </div>
+        <div class="basket-save">חיסכון מול הצעת טרנדלייט: <b>₪7,041</b> (43.8%) · מול מחירי השוק הנוכחיים: <b>₪4,657</b>. כולל אומדן משלוח, לא כולל התקנה.</div>
+      </div>
+    </div>
+
+    <div class="alt-divider">
+      <div>
+        <div class="eyebrow">לפני שלוחצים שלם</div>
+        <h3>שמונה מלכודות רכש</h3>
+        <p>רוב הפערים בין דף המוצר לבין מה שמגיע הביתה נמצאים כאן — לא במחיר.</p>
+      </div>
+    </div>
+
+    <div class="req-grid two">
+      <div class="req warn">
+        <div class="req-n">01 · חומר</div>
+        <h3>״עץ״ אינו עץ מלא</h3>
+        <p>MDF, ABS או Polywood. לחוץ — ABS עדיף; עץ מלא עלול להתעוות. אל תשלמו פרמיה על ״עץ״ בלי מפרט חומר בכתב.</p>
+      </div>
+      <div class="req warn">
+        <div class="req-n">02 · תאורה</div>
+        <h3>התאורה לא תמיד כלולה</h3>
+        <p>Talia 48 ב־657 ₪ מגיע בלי מודול 28W; עם התאורה זה כ־947 ₪. בקשו ״כולל גוף תאורה״ בכתב, לא לפי התמונה.</p>
+      </div>
+      <div class="req warn">
+        <div class="req-n">03 · רטיבות</div>
+        <h3>IP44 הוא לא גשם</h3>
+        <p>עמידות להתזות, לא להצפה. Venta הוא IP54 אבל האחריות שוללת מרפסת לא מקורה. מרפסת פתוחה דורשת IP65 ומקום מוגן.</p>
+      </div>
+      <div class="req warn">
+        <div class="req-n">04 · רעש</div>
+        <h3>dB נמדד במהירות מקסימלית</h3>
+        <p>45dB של Talia מול 51.7dB של Star. בקשו dB במהירות 2–3, שם המאוורר באמת עובד. DC עם 6 הילוכים עדיף מ־3.</p>
+      </div>
+      <div class="req warn">
+        <div class="req-n">05 · מלאי</div>
+        <h3>מלאי הוא הצהרה</h3>
+        <p>Strong 60 אזל; Storm 42 ואטלנטה מסומנים ״יחידה אחרונה״. בקשו תאריך אספקה בכתב — לא ״במלאי״ בטלפון.</p>
+      </div>
+      <div class="req warn">
+        <div class="req-n">06 · קופונים</div>
+        <h3>קופון לא תמיד מצטבר</h3>
+        <p>NOV26: Hercules 623, Star 835, ROY 642. הסלים מחושבים במחיר מחירון; קופון עשוי להוזיל — או לא להצטבר עם מבצע אחר.</p>
+      </div>
+      <div class="req warn">
+        <div class="req-n">07 · משלוח והתקנה</div>
+        <h3>התקנה היא שורה נפרדת</h3>
+        <p>KSP 30 ₪; מחסני תאורה 49.90–99.90 (חינם מעל 2,500); לב המשרד 25. חשמלאי והתקנה לא כלולים. ל־Star אין מוט הארכה — לתקרה גבוהה צריך פתרון.</p>
+      </div>
+      <div class="req warn">
+        <div class="req-n">08 · אחריות</div>
+        <h3>מנוע ≠ חלקים</h3>
+        <p>KSP: 9–10 שנים למנוע, שנה לחלקים. ווסטינגהאוס: 15+2. Venta: 4. שאלו מי משלם את המשלוח בתיקון — זו השורה שקובעת.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h3>ההמלצה: הסל המאוזן — 6,600 ₪ עד הבית</h3>
+      <p>לא הזול, אבל היחיד שבו כל ארבע הדרישות מכוסות במקום שהכי חשוב: <b><span dir="ltr">6,143 CFM</span> ו־45dB בסלון</b>, <b><span dir="ltr">7,543 CFM</span> ו־IP44 במרפסת</b>, LED בכל עשרת המאווררים, ולבן בממ״ד ובחדרי השינה. מול ההצעה הוא חוסך <b>9,479 ₪ (59%)</b>; מול מחירי השוק של דגמי ההצעה — <b>7,095 ₪</b>.</p>
+      <ul class="rec-list">
+        <li><span class="dot"></span><span><b>סלון:</b> Talia 52 ב־725 ₪. התוספת מול Hercules היא 31 ₪ — תמורת <span dir="ltr">6,143 CFM</span> מאומתים ו־45dB. זו ההחלטה הקלה במדריך.</span></li>
+        <li><span class="dot"></span><span><b>מרפסת:</b> Star Outdoor 56 ×2 ב־1,798 ₪. <span dir="ltr">7,543 CFM</span> ו־IP44. אם מראה עץ חובה — Atlanta בתוספת 782 ₪, עם אישור CFM בכתב.</span></li>
+        <li><span class="dot"></span><span><b>מטבח ועבודה:</b> Young 48 + Young 42 ב־926 ₪. הזוג הזול עם נתוני ספיקה ורעש מפורסמים; MDF בגוון עץ.</span></li>
+        <li><span class="dot"></span><span><b>ממ״ד וחדרי שינה:</b> Genesis1 42 + ROY 52 ×4 ב־3,096 ₪. אם חדר ההורים גדול מ־18 מ״ר — Ice 62 לבן ב־1,499 ₪ במקום ROY.</span></li>
+        <li><span class="dot"></span><span><b>לפני הזמנה:</b> בקשו הצעה כוללת לעשרת המאווררים + התקנה, והשוו מול 6,600 ₪. זה המיקוח.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALTERNATIVES ============ -->
+<section id="alternatives" style="background:linear-gradient(180deg,rgba(255,255,255,.35),transparent 30%)">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">אותה משפחה, אפשרויות אחרות</div>
+        <h2>חלופות שכדאי להכיר</h2>
+        <p class="section-lead">שלוש שכבות: קודם המשפחה של Swing עצמה — דגמים קרובים, חלקם זולים יותר ואחד שמתאים לפרגולה יותר מהוויב. אחר כך השוק הרחב, עם מה שמציעים סמיקום, סטאר וסוהו אייר באותו תקציב. ולבסוף <b>ווסטינגהאוס מ״לב המשרד״</b> — המחיר שקשה לעמוד מולו, עם תאורה ושלט כלולים. כל המחירים הם מחירי מדף כולל מע״מ, נכון ל־10.11.2026.</p>
+      </div>
+      <div class="section-index">06 — ALTERNATIVES</div>
+    </div>
+
+    <div class="alt-grid">
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">חלופה חסכונית</span><img src="assets/alt-pebbel.jpg" alt="מאוורר פייבל"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Pebble <small>פייבל · 42″ / 48″ / 56″</small></h3>
+          <p class="alt-spec">DC · 3 או 4 להבים · שלט · פנים · אחריות 25 שנה למנוע</p>
+          <p class="alt-spec" style="color:#4C473D">שדרוג עיצובי זול מדיימונד, עם אותו מנוע DC שקט. אם חדר הילדים לא צריך להב רחב במיוחד — זו בחירה משתלמת.</p>
+          <div class="alt-price"><b class="num">₪1,143</b><span>החל מ־ · כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.tlite.co.il/product/pebbel/" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">הכי משתלם לחלל גדול</span><img src="assets/alt-onyx.jpg" alt="מאוורר אוניקס"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Onyx <small>אוניקס · 54″ / 60″</small></h3>
+          <p class="alt-spec">DC · שלט · תאורה אופציונלית · פנים · 25 שנה למנוע</p>
+          <p class="alt-spec" style="color:#4C473D">חלופה ישירה לנקסוס: קוטר זהה או גדול יותר, במחיר נמוך ב־<span dir="ltr">400–800</span> ₪. אם חלל המטבח גדול — 60″ יכסה יותר אוויר.</p>
+          <div class="alt-price"><b class="num">₪1,599</b><span>החל מ־ · כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.tlite.co.il/product/onyx/" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">שדרוג עיצובי</span><img src="assets/alt-pixel.jpg" alt="מאוורר פיקסל"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Pixel <small>פיקסל · 42″ / 48″ / 56″</small></h3>
+          <p class="alt-spec">DC · שלט · תאורה · פנים · 25 שנה למנוע</p>
+          <p class="alt-spec" style="color:#4C473D">הדגם הפופולרי של Swing: עיצוב נקי במיוחד, מנוע DC ושישה הילוכים. יקר מדיימונד ב־500 ₪ — שדרוג אם העיצוב חשוב יותר מהתקציב.</p>
+          <div class="alt-price"><b class="num">₪1,999</b><span>החל מ־ · כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.tlite.co.il/product/pixel/" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">לפרגולה · DC</span><img src="assets/alt-tornado.jpg" alt="מאוורר דיימונד טורנדו חוץ"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Diamond Tornado <small>דיימונד חוץ · 50″</small></h3>
+          <p class="alt-spec">DC · שלט · עמיד לחות · חוץ/פנים · 25 שנה למנוע</p>
+          <p class="alt-spec" style="color:#4C473D">אם רוצים את השקט והשלט של דיימונד גם בפרגולה — זה השדרוג הטבעי לוויב. יקר ב־650 ₪ ליחידה, אבל מנוע DC ושלט כלול.</p>
+          <div class="alt-price"><b class="num">₪1,599</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.tlite.co.il/product/diamond-damp-tornado/" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">לפרגולה · 52″</span><img src="assets/alt-wind.jpg" alt="מאוורר דיימונד ווינד חוץ"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Diamond Wind <small>דיימונד ווינד חוץ · 52″</small></h3>
+          <p class="alt-spec">DC · שלט · 3 להבים · חוץ/פנים · 25 שנה למנוע</p>
+          <p class="alt-spec" style="color:#4C473D">גרסת החוץ בגודל 52″ — זהה לוויב בקוטר, אבל עם מנוע DC ושלט. הבחירה אם הפרגולה בשימוש יומיומי ורוצים שליטה מהכורסא.</p>
+          <div class="alt-price"><b class="num">₪1,648</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.tlite.co.il/product/tornado-damp-wind/" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">הכי גדול</span><img src="assets/alt-delta.jpg" alt="מאוורר דלתא 60 אינץ'"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Delta <small>דלתא · 60″</small></h3>
+          <p class="alt-spec">DC · שלט · פנים · 25 שנה למנוע</p>
+          <p class="alt-spec" style="color:#4C473D">הקוטר הגדול במשפחה. מתאים לחלל פתוח מאוד — סלון כפול גובה או חלל מעל 30 מ״ר. מחיר זהה לנקסוס, יותר אוויר.</p>
+          <div class="alt-price"><b class="num">₪1,999</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.tlite.co.il/product/delta/" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="alt-divider">
+      <div>
+        <div class="eyebrow">מחוץ למשפחת Swing</div>
+        <h3>השוק הרחב: מה מקבלים באותו תקציב</h3>
+        <p>אותם גדלים, מנוע DC ושלט — לרוב במחיר נמוך בהרבה. בתמורה מקבלים אחריות מנוע קצרה יותר ורשת שירות דקה. אלה הדגמים שבדקנו אצל סמיקום, סטאר וסוהו אייר, עם מחירי מדף ל־10.11.2026.</p>
+      </div>
+    </div>
+
+    <div class="alt-grid quad">
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">הזול בקבוצה</span><img loading="lazy" src="assets/x-genesis90.jpg" alt="סמיקום ג'נסיס 90 לבן 48 אינץ'"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Genesis90 <small>סמיקום · 48″ · לבן</small></h3>
+          <p class="alt-spec">DC · היפוך קיץ/חורף · LED תלת־גוון · שלט · 10 שנה למנוע</p>
+          <p class="alt-spec" style="color:#4C473D">הצורה הקרובה ביותר לדיימונד — שלושה להבים לבנים וקוטר זהה — בשליש מהמחיר. חלופה הגיונית לחדר עבודה או לחדר אורחים.</p>
+          <div class="alt-price"><b class="num">₪489</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.semicom.co.il/sm-cf48w-25ct" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">שלם, כולל תאורה</span><img loading="lazy" src="assets/x-storm.jpg" alt="סמיקום סטורם 48 אינץ' שחור עם להבים בהירים"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Storm 48 DC <small>סמיקום · 48″ · שחור/אלון</small></h3>
+          <p class="alt-spec">DC · 6 מהירויות · LED 25W תלת־גוון · שלט · 10 שנה למנוע</p>
+          <p class="alt-spec" style="color:#4C473D">מאוורר מלא עם תאורה ושלט בפחות ממה שההצעה גובה על ארבע ערכות להבים. אותו גודל חדר, חומרי גימור פשוטים יותר.</p>
+          <div class="alt-price"><b class="num">₪529</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.semicom.co.il/sm-1010dc-48bct" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">חוץ · תקציב</span><img loading="lazy" src="assets/x-ryan.jpg" alt="סמיקום ריאן 52 אינץ' לחוץ"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Ryan 52 DC <small>סמיקום · 52″ · IP54</small></h3>
+          <p class="alt-spec">DC · LED 22W תלת־גוון · שלט · עמידות IP54</p>
+          <p class="alt-spec" style="color:#4C473D">ה־52″ לפרגולה: חוסך כ־100 ₪ מול הוויב בניסני ונותן תאורה ושלט. ‏IP54 מתאים למרפסת מקורה — לא לחשיפה ישירה לגשם.</p>
+          <div class="alt-price"><b class="num">₪849</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.semicom.co.il/int-20005w52-22ct" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">חוץ · אטום למים</span><img loading="lazy" src="assets/x-genesis66.jpg" alt="סמיקום ג'נסיס 66 לבן 56 אינץ' IP66"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Genesis66 56 DC <small>סמיקום · 56″ · IP66</small></h3>
+          <p class="alt-spec">DC · LED 25W תלת־גוון · שלט · IP66 · 10 שנה למנוע</p>
+          <p class="alt-spec" style="color:#4C473D">רמת האטימה הגבוהה בקבוצה — לפרגולה חשופה או לאזור עם ממטרות. מחיר כמעט זהה לוויב בהצעה, עם מנוע DC במקום AC.</p>
+          <div class="alt-price"><b class="num">₪1,339</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.semicom.co.il/sm-1144wh-25ct" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag hot">המתחרה האמיתי לוויב</span><img loading="lazy" src="assets/x-star-outdoor.jpg" alt="מאוורר תקרה סטאר OUTDOOR 56 אינץ' שחור"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Star Outdoor <small>סטאר · 56″ · IP44</small></h3>
+          <p class="alt-spec">DC 32W · 7,543 CFM · LED 24W עם דימר · שלט LCD · 6 מהירויות</p>
+          <p class="alt-spec" style="color:#4C473D">מה שמשתנה מול הוויב: מנוע DC במקום AC, שלט LCD כלול ותאורה תלת־גוונית עם דימר — ב־999 ₪, 50 ₪ יותר מהוויב בניסני, שם השלט הוא תוספת של 249 ₪. מנוע 10 שנה בבית, 3 בפרגולה.</p>
+          <div class="alt-price"><b class="num">₪999</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://star.co.il/product/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-outdoor-%D7%A1%D7%98%D7%90%D7%A8-%D7%94%D7%97%D7%93%D7%A9/" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">הכי הרבה אוויר</span><img loading="lazy" src="assets/x-star-maverick.jpg" alt="מאוורר תקרה סטאר מאבריק 60 אינץ' IP55"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Maverick 60 <small>סטאר · 60″ · IP55</small></h3>
+          <p class="alt-spec">DC 37W · 6 מהירויות · שלט · IP55 ללא תאורה</p>
+          <p class="alt-spec" style="color:#4C473D">60″ לפרגולה גדולה או לחלל פתוח. שימו לב לדגל האדום: עם תוספת תאורה המאוורר מאבד את תקן IP55 — לפרגולה פתוחה עדיף בלי תאורה.</p>
+          <div class="alt-price"><b class="num">₪1,400</b><span>ללא תאורה · כולל מע״מ</span></div>
+          <a class="alt-link" href="https://star.co.il/product/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%A1%D7%98%D7%90%D7%A8-%D7%9E%D7%90%D7%91%D7%A8%D7%99%D7%A7/" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">עיצוב פרימיום</span><img loading="lazy" src="assets/x-petit.jpg" alt="סוהו אייר פטיט פרו 49 אינץ' עם תאורה"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Petit Pro 49 <small>סוהו אייר · 49″ · LED</small></h3>
+          <p class="alt-spec">DC · 6 מהירויות · LED 18W CCT מובנה · שלט עם צג</p>
+          <p class="alt-spec" style="color:#4C473D">המתחרה העיצובי הישיר לדיימונד: גוף תאורה מובנה ושלט עם צג. יקר ב־150 ₪ מדיימונד בניסני — משלמים על המראה, לא על המפרט.</p>
+          <div class="alt-price"><b class="num">₪1,600</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.sohoair.co.il/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-petit-pro-49-led/" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">עיצוב, לא תקציב</span><img loading="lazy" src="assets/x-tornado60.jpg" alt="סוהו אייר טורנדו 60 אינץ' IP55 שחור"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Tornado 60 IP55 <small>סוהו אייר · 60″ · שחור</small></h3>
+          <p class="alt-spec">DC · 5 מהירויות · 3 להבים שחורים · IP55 · אחריות מוצר שנתיים</p>
+          <p class="alt-spec" style="color:#4C473D">הכי יקר בקבוצה, ולמרות המחיר — אחריות של שנתיים בלבד. לפרויקט בית חדש זה סיכון מיותר, אלא אם המראה השחורה היא הדרישה.</p>
+          <div class="alt-price"><b class="num">₪2,000</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.sohoair.co.il/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8-%D7%AA%D7%A7%D7%A8%D7%94-%D7%A2%D7%9D-%D7%9C%D7%94%D7%91%D7%99%D7%9D-%D7%91%D7%92%D7%95%D7%95%D7%9F-%D7%A9%D7%97%D7%95%D7%A8tornado-ip55-black/" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="alt-divider">
+      <div>
+        <div class="eyebrow">ווסטינגהאוס · לב המשרד</div>
+        <h3>אותו תקציב, עם תאורה ושלט בפנים</h3>
+        <p>״לב המשרד״ (המסגר 78, תל אביב) מחזיקה מבחר ווסטינגהאוס — המותג האמריקאי הוותיק — במחירים שמתחילים ב־612 ₪. רוב הדגמים כוללים שלט, תאורה ושישה הילוכים DC. זו החלופה הישירה לסווינג: פחות יוקרה, יותר תמורה. כל המחירים כולל מע״מ.</p>
+      </div>
+    </div>
+
+    <div class="alt-grid">
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">הזול בקבוצה</span><img loading="lazy" src="assets/wh-talia42.jpg" alt="ווסטינגהאוס טליה 42 אינץ' שחור עם תאורה"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Talia 42″ <small>ווסטינגהאוס · 42″ · שחור</small></h3>
+          <p class="alt-spec">DC · 6 מהירויות · 28W CCT 2,800lm עם עמעם · שלט · 4,590 CFM · 45dB · 20 מ״ר</p>
+          <p class="alt-spec" style="color:#4C473D">מאוורר DC מלא ב־612 ₪: תאורה חזקה, שלט ושישה הילוכים. לחדר עבודה, ממ״ד או חדר אורחים. אחריות 15 שנה למנוע, שנתיים לחלקים.</p>
+          <div class="alt-price"><b class="num">₪612</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-42-TALIA-%d7%98%d7%9c%d7%99%d7%94-DC-Westinghouse-i15528" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag hot">הכי משתלם לסלון</span><img loading="lazy" src="assets/wh-talia52.jpg" alt="ווסטינגהאוס טליה 52 אינץ' עם תאורה"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Talia 52″ <small>ווסטינגהאוס · 52″ · שחור/עץ</small></h3>
+          <p class="alt-spec">DC · 6 מהירויות · 28W CCT 2,800lm עם עמעם · שלט · 6,143 CFM · 45dB · 36 מ״ר</p>
+          <p class="alt-spec" style="color:#4C473D">הדגם שמומלץ לסלון: 36 מ״ר, 6,143 CFM ואותו שקט של 45dB. במחיר הזה אין מתחרה שמגיע עם תאורה ושלט — כולל היפוך חורף.</p>
+          <div class="alt-price"><b class="num">₪725</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-52-TALIA-%d7%98%d7%9c%d7%99%d7%94-DC-Westinghouse-i15532" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">אמצע הדרך</span><img loading="lazy" src="assets/wh-carla48.jpg" alt="ווסטינגהאוס קרלה 48 אינץ' עם תאורה"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Carla 48″ <small>ווסטינגהאוס · 48″ · שחור/עץ</small></h3>
+          <p class="alt-spec">DC · 6 מהירויות · 28W 3CCT 2,800lm · שלט · 48dB · 25 מ״ר · היפוך חורף</p>
+          <p class="alt-spec" style="color:#4C473D">48″ עם תאורה חזקה ושישה הילוכים — לחדר שינה גדול או לחלל של 25 מ״ר. גוף שחור ולהבי עץ בהיר; קצת יותר רועש מ־Talia.</p>
+          <div class="alt-price"><b class="num">₪962</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-48-CARLA-%d7%a7%d7%a8%d7%9c%d7%94-Westinghouse-i20493" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">הלבן היחיד</span><img loading="lazy" src="assets/wh-longwood42.jpg" alt="ווסטינגהאוס לונגווד 42 אינץ' לבן"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Longwood 42″ <small>ווסטינגהאוס · 42″ · לבן/אלון</small></h3>
+          <p class="alt-spec">DC · 6 מהירויות · 24W CCT 2,450lm · שלט · 4,979 CFM · 48dB · 20 מ״ר</p>
+          <p class="alt-spec" style="color:#4C473D">גוף לבן מט עם להבי אלון — הדגם היחיד בקבוצה שמתאים לתקרה לבנה. התאורה חלשה יותר מ־Talia וקוטר 42″ לחדר קטן.</p>
+          <div class="alt-price"><b class="num">₪1,049</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-%d7%9c%d7%95%d7%a0%d7%92%d7%95%d7%95%d7%93-CCT-42-Longwood-Westinghouse-i18707" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">העיצוב של הסלון</span><img loading="lazy" src="assets/wh-magnolia52.jpg" alt="ווסטינגהאוס מגנוליה 52 אינץ' עם להבי מהגוני"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Magnolia 52″ <small>ווסטינגהאוס · 52″ · שחור/מהגוני</small></h3>
+          <p class="alt-spec">3 להבים · DC · 6 מהירויות · 24W CCT 2,450lm · שלט · 6,635 CFM · 48dB · 36 מ״ר</p>
+          <p class="alt-spec" style="color:#4C473D">שלושה להבים רחבים בגימור מהגוני — המראה הקרוב ביותר לשפה העיצובית של סווינג, עם תאורה ושלט כלולים. המחיר הגבוה בקבוצה הפנימית.</p>
+          <div class="alt-price"><b class="num">₪1,312</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-%d7%9e%d7%92%d7%a0%d7%95%d7%9c%d7%99%d7%94-52-CCT-Magnolia-Westinghouse-i18701" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="alt">
+        <div class="alt-img"><span class="alt-flag">לחלל ענק</span><img loading="lazy" src="assets/wh-denver80.jpg" alt="ווסטינגהאוס דנוור 80 אינץ' עם להבי עץ"></div>
+        <div class="alt-body">
+          <h3 class="alt-name">Denver 80″ <small>ווסטינגהאוס · 80″ · עץ/לבן</small></h3>
+          <p class="alt-spec">80″ · DC · שלט · 14,194 CFM · ללא תאורה · מעל 36 מ״ר</p>
+          <p class="alt-spec" style="color:#4C473D">80″ — שני מטר קוטר. לסלון כפול גובה או לחלל פתוח גדול במיוחד. בלי תאורה: צריך פתרון תאורה נפרד, ותקרה גבוהה בהתאם.</p>
+          <div class="alt-price"><b class="num">₪2,187</b><span>כולל מע״מ</span></div>
+          <a class="alt-link" href="https://www.lev-hamisrad.co.il/%d7%9e%d7%90%d7%95%d7%95%d7%a8%d7%a8-%d7%aa%d7%a7%d7%a8%d7%94-80-Denver-%d7%93%d7%a0%d7%95%d7%95%d7%a8-Westinghouse-i15543" target="_blank" rel="noopener">לעמוד המוצר <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <p class="res-note" style="margin:12px 0 0;max-width:82ch">כל ששת דפי המוצר נפתחו מחדש ואומתו ב־10.11.2026: המחירים זהים לאלה שמוצגים כאן, ולכל דגם צבע אחד בלבד — בדף אין בורר צבע, ערכת תאורה או שלט, אלא כמות בלבד. הוספת Talia 52, Longwood 42 ו־Talia 42 לסל הסתכמה ב־2,386 ₪ כולל מע״מ; בקופה משלוח עם שליח 25 ₪ לכל ההזמנה (1–7 ימי עבודה), דחוף בת״א רבתי 120 ₪, או איסוף עצמי מהמסגר 78 ב־0 ₪.</p>
+
+    <div class="note" style="margin-top:16px;margin-bottom:0">
+      <b>לפרגולה:</b> אם רוצים ווסטינגהאוס גם בחוץ, Deacon 52″ IP44 עולה 799 ₪ — הפעלה בחוט משיכה, שלושה הילוכים, בלי שלט ובלי תאורה. שימו לב: כותרת הדף מציינת 56″, אבל המפרט והתמונה מראים 52″ (132 ס״מ) — לאמת טלפונית. לפרגולה הזו ה־Wave או Star Outdoor עדיין עדיפים.
+    </div>
+
+    <div class="tradeoff">
+      <h4>מה מוותרים כשהמחיר יורד</h4>
+      <p><b>אחריות מנוע:</b> סווינג נותנת 25 שנה; סמיקום 10, סטאר 10 שנה בבית ו־3 בלבד בפרגולה, וסוהו מצהירה על שנתיים ל־Tornado. מנוע הוא הרכיב היקר — 3 שנות אחריות בפרגולה מול 25 זה הבדל אמיתי בהוצאה העתידית, לא רק במחיר הקנייה.</p>
+      <p><b>שירות והתקנה:</b> טכנולייט (יבואן Swing) מחזיקה מערך התקנה ושירות; החנויות הזולות עובדות לרוב במשלוח בלבד. בהזמנה של עשרה מאווררים, התקנה מסודרת ששומרת על האחריות שווה יותר מהנחה של 200 ₪ ליחידה. גם את שלושת המאווררים של לב המשרד אפשר לתת לחשמלאי של הפרויקט — אבל האחריות עליהם היא מול החנות, לא מול טכנולייט.</p>
+      <p><b>ווסטינגהאוס מול סווינג:</b> המחיר בלב המשרד כולל תאורה ושלט — בדיוק מה שסווינג גובה עליו בנפרד (336 ₪ לערכת LED בהצעה). מנגד, האחריות למנוע היא 15 שנה ולא 25, והחלקים שנתיים בלבד. המאווררים השחורים־עץ גם לא יתאימו לכל בית לבן; אם אחידות הצבע חשובה, Longwood הלבן או חזרה לסווינג.</p>
+      <p><b>רעש:</b> ל־Star Outdoor מקסימום 51.7dB בעוצמה הגבוהה — מקובל לפרגולה, פחות מתאים לחדר שינה. זכרו שמדידות dB הן בעוצמה מקסימלית, ולכן לא מלמדות על השימוש היומיומי בהילוך נמוך.</p>
+    </div>
+
+    <div class="callout">
+      <h3>ההמלצה שלנו, בקצרה</h3>
+      <ul class="rec-list">
+        <li><span class="dot"></span><span><b>התוספת — קונים את שלושת המאווררים ב״לב המשרד״.</b> Talia 52 לסלון (725 ₪), Longwood 42 לממ״ד (1,049 ₪) ו־Talia 42 לחדר העבודה (612 ₪) — 2,386 ₪ לשלושה, כולל תאורה ושלט, ו־2,411 ₪ עד הבית עם משלוח. אותה תוספת במשפחת Swing מגיעה לכ־5,062 ₪. אם הסלון דורש מראה מהגוני, Magnolia 52 ב־1,312 ₪ מוסיף 587 ₪ (2,998 ₪ עד הבית).</span></li>
+        <li><span class="dot"></span><span><b>חדרי השינה — נשארים עם Diamond Storm.</b> המחיר הטוב (1,450 ₪) צמוד להצעה, המנוע שקט והאחריות ארוכה. 48″ לחדרי הילדים, 56″ להורים — לא להתפשר על גודל קטן מדי.</span></li>
+        <li><span class="dot"></span><span><b>הפרגולה — קונים את ה־Wave בניסני ב־949 ₪, או את Star Outdoor 56 ב־999 ₪.</b> ה־Wave הוא החיסכון הבטוח: 395 ₪ פחות ליחידה, אותה אחריות. אבל ב־50 ₪ יותר, סטאר נותנת שלט LCD, תאורה מעומעמת תלת־גוונית ומנוע DC — במקום שלט בתוספת 249 ₪ אצל ניסני. אם השלט חשוב, זו הבחירה.</span></li>
+        <li><span class="dot"></span><span><b>אי המטבח — שוקלים Onyx 54/60 ב־1,599 ₪ במקום Nexus.</b> חוסך <span dir="ltr">200–640</span> ₪ מול ההצעה, ומאפשר קוטר גדול יותר. אם התקרה גבוהה מאוד, ודאו מחיר מוט בנפרד.</span></li>
+        <li><span class="dot"></span><span><b>לא לחסוך על התקנה.</b> התקנה מקצועית שומרת על האחריות (25 שנה למנוע) ומונעת רעידות. בקשו הצעה להתקנה של כל שבעת המאווררים בהצעה כחבילה, והוסיפו את שלושת הנוספים לאותה עבודה.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROOMS ============ -->
+<section id="rooms">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">תוכנית הבית</div>
+        <h2>מי הולך לאן</h2>
+        <p class="section-lead">ההצעה מפרטת שבעה מאווררים לפי חדרים; שלושת הנוספים משלימים את הסלון, הממ״ד וחדר העבודה. זו המפה המלאה — כולל גודל מומלץ, גובה תקרה וסוג התאורה. השתמשו בה לפני שמזמינים, כדי לוודא שכל חדר מקבל את הקוטר הנכון.</p>
+      </div>
+      <div class="section-index">07 — LAYOUT</div>
+    </div>
+
+    <div class="rooms">
+      <div class="room">
+        <div class="room-name">חדרי ילדים</div>
+        <div class="room-fan">Diamond 48″</div>
+        <div class="room-qty">×3 יחידות</div>
+        <div class="room-note">ערכת LED 18W · 3000K. להבים לבנים. גובה תקרה סטנדרטי — מוט 15 ס״מ.</div>
+      </div>
+      <div class="room">
+        <div class="room-name">חדר הורים</div>
+        <div class="room-fan">Diamond 56″</div>
+        <div class="room-qty">×1 יחידה</div>
+        <div class="room-note">קוטר גדול לחדר גדול. אותה ערכת תאורה 18W ואותו שלט — שפה עיצובית אחידה.</div>
+      </div>
+      <div class="room">
+        <div class="room-name">פרגולה</div>
+        <div class="room-fan">Wave 52″</div>
+        <div class="room-qty">×2 יחידות</div>
+        <div class="room-note">תאורת LED 23W כלולה. מפסק קיר 55; שלט בתוספת. מיועד לחוץ — בדקו הגנה מגשם ישיר.</div>
+      </div>
+      <div class="room">
+        <div class="room-name">אי המטבח / חלל</div>
+        <div class="room-fan">Nexus 54″</div>
+        <div class="room-qty">×1 יחידה</div>
+        <div class="room-note">מוט 300 ס״מ בהצעה — כנראה תקרה גבוהה. מודול תאורה 23W בנפרד. ודאו גובה לפני הזמנה.</div>
+      </div>
+      <div class="room room-add">
+        <div class="room-tag">תוספת</div>
+        <div class="room-name">סלון</div>
+        <div class="room-fan">Talia 52″</div>
+        <div class="room-qty">×1 · ₪725</div>
+        <div class="room-note">ווסטינגהאוס · DC, תאורה 2,800lm ושלט. עד 36 מ״ר. שדרוג עיצובי: Magnolia 52 ב־1,312 ₪.</div>
+      </div>
+      <div class="room room-add">
+        <div class="room-tag">תוספת</div>
+        <div class="room-name">ממ״ד</div>
+        <div class="room-fan">Longwood 42″</div>
+        <div class="room-qty">×1 · ₪1,049</div>
+        <div class="room-note">ווסטינגהאוס · לבן מט ולהבי אלון, תאורה 2,450lm. 42″ לחדר קטן — פחות רוח מעל המיטה.</div>
+      </div>
+      <div class="room room-add">
+        <div class="room-tag">תוספת</div>
+        <div class="room-name">חדר עבודה</div>
+        <div class="room-fan">Talia 42″</div>
+        <div class="room-qty">×1 · ₪612</div>
+        <div class="room-note">ווסטינגהאוס · DC, תאורה 2,800lm עם עמעם, 45dB. הזול בפרויקט; 42″ מספיק בהחלט.</div>
+      </div>
+    </div>
+
+    <div class="sizing">
+      <div class="size-item"><b>עד 10 מ״ר</b>42″ — חדר קטן, ממדים צרים, תקרה נמוכה.</div>
+      <div class="size-item"><b><span dir="ltr">10–13</span> מ״ר</b><span dir="ltr">48″–52″</span> — חדר שינה סטנדרטי, חדר עבודה.</div>
+      <div class="size-item"><b><span dir="ltr">13+</span> מ״ר</b><span dir="ltr">54″–60″</span> — סלון, חלל פתוח, מטבח גדול. מעל 36 מ״ר: <span dir="ltr">72″–80″</span>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEOS ============ -->
+<section id="videos" style="background:linear-gradient(180deg,rgba(255,255,255,.35),transparent 30%)">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">וידאו</div>
+        <h2>לראות לפני שקונים</h2>
+        <p class="section-lead">סרטוני סקירה והתקנה רשמיים של Swing, מדריך קנייה בלתי תלוי וסרטון התקנה כללי. לחיצה פותחת נגן מוטמע — ללא יציאה מהדף.</p>
+      </div>
+      <div class="section-index">08 — VIDEO</div>
+    </div>
+
+    <div class="vid-grid">
+      <button class="vid" data-video="KFtvDCXSMuA" data-title="Swing Diamond Storm — סקירה">
+        <span class="vid-poster"><img src="assets/yt-KFtvDCXSMuA.jpg" alt=""><span class="vid-dur">0:19</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></span>
+        <span class="vid-txt"><b>Diamond Storm — סקירה</b><span>ערוץ Swing Fans הרשמי</span></span>
+      </button>
+      <button class="vid" data-video="R4zrm4LSPMs" data-title="Diamond Wind לבן — סקירה">
+        <span class="vid-poster"><img src="assets/yt-R4zrm4LSPMs.jpg" alt=""><span class="vid-dur">0:17</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></span>
+        <span class="vid-txt"><b>דיימונד לבן — סקירה</b><span>מראה קרוב של הגוף והלהבים</span></span>
+      </button>
+      <button class="vid" data-video="x7NzcP-elwo" data-title="SWING Wave — התקנה">
+        <span class="vid-poster"><img src="assets/yt-x7NzcP-elwo.jpg" alt=""><span class="vid-dur">2:12</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></span>
+        <span class="vid-txt"><b>Wave — התקנה צעד אחר צעד</b><span>כולל חיבור תאורת ה-LED</span></span>
+      </button>
+      <button class="vid" data-video="2AYtQNyM2U4" data-title="SWING Nexus with Light — התקנה">
+        <span class="vid-poster"><img src="assets/yt-2AYtQNyM2U4.jpg" alt=""><span class="vid-dur">2:23</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></span>
+        <span class="vid-txt"><b>Nexus עם תאורה — התקנה</b><span>הדגמה של מודול התאורה</span></span>
+      </button>
+      <button class="vid" data-video="9jUYi3zHr-U" data-title="Swing Fans — סרטון המותג">
+        <span class="vid-poster"><img src="assets/yt-9jUYi3zHr-U.jpg" alt=""><span class="vid-dur">0:43</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></span>
+        <span class="vid-txt"><b>Swing Fans — סרטון המותג</b><span>מבט על הקולקציה הביתית</span></span>
+      </button>
+      <button class="vid" data-video="qk2EvbL0M3s" data-title="מדריך קנייה של מאווררי תקרה">
+        <span class="vid-poster"><img src="assets/yt-qk2EvbL0M3s.jpg" alt=""><span class="vid-dur">2:54</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></span>
+        <span class="vid-txt"><b>מדריך קנייה — סמיקום</b><span>קוטר, גובה, מנוע ותאורה</span></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHECKLIST ============ -->
+<section id="checklist">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">לפני שאומרים כן</div>
+        <h2>צ׳קליסט ושאלות לספק</h2>
+        <p class="section-lead">עברו על הרשימה, סמנו מה שנסגר, ופתחו את השיחה עם טרנדלייט מהשאלות שבצד — בעיקר אלה שנוגעות לשורת הלהבים. שם נמצא הכסף.</p>
+      </div>
+      <div class="section-index">09 — CHECKLIST</div>
+    </div>
+
+    <div class="check-grid">
+      <div class="panel">
+        <h3>מה לוודא לפני הזמנה</h3>
+        <p class="panel-sub">שתים־עשרה בדיקות שקובעות אם המאוורר יתקין חלק ויעבוד נכון.</p>
+        <label class="check"><input type="checkbox"><span>מדדתי גובה תקרה בכל חדר — לפחות 2.6 מ׳ למאוורר עם מוט סטנדרטי.</span></label>
+        <label class="check"><input type="checkbox"><span>בחרתי קוטר לפי שטח החדר: 48″ ל־<span dir="ltr">10–13</span> מ״ר, 56″ ל־<span dir="ltr">13+</span> מ״ר.</span></label>
+        <label class="check"><input type="checkbox"><span>וידאתי שאין שיפוע תקרה מעל 15° (אחרת נדרש תושבת מיוחדת).</span></label>
+        <label class="check"><input type="checkbox"><span>בדקתי אם נדרש מוט הארכה — במיוחד ל-Nexus עם המוט 300 ס״מ.</span></label>
+        <label class="check"><input type="checkbox"><span>מדדתי את הסלון, הממ״ד וחדר העבודה — 42″ לחדרים קטנים, 52″ לסלון.</span></label>
+        <label class="check"><input type="checkbox"><span>וידאתי מול לב המשרד מלאי, צבע, משלוח (25 ₪ עם שליח / איסוף חינם) ומי מתקין — וקיבלתי מחיר לשלושת המאווררים כחבילה.</span></label>
+        <label class="check"><input type="checkbox"><span>החלפתי/וידאתי דימר תואם TRIAC לערכת התאורה — אחרת היא תהבהב.</span></label>
+        <label class="check"><input type="checkbox"><span>החלטתי שליטה: שלט (Diamond/Nexus) או מפסק קיר (Wave); הוספת שלט ל-Wave אם צריך.</span></label>
+        <label class="check"><input type="checkbox"><span>קיבלתי הצעת התקנה מחשמלאי מורשה — לשמירת האחריות ולמניעת רעידות.</span></label>
+        <label class="check"><input type="checkbox"><span>אישרתי צבעים: לבן/לבן או לבן/טיק, וקיבלתי דוגמת צבע פיזית.</span></label>
+        <label class="check"><input type="checkbox"><span>ביקשתי משלוח עד הבית בזכרון יעקב ומועד אספקה בכתב.</span></label>
+        <label class="check"><input type="checkbox"><span>שמרתי חשבונית, מספרי סידוריים ותעודת אחריות לכל מאוורר.</span></label>
+        <div class="progress"><div class="progress-bar"><i id="checkProgress"></i></div><span id="checkCount">0 / 12</span></div>
+      </div>
+
+      <div class="panel" style="background:linear-gradient(180deg,#FFFDF9,#FBF8F1)">
+        <h3>שאלות לטרנדלייט</h3>
+        <p class="panel-sub">ארבע מהשאלות האלו שוות מאות שקלים. כתבו אותן במייל, לא בטלפון.</p>
+        <ol class="q-list">
+          <li><span><b>האם שורת 853 (להבים) כפולה?</b> המאוורר 85102 מגיע עם להבים כלולים, או שהלהבים נמכרים בנפרד? אם כלולים — בקשו להסיר 4 × 150 ₪ לפני מע״מ.</span></li>
+          <li><span><b>האם 85125 נדרש בנוסף לתאורה של Nexus?</b> בדקו אם דגם 85070 כולל תאורה, ואם כן — למה נוסף מודול 23W.</span></li>
+          <li><span><b>מה גובה התקרה באי המטבח?</b> מוט 300 ס״מ הוא חריג; בקשו הנמקה והצעה חלופית אם הגובה סטנדרטי.</span></li>
+          <li><span><b>מה מחיר שלושת המאווררים הנוספים?</b> סלון 54″, ממ״ד 42″, חדר עבודה 48″ — עם ערכת תאורה ושלט לכל אחד, כולל הנחות ההצעה והתקנה. נשווה מול 2,411 ₪ של לב המשרד עד הבית (2,386 ₪ + 25 ₪ משלוח).</span></li>
+          <li><span><b>האם תאמתו מחירים מול הרשת?</b> הציגו את ניסני: דיימונד 1,450 ₪, וויב 949 ₪, נקסוס 1,800 ₪ — כולם כולל מע״מ. ואת לב המשרד: Talia 52 ב־725 ₪ ו־Talia 42 ב־612 ₪, כולל תאורה ושלט.</span></li>
+          <li><span><b>מה כלול במחיר ההתקנה?</b> תלייה, חיבור חשמל, כיוון איזון, פירוק אריזה ופינוי?</span></li>
+          <li><span><b>מה תנאי האחריות בפועל?</b> 25 שנה למנוע, שנה לחלקים ולאלקטרוניקה — מי נותן שירות ובאיזה אזור?</span></li>
+          <li><span><b>מה זמינות הצבע הלבן והמלאי?</b> בקשו תאריך אספקה מחייב, לא ״בערך״.</span></li>
+        </ol>
+        <div class="note" style="margin-top:16px;margin-bottom:0">
+          <b>טיפ מיקוח:</b> הציעו לרכוש את כל 10 המאווררים + ערכות התאורה כחבילה אחת, ובקשו 10% הנחה או משלוח והתקנה כלולים. הזכירו שאתם משווים מול ניסני, לגעת באור ולב המשרד — זה בדרך כלל מזיז את המחיר.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-title">מדריך רכישה · מאווררי תקרה</div>
+        <p>הוכן עבור IDIT BENNATAN, בית חדש בזכרון יעקב, על בסיס הצעת מחיר 06/018925 של טרנדלייט בע״מ מתאריך 18.09.2026. מטרת המסמך: להשוות מחירים, לאמת זמינות ולקבל החלטת רכש מושכלת — לא להחליף הצעת מחיר מחייבת.</p>
+        <p>עודכן לאחרונה: 10.11.2026 · טיוטת עבודה.</p>
+      </div>
+      <div>
+        <h4>מקורות מרכזיים</h4>
+        <ul class="foot-list">
+          <li><a href="https://www.trendlight.co.il/" target="_blank" rel="noopener">טרנדלייט — ספק ההצעה</a></li>
+          <li><a href="https://www.tlite.co.il/product/diamond/" target="_blank" rel="noopener">טכנולייט — דיימונד</a></li>
+          <li><a href="https://www.swingfans.co.il/product/diamond-storm/" target="_blank" rel="noopener">Swingfans — דיימונד סטורם</a></li>
+          <li><a href="https://www.nisanihashmal.co.il/" target="_blank" rel="noopener">ניסני חשמל</a></li>
+          <li><a href="https://lagatbaor.co.il/" target="_blank" rel="noopener">לגעת באור</a></li>
+          <li><a href="https://www.lev-hamisrad.co.il/" target="_blank" rel="noopener">לב המשרד — ווסטינגהאוס</a></li>
+          <li><a href="https://ksp.co.il/" target="_blank" rel="noopener">KSP — מאווררי תקרה</a></li>
+          <li><a href="https://www.lighting.co.il/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%A8%D7%99-%D7%AA%D7%A7%D7%A8%D7%94/%D7%9E%D7%90%D7%95%D7%95%D7%A8%D7%99-%D7%AA%D7%A7%D7%A8%D7%94-%D7%A4%D7%A0%D7%99%D7%9D" target="_blank" rel="noopener">מחסני תאורה — מאווררי תקרה</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ניווט מהיר</h4>
+        <ul class="foot-list">
+          <li><a href="#models">שלושת הדגמים</a></li>
+          <li><a href="#addition">התוספת — 3 מאווררים</a></li>
+          <li><a href="#compare">טבלת המחירים</a></li>
+          <li><a href="#competitors">מול KSP ומחסני תאורה</a></li>
+          <li><a href="#alternatives">חלופות</a></li>
+          <li><a href="#checklist">צ׳קליסט</a></li>
+          <li><a href="#videos">סרטוני התקנה</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>המחירים נבדקו ב־10.11.2026 באתרי הקמעונאים ומצוינים כולל מע״מ, אלא אם צוין אחרת. ייתכנו שינויים במלאי ובמחיר.</span>
+      <span>אין קשר עסקי בין מחבר המסמך לחנויות המופיעות בו.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- video modal -->
+<div class="modal" id="videoModal" aria-hidden="true" role="dialog" aria-label="נגן וידאו">
+  <div class="modal-back" data-close></div>
+  <div class="modal-box">
+    <div class="modal-frame"><iframe id="videoFrame" title="נגן וידאו" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="modal-bar">
+      <span id="videoTitle">וידאו</span>
+      <span><a id="videoLink" href="#" target="_blank" rel="noopener">פתיחה ביוטיוב</a> · <button class="modal-close" data-close>סגירה</button></span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* gallery */
+  document.querySelectorAll('[data-thumbs]').forEach(function(group){
+    var key = group.getAttribute('data-thumbs');
+    var main = document.querySelector('[data-gallery="' + key + '"] img');
+    group.addEventListener('click', function(e){
+      var btn = e.target.closest('.thumb');
+      if(!btn || !main) return;
+      main.src = btn.getAttribute('data-src');
+      group.querySelectorAll('.thumb').forEach(function(t){ t.classList.remove('active'); });
+      btn.classList.add('active');
+    });
+  });
+
+  /* video modal */
+  var modal = document.getElementById('videoModal');
+  var frame = document.getElementById('videoFrame');
+  var titleEl = document.getElementById('videoTitle');
+  var linkEl = document.getElementById('videoLink');
+  var lastFocus = null;
+
+  function openVideo(id, title){
+    lastFocus = document.activeElement;
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1&hl=he';
+    titleEl.textContent = title || 'וידאו';
+    linkEl.href = 'https://www.youtube.com/watch?v=' + id;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.modal-close').focus();
+  }
+  function closeVideo(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    frame.src = '';
+    document.body.style.overflow = '';
+    if(lastFocus) lastFocus.focus();
+  }
+  document.addEventListener('click', function(e){
+    var trigger = e.target.closest('[data-video]');
+    if(trigger){
+      e.preventDefault();
+      openVideo(trigger.getAttribute('data-video'), trigger.getAttribute('data-title'));
+      return;
+    }
+    if(e.target.closest('[data-close]')) closeVideo();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('open')) closeVideo();
+  });
+
+  /* calculator */
+  var qD = document.getElementById('qDiamond');
+  var qW = document.getElementById('qWave');
+  var qN = document.getElementById('qNexus');
+  var acc = document.getElementById('withAccessories');
+  var outQ = document.getElementById('quoteTotal');
+  var outM = document.getElementById('marketTotal');
+  var outS = document.getElementById('savingTotal');
+  var note = document.getElementById('calcNote');
+
+  /* prices incl VAT, per unit */
+  var P = {
+    diamond: { quote: 1512.23, market: 1450, quoteAcc: 168.15 + 336.30, marketAcc: 336.30 - 46.30 },
+    wave:    { quote: 1344.08, market: 949,  quoteAcc: 0, marketAcc: 0 },
+    nexus:   { quote: 2240.88, market: 1800, quoteAcc: 336.30 + 336.30, marketAcc: 290 + 336.30 }
+  };
+
+  function money(v){
+    return '₪' + Math.round(v).toLocaleString('en-US');
+  }
+  function calc(){
+    var d = Math.max(0, parseInt(qD.value || 0, 10));
+    var w = Math.max(0, parseInt(qW.value || 0, 10));
+    var n = Math.max(0, parseInt(qN.value || 0, 10));
+    var useAcc = acc.checked;
+    var q = d * P.diamond.quote + w * P.wave.quote + n * P.nexus.quote;
+    var m = d * P.diamond.market + w * P.wave.market + n * P.nexus.market;
+    if(useAcc){
+      q += d * P.diamond.quoteAcc + n * P.nexus.quoteAcc;
+      m += d * P.diamond.marketAcc + n * P.nexus.marketAcc;
+    }
+    outQ.textContent = money(q);
+    outM.textContent = money(m);
+    var saving = q - m;
+    outS.textContent = saving >= 0 ? money(saving) : '−' + money(Math.abs(saving));
+    outS.style.color = saving >= 0 ? 'var(--sage)' : 'var(--warn)';
+    note.textContent = useAcc
+      ? 'כולל מע״מ ואביזרים (להבים, ערכת LED 22W, מודול 23W ומוט בהצעה). המחיר בשוק מבוסס על ניסני חשמל; המוט לפי מחיר ההצעה. לא כולל משלוח והתקנה.'
+      : 'מחירי גוף המאוורר בלבד, כולל מע״מ. לא כולל אביזרים, משלוח והתקנה.';
+  }
+  [qD,qW,qN].forEach(function(inp){
+    inp.addEventListener('input', calc);
+    inp.addEventListener('change', calc);
+  });
+  acc.addEventListener('change', calc);
+  document.querySelectorAll('[data-step]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var input = document.getElementById(btn.getAttribute('data-target'));
+      var v = parseInt(input.value || 0, 10) + parseInt(btn.getAttribute('data-step'), 10);
+      input.value = Math.min(20, Math.max(0, v));
+      calc();
+    });
+  });
+  calc();
+
+  /* basket tabs */
+  var basketTabs = Array.prototype.slice.call(document.querySelectorAll('.basket-tab'));
+  var basketPanels = Array.prototype.slice.call(document.querySelectorAll('.basket-panel'));
+  function showBasket(key, focusTab){
+    basketTabs.forEach(function(t){
+      var on = t.getAttribute('data-basket') === key;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      if(on && focusTab) t.focus();
+    });
+    basketPanels.forEach(function(p){
+      p.classList.toggle('active', p.getAttribute('data-panel') === key);
+    });
+  }
+  basketTabs.forEach(function(tab, i){
+    tab.addEventListener('click', function(){
+      showBasket(tab.getAttribute('data-basket'));
+    });
+    tab.addEventListener('keydown', function(e){
+      var step = e.key === 'ArrowLeft' ? 1 : e.key === 'ArrowRight' ? -1 : 0;
+      if(!step) return;
+      e.preventDefault();
+      var next = basketTabs[(i + step + basketTabs.length) % basketTabs.length];
+      showBasket(next.getAttribute('data-basket'), true);
+    });
+  });
+
+  /* checklist */
+  var checks = document.querySelectorAll('.check input');
+  var bar = document.getElementById('checkProgress');
+  var count = document.getElementById('checkCount');
+  function updateChecks(){
+    var done = 0;
+    checks.forEach(function(c){ if(c.checked) done++; });
+    bar.style.width = (done / checks.length * 100) + '%';
+    count.textContent = done + ' / ' + checks.length;
+  }
+  checks.forEach(function(c){ c.addEventListener('change', updateChecks); });
+  updateChecks();
+
+  /* scroll spy */
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var targets = links.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  function spy(){
+    var pos = window.scrollY + 120;
+    var current = targets[0];
+    targets.forEach(function(t){ if(t.offsetTop <= pos) current = t; });
+    links.forEach(function(a){
+      a.classList.toggle('active', current && a.getAttribute('href') === '#' + current.id);
+    });
+  }
+  window.addEventListener('scroll', spy, {passive:true});
+  spy();
+
+  /* reveal on scroll */
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.06});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
